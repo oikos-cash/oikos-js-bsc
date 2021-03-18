@@ -9,7 +9,7 @@ function Oikos(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxyOikos'],
+    this.contractSettings.addressList['ProxyERC20'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -538,6 +538,15 @@ function Oikos(contractSettings) {
   };
 
   /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param currencyKey {bytes32}
+   * @returns BigNumber
+   **/
+  this.totalIssuedSynthsExcludeBNBCollateral = async currencyKey => {
+    return await this.contract.totalIssuedSynthsExcludeBNBCollateral(currencyKey);
+  };
+
+  /**
    * If a user issues synths backed by SNX in their wallet, the SNX become locked. This function will tell you how many synths a user has to give back to the system in order to unlock their original debt position. This is priced in whichever synth is passed in as a currency key, e.g. you can price the debt in oUSD, XDR, or any other synth you wish.<br>
    * Call (no gas consumed, doesn't require signer)
    * @param _issuer {String<EthAddress>}
@@ -546,15 +555,6 @@ function Oikos(contractSettings) {
    **/
   this.debtBalanceOf = async (_issuer, currencyKey) => {
     return await this.contract.debtBalanceOf(_issuer, currencyKey);
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @param currencyKey {bytes32}
-   * @returns BigNumber
-   **/
-  this.totalIssuedSynthsExcludeEtherCollateral = async currencyKey => {
-    return await this.contract.totalIssuedSynthsExcludeEtherCollateral(currencyKey);
   };
 
   /**

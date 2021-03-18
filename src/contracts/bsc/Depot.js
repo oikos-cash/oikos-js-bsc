@@ -15,17 +15,6 @@ function Depot(contractSettings) {
   );
 
   /**
-   * Transaction (consumes gas, requires signer)
-<br>Payable (to enter ETH amount set txParams.value)
-   * @param txParams {TxParams}
-   * @returns BigNumber
-   **/
-  this.exchangeEtherForSNX = async txParams => {
-    txParams = txParams || {};
-    return await this.contract.exchangeEtherForSNX(txParams);
-  };
-
-  /**
    * Call (no gas consumed, doesn't require signer)
    * @returns String<EthAddress>
    **/
@@ -165,11 +154,33 @@ function Depot(contractSettings) {
   };
 
   /**
+   * Transaction (consumes gas, requires signer)
+   * @param synthAmount {BigNumber}
+   * @param txParams {TxParams}
+   * @returns BigNumber
+   **/
+  this.exchangeSynthsForOKS = async (synthAmount, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.exchangeSynthsForOKS(synthAmount, txParams);
+  };
+
+  /**
    * Call (no gas consumed, doesn't require signer)
    * @returns String<EthAddress>
    **/
   this.nominatedOwner = async () => {
     return await this.contract.nominatedOwner();
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+<br>Payable (to enter ETH amount set txParams.value)
+   * @param txParams {TxParams}
+   * @returns BigNumber
+   **/
+  this.exchangeEtherForOKS = async txParams => {
+    txParams = txParams || {};
+    return await this.contract.exchangeEtherForOKS(txParams);
   };
 
   /**
@@ -198,6 +209,18 @@ function Depot(contractSettings) {
    **/
   this.depositStartIndex = async () => {
     return await this.contract.depositStartIndex();
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param synthAmount {BigNumber}
+   * @param guaranteedRate {BigNumber}
+   * @param txParams {TxParams}
+   * @returns BigNumber
+   **/
+  this.exchangeSynthsForOKSAtRate = async (synthAmount, guaranteedRate, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.exchangeSynthsForOKSAtRate(synthAmount, guaranteedRate, txParams);
   };
 
   /**
@@ -251,23 +274,6 @@ function Depot(contractSettings) {
 
   /**
    * Transaction (consumes gas, requires signer)
-<br>Payable (to enter ETH amount set txParams.value)
-   * @param guaranteedEtherRate {BigNumber}
-   * @param guaranteedOikosRate {BigNumber}
-   * @param txParams {TxParams}
-   * @returns BigNumber
-   **/
-  this.exchangeEtherForSNXAtRate = async (guaranteedEtherRate, guaranteedOikosRate, txParams) => {
-    txParams = txParams || {};
-    return await this.contract.exchangeEtherForSNXAtRate(
-      guaranteedEtherRate,
-      guaranteedOikosRate,
-      txParams
-    );
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
    * @param txParams {TxParams}
   
    **/
@@ -303,18 +309,6 @@ function Depot(contractSettings) {
    **/
   this.deposits = async uint256_1 => {
     return await this.contract.deposits(uint256_1);
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param synthAmount {BigNumber}
-   * @param guaranteedRate {BigNumber}
-   * @param txParams {TxParams}
-   * @returns BigNumber
-   **/
-  this.exchangeSynthsForSNXAtRate = async (synthAmount, guaranteedRate, txParams) => {
-    txParams = txParams || {};
-    return await this.contract.exchangeSynthsForSNXAtRate(synthAmount, guaranteedRate, txParams);
   };
 
   /**
@@ -395,13 +389,19 @@ function Depot(contractSettings) {
 
   /**
    * Transaction (consumes gas, requires signer)
-   * @param synthAmount {BigNumber}
+<br>Payable (to enter ETH amount set txParams.value)
+   * @param guaranteedEtherRate {BigNumber}
+   * @param guaranteedOikosRate {BigNumber}
    * @param txParams {TxParams}
    * @returns BigNumber
    **/
-  this.exchangeSynthsForSNX = async (synthAmount, txParams) => {
+  this.exchangeEtherForOKSAtRate = async (guaranteedEtherRate, guaranteedOikosRate, txParams) => {
     txParams = txParams || {};
-    return await this.contract.exchangeSynthsForSNX(synthAmount, txParams);
+    return await this.contract.exchangeEtherForOKSAtRate(
+      guaranteedEtherRate,
+      guaranteedOikosRate,
+      txParams
+    );
   };
 
   /**

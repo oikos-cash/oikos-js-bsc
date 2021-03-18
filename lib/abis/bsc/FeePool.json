@@ -1011,7 +1011,7 @@
 			},
 			{
 				"indexed": false,
-				"name": "snxRewards",
+				"name": "oksRewards",
 				"type": "uint256"
 			}
 		],

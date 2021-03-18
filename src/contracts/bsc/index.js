@@ -8,7 +8,6 @@ import OikosEscrow from './OikosEscrow';
 import OikosState from './OikosState';
 import RewardEscrow from './RewardEscrow';
 import Exchanger from './Exchanger';
-import EtherCollateral from './EtherCollateral';
 import Issuer from './Issuer';
 import AddressResolver from './AddressResolver';
 import ODR from './ODR';
@@ -32,7 +31,6 @@ export default {
   OikosState,
   RewardEscrow,
   Exchanger,
-  EtherCollateral,
   Issuer,
   AddressResolver,
   ODR,
