@@ -4,11 +4,14 @@ import ABIS from '../lib/abis';
 import synths from '../lib/synths';
 
 const SUPPORTED_NETWORKS = {
-  97: 'bsc',
+  56: 'bsc',
+  97: 'bsctestnet',
 };
 
-const mainnetRpcUrl = 'https://bsc-dataseed.binance.org';
-const testnetRpcUrl = 'https://data-seed-prebsc-2-s3.binance.org:8545';
+const network2providerUrl = {
+  bsc: 'https://bsc-dataseed.binance.org',
+  bsctestnet: 'https://data-seed-prebsc-2-s3.binance.org:8545',
+};
 
 class ContractSettings {
   /**
@@ -21,11 +24,11 @@ class ContractSettings {
     console.log(contractSettings);
     contractSettings = contractSettings || {};
     const { provider, signer, networkId } = contractSettings;
-    this.networkId = networkId || 1;
+    this.networkId = networkId || 56;
     this.network = SUPPORTED_NETWORKS[Number(this.networkId)];
-    this.provider = provider || getDefaultProvider(mainnetRpcUrl);
+    this.provider = provider || getDefaultProvider(network2providerUrl.bsc);
     if (!provider && networkId) {
-      this.provider = getDefaultProvider(mainnetRpcUrl);
+      this.provider = getDefaultProvider(network2providerUrl[this.network]);
     }
     this.signer = signer;
     this.addressList = addresses[this.networkId];
