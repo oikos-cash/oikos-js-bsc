@@ -10,6 +10,7 @@ describe('auto-generated contracts', () => {
     describe(network, () => {
       let snxjs;
       beforeAll(() => {
+        console.log({ networkId, network });
         snxjs = new OikosJs({ networkId });
       });
 

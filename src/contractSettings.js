@@ -5,7 +5,7 @@ import synths from '../lib/synths';
 
 const SUPPORTED_NETWORKS = {
   56: 'bsc',
-  97: 'bsctestnet',
+  // 97: 'bsctestnet',
 };
 
 const network2providerUrl = {
@@ -21,7 +21,7 @@ class ContractSettings {
    * @param networkId {Number} - default 1 - mainnet, also supports 42 (Kovan)
    */
   constructor(contractSettings) {
-    console.log(contractSettings);
+    console.log({ contractSettings });
     contractSettings = contractSettings || {};
     const { provider, signer, networkId } = contractSettings;
     this.networkId = networkId || 56;

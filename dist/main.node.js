@@ -24022,7 +24022,7 @@ var BSC_ADDRESSES = {
   BNBCollateral: '0xc5A7f060243A2BE4e8f1d78b09731e847F9212B1'
 };
 /* harmony default export */ var lib_addresses = ({
-  97: BSC_ADDRESSES
+  56: BSC_ADDRESSES
 });
 // CONCATENATED MODULE: ./lib/abis/bsc/Depot.js
 /* harmony default export */ var bsc_Depot = ([{
@@ -30127,7 +30127,7 @@ var BSC_SYNTHS = [{
   subclass: 'PurgeableSynth'
 }];
 /* harmony default export */ var synths = ({
-  97: BSC_SYNTHS
+  56: BSC_SYNTHS
 });
 // CONCATENATED MODULE: ./src/contractSettings.js
 
@@ -30136,10 +30136,13 @@ var BSC_SYNTHS = [{
 
 
 var SUPPORTED_NETWORKS = {
-  97: 'bsc'
+  56: 'bsc' // 97: 'bsctestnet',
+
 };
-var mainnetRpcUrl = 'https://bsc-dataseed.binance.org';
-var testnetRpcUrl = 'https://data-seed-prebsc-2-s3.binance.org:8545';
+var network2providerUrl = {
+  bsc: 'https://bsc-dataseed.binance.org',
+  bsctestnet: 'https://data-seed-prebsc-2-s3.binance.org:8545'
+};
 
 var contractSettings_ContractSettings =
 /**
@@ -30151,18 +30154,20 @@ var contractSettings_ContractSettings =
 function ContractSettings(contractSettings) {
   classCallCheck_default()(this, ContractSettings);
 
-  console.log(contractSettings);
+  console.log({
+    contractSettings: contractSettings
+  });
   contractSettings = contractSettings || {};
   var _contractSettings = contractSettings,
       provider = _contractSettings.provider,
       signer = _contractSettings.signer,
       networkId = _contractSettings.networkId;
-  this.networkId = networkId || 1;
+  this.networkId = networkId || 56;
   this.network = SUPPORTED_NETWORKS[Number(this.networkId)];
-  this.provider = provider || getDefaultProvider(mainnetRpcUrl);
+  this.provider = provider || getDefaultProvider(network2providerUrl.bsc);
 
   if (!provider && networkId) {
-    this.provider = getDefaultProvider(mainnetRpcUrl);
+    this.provider = getDefaultProvider(network2providerUrl[this.network]);
   }
 
   this.signer = signer;

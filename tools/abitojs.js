@@ -5,7 +5,8 @@ const snx = require('@oikos/oikos-bsc');
 const docsDescriptions = require('../lib/docSrc/descriptions');
 
 const SUPPORTED_NETWORKS = {
-  97: 'bsc',
+  56: 'bsc',
+  //97: 'bsctestnet',
 };
 
 /**
