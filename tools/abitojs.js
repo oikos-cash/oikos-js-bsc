@@ -37,7 +37,7 @@ const contracts = {
     target: 'ProxyoUSD',
   },
   Oikos: {
-    target: 'ProxyOikos',
+    target: 'ProxyERC20',
   },
   OikosEscrow: true,
   OikosState: true,
