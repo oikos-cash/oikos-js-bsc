@@ -7,6 +7,9 @@ const SUPPORTED_NETWORKS = {
   97: 'bsc',
 };
 
+const mainnetRpcUrl = 'https://bsc-dataseed.binance.org';
+const testnetRpcUrl = 'https://data-seed-prebsc-2-s3.binance.org:8545';
+
 class ContractSettings {
   /**
    * @constructor
@@ -20,10 +23,9 @@ class ContractSettings {
     const { provider, signer, networkId } = contractSettings;
     this.networkId = networkId || 1;
     this.network = SUPPORTED_NETWORKS[Number(this.networkId)];
-    this.provider =
-      provider || getDefaultProvider('https://data-seed-prebsc-2-s3.binance.org:8545');
+    this.provider = provider || getDefaultProvider(mainnetRpcUrl);
     if (!provider && networkId) {
-      this.provider = getDefaultProvider('https://data-seed-prebsc-2-s3.binance.org:8545');
+      this.provider = getDefaultProvider(mainnetRpcUrl);
     }
     this.signer = signer;
     this.addressList = addresses[this.networkId];
