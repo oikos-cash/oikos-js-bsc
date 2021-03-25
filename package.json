@@ -1,6 +1,6 @@
 {
   "name": "@oikos/oikos-js-bsc",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "description": "Synthetix JS Library - access Synthetix smart contracts from browser and Node.js",
   "main": "dist/main.node.js",
   "browser": "dist/main.js",
