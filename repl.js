@@ -6,7 +6,7 @@ const { ethers, getDefaultProvider } = require("ethers");
 const repl = require('repl');
 
 const { OikosJs } = require('./src/index.node');
-const networkId = 97 //guessNetworkId();
+const networkId = 56 //guessNetworkId();
 
 // const networkId = network2id(process.env.TRON_NETWORK || 'shasta');
 // snxjs.contractSettings.tronWeb.setPrivateKey(process.env.PRIVATE_KEY);
