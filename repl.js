@@ -11,7 +11,7 @@ const networkId = 56 //guessNetworkId();
 // const networkId = network2id(process.env.TRON_NETWORK || 'shasta');
 // snxjs.contractSettings.tronWeb.setPrivateKey(process.env.PRIVATE_KEY);
 
-const provider = getDefaultProvider("https://data-seed-prebsc-2-s3.binance.org:8545")
+const provider = getDefaultProvider("https://bsc-dataseed.binance.org")
 const signer = new OikosJs.signers.PrivateKey(
   provider,
   networkId,
