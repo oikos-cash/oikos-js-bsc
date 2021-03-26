@@ -249,6 +249,17 @@ function FeePool(contractSettings) {
 
   /**
    * Transaction (consumes gas, requires signer)
+   * @param exchangeRatesAddress {String<EthAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+  this.convertODRFeesTosUSD = async (exchangeRatesAddress, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.convertODRFeesTosUSD(exchangeRatesAddress, txParams);
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
    * @param account {String<EthAddress>}
    * @param txParams {TxParams}
   
@@ -517,17 +528,6 @@ function FeePool(contractSettings) {
    **/
   this.proxy = async () => {
     return await this.contract.proxy();
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param exchangeRatesAddress {String<EthAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-  this.convertXDRFeesTosUSD = async (exchangeRatesAddress, txParams) => {
-    txParams = txParams || {};
-    return await this.contract.convertXDRFeesTosUSD(exchangeRatesAddress, txParams);
   };
 
   /**

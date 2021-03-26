@@ -4669,7 +4669,7 @@ module.exports = _classCallCheck;
 /* 9 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"constant\":true,\"inputs\":[],\"name\":\"resolver\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x04f3bcec\"},{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x06fdde03\"},{\"constant\":false,\"inputs\":[{\"name\":\"spender\",\"type\":\"address\"},{\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x095ea7b3\"},{\"constant\":false,\"inputs\":[{\"name\":\"_integrationProxy\",\"type\":\"address\"}],\"name\":\"setIntegrationProxy\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x131b0ae7\"},{\"constant\":false,\"inputs\":[{\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"nominateNewOwner\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x1627540c\"},{\"constant\":true,\"inputs\":[],\"name\":\"initiationTime\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x17c70de4\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x18160ddd\"},{\"constant\":false,\"inputs\":[{\"name\":\"_beneficiary\",\"type\":\"address\"}],\"name\":\"setSelfDestructBeneficiary\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x20714f88\"},{\"constant\":false,\"inputs\":[{\"name\":\"from\",\"type\":\"address\"},{\"name\":\"to\",\"type\":\"address\"},{\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x23b872dd\"},{\"constant\":true,\"inputs\":[],\"name\":\"DECIMALS\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x2e0f2625\"},{\"constant\":true,\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x313ce567\"},{\"constant\":false,\"inputs\":[],\"name\":\"terminateSelfDestruct\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x3278c960\"},{\"constant\":false,\"inputs\":[{\"name\":\"_resolver\",\"type\":\"address\"}],\"name\":\"setResolver\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x4e543b26\"},{\"constant\":true,\"inputs\":[],\"name\":\"nominatedOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x53a47bb7\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x70a08231\"},{\"constant\":false,\"inputs\":[],\"name\":\"acceptOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x79ba5097\"},{\"constant\":true,\"inputs\":[],\"name\":\"maxSupplyToPurgeInUSD\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x7e88ac16\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"issue\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x867904b4\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x8da5cb5b\"},{\"constant\":true,\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x95d89b41\"},{\"constant\":false,\"inputs\":[{\"name\":\"_proxy\",\"type\":\"address\"}],\"name\":\"setProxy\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x97107d6d\"},{\"constant\":false,\"inputs\":[],\"name\":\"selfDestruct\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x9cb8a26a\"},{\"constant\":true,\"inputs\":[],\"name\":\"integrationProxy\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x9cbdaeb6\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x9dc29fac\"},{\"constant\":false,\"inputs\":[{\"name\":\"_tokenState\",\"type\":\"address\"}],\"name\":\"setTokenState\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x9f769807\"},{\"constant\":true,\"inputs\":[],\"name\":\"SELFDESTRUCT_DELAY\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xa461fc82\"},{\"constant\":false,\"inputs\":[{\"name\":\"to\",\"type\":\"address\"},{\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0xa9059cbb\"},{\"constant\":false,\"inputs\":[{\"name\":\"addresses\",\"type\":\"address[]\"}],\"name\":\"purge\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0xab593079\"},{\"constant\":false,\"inputs\":[{\"name\":\"to\",\"type\":\"address\"},{\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transferAndSettle\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0xb014c3a3\"},{\"constant\":true,\"inputs\":[],\"name\":\"selfDestructInitiated\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xb8225dec\"},{\"constant\":false,\"inputs\":[{\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"setMessageSender\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0xbc67f832\"},{\"constant\":false,\"inputs\":[],\"name\":\"initiateSelfDestruct\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0xbd32aa44\"},{\"constant\":true,\"inputs\":[],\"name\":\"selfDestructBeneficiary\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xc58aaae6\"},{\"constant\":true,\"inputs\":[],\"name\":\"messageSender\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xd67bdd25\"},{\"constant\":true,\"inputs\":[],\"name\":\"currencyKey\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xdbd06c85\"},{\"constant\":true,\"inputs\":[{\"name\":\"owner\",\"type\":\"address\"},{\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xdd62ed3e\"},{\"constant\":false,\"inputs\":[{\"name\":\"from\",\"type\":\"address\"},{\"name\":\"to\",\"type\":\"address\"},{\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transferFromAndSettle\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0xe73cced3\"},{\"constant\":true,\"inputs\":[],\"name\":\"tokenState\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xe90dd9e2\"},{\"constant\":true,\"inputs\":[],\"name\":\"FEE_ADDRESS\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xeb1edd61\"},{\"constant\":true,\"inputs\":[],\"name\":\"proxy\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xec556889\"},{\"constant\":false,\"inputs\":[{\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"setTotalSupply\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0xf7ea7a3d\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"transferableSynths\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xffff51d6\"},{\"inputs\":[{\"name\":\"_proxy\",\"type\":\"address\"},{\"name\":\"_tokenState\",\"type\":\"address\"},{\"name\":\"_tokenName\",\"type\":\"string\"},{\"name\":\"_tokenSymbol\",\"type\":\"string\"},{\"name\":\"_owner\",\"type\":\"address\"},{\"name\":\"_currencyKey\",\"type\":\"bytes32\"},{\"name\":\"_totalSupply\",\"type\":\"uint256\"},{\"name\":\"_resolver\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\",\"signature\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Purged\",\"type\":\"event\",\"signature\":\"0x265db6c9c62cb962adbcf4398a54e4b02b2d87b28ab5b7538850150465a5f43c\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Issued\",\"type\":\"event\",\"signature\":\"0xa59f12e354e8cd10bb74c559844c2dd69a5458e31fe56c7594c62ca57480509a\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Burned\",\"type\":\"event\",\"signature\":\"0x696de425f79f4a40bc6d2122ca50507f0efbeabbff86a84871b7196ab8ea8df7\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\",\"signature\":\"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\",\"signature\":\"0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"newTokenState\",\"type\":\"address\"}],\"name\":\"TokenStateUpdated\",\"type\":\"event\",\"signature\":\"0xa538c4dcfe9fb148efee2952bafe34982d2d07d5fbb38ae5b44abf659a46bfd8\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"proxyAddress\",\"type\":\"address\"}],\"name\":\"ProxyUpdated\",\"type\":\"event\",\"signature\":\"0xfc80377ca9c49cc11ae6982f390a42db976d5530af7c43889264b13fbbd7c57e\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"SelfDestructTerminated\",\"type\":\"event\",\"signature\":\"0x6adcc7125002935e0aa31697538ebbd65cfddf20431eb6ecdcfc3e238bfd082c\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"beneficiary\",\"type\":\"address\"}],\"name\":\"SelfDestructed\",\"type\":\"event\",\"signature\":\"0x8a09e1677ced846cb537dc2b172043bd05a1a81ad7e0033a7ef8ba762df990b7\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"selfDestructDelay\",\"type\":\"uint256\"}],\"name\":\"SelfDestructInitiated\",\"type\":\"event\",\"signature\":\"0xcbd94ca75b8dc45c9d80c77e851670e78843c0d75180cb81db3e2158228fa9a6\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"newBeneficiary\",\"type\":\"address\"}],\"name\":\"SelfDestructBeneficiaryUpdated\",\"type\":\"event\",\"signature\":\"0xd5da63a0b864b315bc04128dedbc93888c8529ee6cf47ce664dc204339228c53\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnerNominated\",\"type\":\"event\",\"signature\":\"0x906a1c6bd7e3091ea86693dd029a831c19049ce77f1dce2ce0bab1cacbabce22\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"oldOwner\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnerChanged\",\"type\":\"event\",\"signature\":\"0xb532073b38c83145e3e5135377a08bf9aab55bc0fd7c1179cd4fb995d2a5159c\"}]");
+module.exports = JSON.parse("[{\"constant\":true,\"inputs\":[],\"name\":\"resolver\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x04f3bcec\"},{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x06fdde03\"},{\"constant\":false,\"inputs\":[{\"name\":\"spender\",\"type\":\"address\"},{\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x095ea7b3\"},{\"constant\":false,\"inputs\":[{\"name\":\"_integrationProxy\",\"type\":\"address\"}],\"name\":\"setIntegrationProxy\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x131b0ae7\"},{\"constant\":false,\"inputs\":[{\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"nominateNewOwner\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x1627540c\"},{\"constant\":true,\"inputs\":[],\"name\":\"initiationTime\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x17c70de4\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x18160ddd\"},{\"constant\":false,\"inputs\":[{\"name\":\"_beneficiary\",\"type\":\"address\"}],\"name\":\"setSelfDestructBeneficiary\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x20714f88\"},{\"constant\":false,\"inputs\":[{\"name\":\"from\",\"type\":\"address\"},{\"name\":\"to\",\"type\":\"address\"},{\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x23b872dd\"},{\"constant\":true,\"inputs\":[],\"name\":\"DECIMALS\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x2e0f2625\"},{\"constant\":true,\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x313ce567\"},{\"constant\":false,\"inputs\":[],\"name\":\"terminateSelfDestruct\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x3278c960\"},{\"constant\":false,\"inputs\":[{\"name\":\"_resolver\",\"type\":\"address\"}],\"name\":\"setResolver\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x4e543b26\"},{\"constant\":true,\"inputs\":[],\"name\":\"nominatedOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x53a47bb7\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x70a08231\"},{\"constant\":false,\"inputs\":[],\"name\":\"acceptOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x79ba5097\"},{\"constant\":true,\"inputs\":[],\"name\":\"maxSupplyToPurgeInUSD\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x7e88ac16\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"issue\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x867904b4\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x8da5cb5b\"},{\"constant\":true,\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x95d89b41\"},{\"constant\":false,\"inputs\":[{\"name\":\"_proxy\",\"type\":\"address\"}],\"name\":\"setProxy\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x97107d6d\"},{\"constant\":false,\"inputs\":[],\"name\":\"selfDestruct\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x9cb8a26a\"},{\"constant\":true,\"inputs\":[],\"name\":\"integrationProxy\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0x9cbdaeb6\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x9dc29fac\"},{\"constant\":false,\"inputs\":[{\"name\":\"_tokenState\",\"type\":\"address\"}],\"name\":\"setTokenState\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0x9f769807\"},{\"constant\":true,\"inputs\":[],\"name\":\"SELFDESTRUCT_DELAY\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xa461fc82\"},{\"constant\":false,\"inputs\":[{\"name\":\"to\",\"type\":\"address\"},{\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0xa9059cbb\"},{\"constant\":false,\"inputs\":[{\"name\":\"addresses\",\"type\":\"address[]\"}],\"name\":\"purge\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0xab593079\"},{\"constant\":false,\"inputs\":[{\"name\":\"to\",\"type\":\"address\"},{\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transferAndSettle\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0xb014c3a3\"},{\"constant\":true,\"inputs\":[],\"name\":\"selfDestructInitiated\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xb8225dec\"},{\"constant\":false,\"inputs\":[{\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"setMessageSender\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0xbc67f832\"},{\"constant\":false,\"inputs\":[],\"name\":\"initiateSelfDestruct\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0xbd32aa44\"},{\"constant\":true,\"inputs\":[],\"name\":\"selfDestructBeneficiary\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xc58aaae6\"},{\"constant\":true,\"inputs\":[],\"name\":\"messageSender\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xd67bdd25\"},{\"constant\":true,\"inputs\":[],\"name\":\"currencyKey\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xdbd06c85\"},{\"constant\":true,\"inputs\":[{\"name\":\"owner\",\"type\":\"address\"},{\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xdd62ed3e\"},{\"constant\":false,\"inputs\":[{\"name\":\"from\",\"type\":\"address\"},{\"name\":\"to\",\"type\":\"address\"},{\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transferFromAndSettle\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0xe73cced3\"},{\"constant\":true,\"inputs\":[],\"name\":\"tokenState\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xe90dd9e2\"},{\"constant\":true,\"inputs\":[],\"name\":\"FEE_ADDRESS\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xeb1edd61\"},{\"constant\":true,\"inputs\":[],\"name\":\"proxy\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xec556889\"},{\"constant\":false,\"inputs\":[{\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"setTotalSupply\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"signature\":\"0xf7ea7a3d\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"transferableSynths\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\",\"signature\":\"0xffff51d6\"},{\"inputs\":[{\"name\":\"_proxy\",\"type\":\"address\"},{\"name\":\"_tokenState\",\"type\":\"address\"},{\"name\":\"_tokenName\",\"type\":\"string\"},{\"name\":\"_tokenSymbol\",\"type\":\"string\"},{\"name\":\"_owner\",\"type\":\"address\"},{\"name\":\"_currencyKey\",\"type\":\"bytes32\"},{\"name\":\"_totalSupply\",\"type\":\"uint256\"},{\"name\":\"_resolver\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Purged\",\"type\":\"event\",\"signature\":\"0x265db6c9c62cb962adbcf4398a54e4b02b2d87b28ab5b7538850150465a5f43c\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Issued\",\"type\":\"event\",\"signature\":\"0xa59f12e354e8cd10bb74c559844c2dd69a5458e31fe56c7594c62ca57480509a\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Burned\",\"type\":\"event\",\"signature\":\"0x696de425f79f4a40bc6d2122ca50507f0efbeabbff86a84871b7196ab8ea8df7\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\",\"signature\":\"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\",\"signature\":\"0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"newTokenState\",\"type\":\"address\"}],\"name\":\"TokenStateUpdated\",\"type\":\"event\",\"signature\":\"0xa538c4dcfe9fb148efee2952bafe34982d2d07d5fbb38ae5b44abf659a46bfd8\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"proxyAddress\",\"type\":\"address\"}],\"name\":\"ProxyUpdated\",\"type\":\"event\",\"signature\":\"0xfc80377ca9c49cc11ae6982f390a42db976d5530af7c43889264b13fbbd7c57e\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"SelfDestructTerminated\",\"type\":\"event\",\"signature\":\"0x6adcc7125002935e0aa31697538ebbd65cfddf20431eb6ecdcfc3e238bfd082c\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"beneficiary\",\"type\":\"address\"}],\"name\":\"SelfDestructed\",\"type\":\"event\",\"signature\":\"0x8a09e1677ced846cb537dc2b172043bd05a1a81ad7e0033a7ef8ba762df990b7\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"selfDestructDelay\",\"type\":\"uint256\"}],\"name\":\"SelfDestructInitiated\",\"type\":\"event\",\"signature\":\"0xcbd94ca75b8dc45c9d80c77e851670e78843c0d75180cb81db3e2158228fa9a6\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"newBeneficiary\",\"type\":\"address\"}],\"name\":\"SelfDestructBeneficiaryUpdated\",\"type\":\"event\",\"signature\":\"0xd5da63a0b864b315bc04128dedbc93888c8529ee6cf47ce664dc204339228c53\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnerNominated\",\"type\":\"event\",\"signature\":\"0x906a1c6bd7e3091ea86693dd029a831c19049ce77f1dce2ce0bab1cacbabce22\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"oldOwner\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnerChanged\",\"type\":\"event\",\"signature\":\"0xb532073b38c83145e3e5135377a08bf9aab55bc0fd7c1179cd4fb995d2a5159c\"}]");
 
 /***/ }),
 /* 10 */,
@@ -23977,7 +23977,7 @@ var BSC_ADDRESSES = {
   ProxyFeePool: '0x3cFAa9FC30F6277990A96E9d11c1207dbf0d654C',
   DelegateApprovals: '0xf718ebB2bA2587F8f146c85FF750CaB9238909C6',
   FeePoolEternalStorage: '0xfC3b24375D0a1E59E64612a7a816Ff442e89c4e5',
-  FeePool: '0x4a7644B4b3ae6E4e2c53D01a39E7C4afA25061aF',
+  FeePool: '0xb4eEFb6884d8824846B5b26d9Ce188bF7c1F6bE6',
   FeePoolState: '0xdaF492F4cAdC2Ae2197663CB769329221b47109A',
   RewardsDistribution: '0x8c5B795aC32eb1aa7AE7e1262F88Bdfa971fCb67',
   SupplySchedule: '0xcF3DFFb8127a07BF55B662418aE0bb0a41098C61',
@@ -24539,8 +24539,7 @@ var BSC_ADDRESSES = {
   }],
   payable: false,
   stateMutability: 'nonpayable',
-  type: 'constructor',
-  signature: 'constructor'
+  type: 'constructor'
 }, {
   payable: true,
   stateMutability: 'payable',
@@ -25906,6 +25905,18 @@ var BSC_ADDRESSES = {
 }, {
   constant: false,
   inputs: [{
+    name: 'exchangeRatesAddress',
+    type: 'address'
+  }],
+  name: 'convertODRFeesTosUSD',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x69f428c2'
+}, {
+  constant: false,
+  inputs: [{
     name: 'account',
     type: 'address'
   }],
@@ -26246,18 +26257,6 @@ var BSC_ADDRESSES = {
   type: 'function',
   signature: '0xec556889'
 }, {
-  constant: false,
-  inputs: [{
-    name: 'exchangeRatesAddress',
-    type: 'address'
-  }],
-  name: 'convertXDRFeesTosUSD',
-  outputs: [],
-  payable: false,
-  stateMutability: 'nonpayable',
-  type: 'function',
-  signature: '0xf0496be8'
-}, {
   constant: true,
   inputs: [],
   name: 'MAX_FEE_PERIOD_DURATION',
@@ -26309,7 +26308,8 @@ var BSC_ADDRESSES = {
   }],
   payable: false,
   stateMutability: 'nonpayable',
-  type: 'constructor'
+  type: 'constructor',
+  signature: 'constructor'
 }, {
   anonymous: false,
   inputs: [{
@@ -33376,21 +33376,21 @@ function FeePool_FeePool(contractSettings) {
   }();
   /**
    * Transaction (consumes gas, requires signer)
-   * @param account {String<EthAddress>}
+   * @param exchangeRatesAddress {String<EthAddress>}
    * @param txParams {TxParams}
   
    **/
 
 
-  this.removeClaimOnBehalf = /*#__PURE__*/function () {
-    var _ref25 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee25(account, txParams) {
+  this.convertODRFeesTosUSD = /*#__PURE__*/function () {
+    var _ref25 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee25(exchangeRatesAddress, txParams) {
       return regenerator_default.a.wrap(function _callee25$(_context25) {
         while (1) {
           switch (_context25.prev = _context25.next) {
             case 0:
               txParams = txParams || {};
               _context25.next = 3;
-              return _this.contract.removeClaimOnBehalf(account, txParams);
+              return _this.contract.convertODRFeesTosUSD(exchangeRatesAddress, txParams);
 
             case 3:
               return _context25.abrupt("return", _context25.sent);
@@ -33408,28 +33408,61 @@ function FeePool_FeePool(contractSettings) {
     };
   }();
   /**
+   * Transaction (consumes gas, requires signer)
+   * @param account {String<EthAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.removeClaimOnBehalf = /*#__PURE__*/function () {
+    var _ref26 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee26(account, txParams) {
+      return regenerator_default.a.wrap(function _callee26$(_context26) {
+        while (1) {
+          switch (_context26.prev = _context26.next) {
+            case 0:
+              txParams = txParams || {};
+              _context26.next = 3;
+              return _this.contract.removeClaimOnBehalf(account, txParams);
+
+            case 3:
+              return _context26.abrupt("return", _context26.sent);
+
+            case 4:
+            case "end":
+              return _context26.stop();
+          }
+        }
+      }, _callee26);
+    }));
+
+    return function (_x32, _x33) {
+      return _ref26.apply(this, arguments);
+    };
+  }();
+  /**
    * Call (no gas consumed, doesn't require signer)
    * @returns BigNumber
    **/
 
 
-  this.totalRewardsAvailable = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee26() {
-    return regenerator_default.a.wrap(function _callee26$(_context26) {
+  this.totalRewardsAvailable = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee27() {
+    return regenerator_default.a.wrap(function _callee27$(_context27) {
       while (1) {
-        switch (_context26.prev = _context26.next) {
+        switch (_context27.prev = _context27.next) {
           case 0:
-            _context26.next = 2;
+            _context27.next = 2;
             return _this.contract.totalRewardsAvailable();
 
           case 2:
-            return _context26.abrupt("return", _context26.sent);
+            return _context27.abrupt("return", _context27.sent);
 
           case 3:
           case "end":
-            return _context26.stop();
+            return _context27.stop();
         }
       }
-    }, _callee26);
+    }, _callee27);
   }));
   /**
    * Transaction (consumes gas, requires signer)
@@ -33438,28 +33471,28 @@ function FeePool_FeePool(contractSettings) {
    **/
 
   this.acceptOwnership = /*#__PURE__*/function () {
-    var _ref27 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee27(txParams) {
-      return regenerator_default.a.wrap(function _callee27$(_context27) {
+    var _ref28 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee28(txParams) {
+      return regenerator_default.a.wrap(function _callee28$(_context28) {
         while (1) {
-          switch (_context27.prev = _context27.next) {
+          switch (_context28.prev = _context28.next) {
             case 0:
               txParams = txParams || {};
-              _context27.next = 3;
+              _context28.next = 3;
               return _this.contract.acceptOwnership(txParams);
 
             case 3:
-              return _context27.abrupt("return", _context27.sent);
+              return _context28.abrupt("return", _context28.sent);
 
             case 4:
             case "end":
-              return _context27.stop();
+              return _context28.stop();
           }
         }
-      }, _callee27);
+      }, _callee28);
     }));
 
-    return function (_x32) {
-      return _ref27.apply(this, arguments);
+    return function (_x34) {
+      return _ref28.apply(this, arguments);
     };
   }();
   /**
@@ -33473,28 +33506,28 @@ function FeePool_FeePool(contractSettings) {
 
 
   this.appendAccountIssuanceRecord = /*#__PURE__*/function () {
-    var _ref28 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee28(account, debtRatio, debtEntryIndex, txParams) {
-      return regenerator_default.a.wrap(function _callee28$(_context28) {
+    var _ref29 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee29(account, debtRatio, debtEntryIndex, txParams) {
+      return regenerator_default.a.wrap(function _callee29$(_context29) {
         while (1) {
-          switch (_context28.prev = _context28.next) {
+          switch (_context29.prev = _context29.next) {
             case 0:
               txParams = txParams || {};
-              _context28.next = 3;
+              _context29.next = 3;
               return _this.contract.appendAccountIssuanceRecord(account, debtRatio, debtEntryIndex, txParams);
 
             case 3:
-              return _context28.abrupt("return", _context28.sent);
+              return _context29.abrupt("return", _context29.sent);
 
             case 4:
             case "end":
-              return _context28.stop();
+              return _context29.stop();
           }
         }
-      }, _callee28);
+      }, _callee29);
     }));
 
-    return function (_x33, _x34, _x35, _x36) {
-      return _ref28.apply(this, arguments);
+    return function (_x35, _x36, _x37, _x38) {
+      return _ref29.apply(this, arguments);
     };
   }();
   /**
@@ -33503,23 +33536,23 @@ function FeePool_FeePool(contractSettings) {
    **/
 
 
-  this.owner = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee29() {
-    return regenerator_default.a.wrap(function _callee29$(_context29) {
+  this.owner = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee30() {
+    return regenerator_default.a.wrap(function _callee30$(_context30) {
       while (1) {
-        switch (_context29.prev = _context29.next) {
+        switch (_context30.prev = _context30.next) {
           case 0:
-            _context29.next = 2;
+            _context30.next = 2;
             return _this.contract.owner();
 
           case 2:
-            return _context29.abrupt("return", _context29.sent);
+            return _context30.abrupt("return", _context30.sent);
 
           case 3:
           case "end":
-            return _context29.stop();
+            return _context30.stop();
         }
       }
-    }, _callee29);
+    }, _callee30);
   }));
   /**
    * Transaction (consumes gas, requires signer)
@@ -33529,46 +33562,14 @@ function FeePool_FeePool(contractSettings) {
    **/
 
   this.setProxy = /*#__PURE__*/function () {
-    var _ref30 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee30(_proxy, txParams) {
-      return regenerator_default.a.wrap(function _callee30$(_context30) {
-        while (1) {
-          switch (_context30.prev = _context30.next) {
-            case 0:
-              txParams = txParams || {};
-              _context30.next = 3;
-              return _this.contract.setProxy(_proxy, txParams);
-
-            case 3:
-              return _context30.abrupt("return", _context30.sent);
-
-            case 4:
-            case "end":
-              return _context30.stop();
-          }
-        }
-      }, _callee30);
-    }));
-
-    return function (_x37, _x38) {
-      return _ref30.apply(this, arguments);
-    };
-  }();
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param txParams {TxParams}
-  
-   **/
-
-
-  this.selfDestruct = /*#__PURE__*/function () {
-    var _ref31 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee31(txParams) {
+    var _ref31 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee31(_proxy, txParams) {
       return regenerator_default.a.wrap(function _callee31$(_context31) {
         while (1) {
           switch (_context31.prev = _context31.next) {
             case 0:
               txParams = txParams || {};
               _context31.next = 3;
-              return _this.contract.selfDestruct(txParams);
+              return _this.contract.setProxy(_proxy, txParams);
 
             case 3:
               return _context31.abrupt("return", _context31.sent);
@@ -33581,8 +33582,40 @@ function FeePool_FeePool(contractSettings) {
       }, _callee31);
     }));
 
-    return function (_x39) {
+    return function (_x39, _x40) {
       return _ref31.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.selfDestruct = /*#__PURE__*/function () {
+    var _ref32 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee32(txParams) {
+      return regenerator_default.a.wrap(function _callee32$(_context32) {
+        while (1) {
+          switch (_context32.prev = _context32.next) {
+            case 0:
+              txParams = txParams || {};
+              _context32.next = 3;
+              return _this.contract.selfDestruct(txParams);
+
+            case 3:
+              return _context32.abrupt("return", _context32.sent);
+
+            case 4:
+            case "end":
+              return _context32.stop();
+          }
+        }
+      }, _callee32);
+    }));
+
+    return function (_x41) {
+      return _ref32.apply(this, arguments);
     };
   }();
   /**
@@ -33591,36 +33624,13 @@ function FeePool_FeePool(contractSettings) {
    **/
 
 
-  this.integrationProxy = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee32() {
-    return regenerator_default.a.wrap(function _callee32$(_context32) {
-      while (1) {
-        switch (_context32.prev = _context32.next) {
-          case 0:
-            _context32.next = 2;
-            return _this.contract.integrationProxy();
-
-          case 2:
-            return _context32.abrupt("return", _context32.sent);
-
-          case 3:
-          case "end":
-            return _context32.stop();
-        }
-      }
-    }, _callee32);
-  }));
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
-
-  this.SELFDESTRUCT_DELAY = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee33() {
+  this.integrationProxy = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee33() {
     return regenerator_default.a.wrap(function _callee33$(_context33) {
       while (1) {
         switch (_context33.prev = _context33.next) {
           case 0:
             _context33.next = 2;
-            return _this.contract.SELFDESTRUCT_DELAY();
+            return _this.contract.integrationProxy();
 
           case 2:
             return _context33.abrupt("return", _context33.sent);
@@ -33637,13 +33647,13 @@ function FeePool_FeePool(contractSettings) {
    * @returns BigNumber
    **/
 
-  this.getPenaltyThresholdRatio = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee34() {
+  this.SELFDESTRUCT_DELAY = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee34() {
     return regenerator_default.a.wrap(function _callee34$(_context34) {
       while (1) {
         switch (_context34.prev = _context34.next) {
           case 0:
             _context34.next = 2;
-            return _this.contract.getPenaltyThresholdRatio();
+            return _this.contract.SELFDESTRUCT_DELAY();
 
           case 2:
             return _context34.abrupt("return", _context34.sent);
@@ -33654,6 +33664,29 @@ function FeePool_FeePool(contractSettings) {
         }
       }
     }, _callee34);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+  this.getPenaltyThresholdRatio = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee35() {
+    return regenerator_default.a.wrap(function _callee35$(_context35) {
+      while (1) {
+        switch (_context35.prev = _context35.next) {
+          case 0:
+            _context35.next = 2;
+            return _this.contract.getPenaltyThresholdRatio();
+
+          case 2:
+            return _context35.abrupt("return", _context35.sent);
+
+          case 3:
+          case "end":
+            return _context35.stop();
+        }
+      }
+    }, _callee35);
   }));
   /**
    * Transaction (consumes gas, requires signer)
@@ -33670,48 +33703,14 @@ function FeePool_FeePool(contractSettings) {
    **/
 
   this.importFeePeriod = /*#__PURE__*/function () {
-    var _ref35 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee35(feePeriodIndex, feePeriodId, startingDebtIndex, startTime, feesToDistribute, feesClaimed, rewardsToDistribute, rewardsClaimed, txParams) {
-      return regenerator_default.a.wrap(function _callee35$(_context35) {
-        while (1) {
-          switch (_context35.prev = _context35.next) {
-            case 0:
-              txParams = txParams || {};
-              _context35.next = 3;
-              return _this.contract.importFeePeriod(feePeriodIndex, feePeriodId, startingDebtIndex, startTime, feesToDistribute, feesClaimed, rewardsToDistribute, rewardsClaimed, txParams);
-
-            case 3:
-              return _context35.abrupt("return", _context35.sent);
-
-            case 4:
-            case "end":
-              return _context35.stop();
-          }
-        }
-      }, _callee35);
-    }));
-
-    return function (_x40, _x41, _x42, _x43, _x44, _x45, _x46, _x47, _x48) {
-      return _ref35.apply(this, arguments);
-    };
-  }();
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param account {String<EthAddress>}
-   * @param quantity {BigNumber}
-   * @param txParams {TxParams}
-  
-   **/
-
-
-  this.appendVestingEntry = /*#__PURE__*/function () {
-    var _ref36 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee36(account, quantity, txParams) {
+    var _ref36 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee36(feePeriodIndex, feePeriodId, startingDebtIndex, startTime, feesToDistribute, feesClaimed, rewardsToDistribute, rewardsClaimed, txParams) {
       return regenerator_default.a.wrap(function _callee36$(_context36) {
         while (1) {
           switch (_context36.prev = _context36.next) {
             case 0:
               txParams = txParams || {};
               _context36.next = 3;
-              return _this.contract.appendVestingEntry(account, quantity, txParams);
+              return _this.contract.importFeePeriod(feePeriodIndex, feePeriodId, startingDebtIndex, startTime, feesToDistribute, feesClaimed, rewardsToDistribute, rewardsClaimed, txParams);
 
             case 3:
               return _context36.abrupt("return", _context36.sent);
@@ -33724,8 +33723,42 @@ function FeePool_FeePool(contractSettings) {
       }, _callee36);
     }));
 
-    return function (_x49, _x50, _x51) {
+    return function (_x42, _x43, _x44, _x45, _x46, _x47, _x48, _x49, _x50) {
       return _ref36.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param account {String<EthAddress>}
+   * @param quantity {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.appendVestingEntry = /*#__PURE__*/function () {
+    var _ref37 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee37(account, quantity, txParams) {
+      return regenerator_default.a.wrap(function _callee37$(_context37) {
+        while (1) {
+          switch (_context37.prev = _context37.next) {
+            case 0:
+              txParams = txParams || {};
+              _context37.next = 3;
+              return _this.contract.appendVestingEntry(account, quantity, txParams);
+
+            case 3:
+              return _context37.abrupt("return", _context37.sent);
+
+            case 4:
+            case "end":
+              return _context37.stop();
+          }
+        }
+      }, _callee37);
+    }));
+
+    return function (_x51, _x52, _x53) {
+      return _ref37.apply(this, arguments);
     };
   }();
   /**
@@ -33736,27 +33769,27 @@ function FeePool_FeePool(contractSettings) {
 
 
   this.amountReceivedFromTransfer = /*#__PURE__*/function () {
-    var _ref37 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee37(value) {
-      return regenerator_default.a.wrap(function _callee37$(_context37) {
+    var _ref38 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee38(value) {
+      return regenerator_default.a.wrap(function _callee38$(_context38) {
         while (1) {
-          switch (_context37.prev = _context37.next) {
+          switch (_context38.prev = _context38.next) {
             case 0:
-              _context37.next = 2;
+              _context38.next = 2;
               return _this.contract.amountReceivedFromTransfer(value);
 
             case 2:
-              return _context37.abrupt("return", _context37.sent);
+              return _context38.abrupt("return", _context38.sent);
 
             case 3:
             case "end":
-              return _context37.stop();
+              return _context38.stop();
           }
         }
-      }, _callee37);
+      }, _callee38);
     }));
 
-    return function (_x52) {
-      return _ref37.apply(this, arguments);
+    return function (_x54) {
+      return _ref38.apply(this, arguments);
     };
   }();
   /**
@@ -33765,23 +33798,23 @@ function FeePool_FeePool(contractSettings) {
    **/
 
 
-  this.selfDestructInitiated = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee38() {
-    return regenerator_default.a.wrap(function _callee38$(_context38) {
+  this.selfDestructInitiated = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee39() {
+    return regenerator_default.a.wrap(function _callee39$(_context39) {
       while (1) {
-        switch (_context38.prev = _context38.next) {
+        switch (_context39.prev = _context39.next) {
           case 0:
-            _context38.next = 2;
+            _context39.next = 2;
             return _this.contract.selfDestructInitiated();
 
           case 2:
-            return _context38.abrupt("return", _context38.sent);
+            return _context39.abrupt("return", _context39.sent);
 
           case 3:
           case "end":
-            return _context38.stop();
+            return _context39.stop();
         }
       }
-    }, _callee38);
+    }, _callee39);
   }));
   /**
    * Transaction (consumes gas, requires signer)
@@ -33791,46 +33824,14 @@ function FeePool_FeePool(contractSettings) {
    **/
 
   this.setMessageSender = /*#__PURE__*/function () {
-    var _ref39 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee39(sender, txParams) {
-      return regenerator_default.a.wrap(function _callee39$(_context39) {
-        while (1) {
-          switch (_context39.prev = _context39.next) {
-            case 0:
-              txParams = txParams || {};
-              _context39.next = 3;
-              return _this.contract.setMessageSender(sender, txParams);
-
-            case 3:
-              return _context39.abrupt("return", _context39.sent);
-
-            case 4:
-            case "end":
-              return _context39.stop();
-          }
-        }
-      }, _callee39);
-    }));
-
-    return function (_x53, _x54) {
-      return _ref39.apply(this, arguments);
-    };
-  }();
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param txParams {TxParams}
-  
-   **/
-
-
-  this.initiateSelfDestruct = /*#__PURE__*/function () {
-    var _ref40 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee40(txParams) {
+    var _ref40 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee40(sender, txParams) {
       return regenerator_default.a.wrap(function _callee40$(_context40) {
         while (1) {
           switch (_context40.prev = _context40.next) {
             case 0:
               txParams = txParams || {};
               _context40.next = 3;
-              return _this.contract.initiateSelfDestruct(txParams);
+              return _this.contract.setMessageSender(sender, txParams);
 
             case 3:
               return _context40.abrupt("return", _context40.sent);
@@ -33843,8 +33844,40 @@ function FeePool_FeePool(contractSettings) {
       }, _callee40);
     }));
 
-    return function (_x55) {
+    return function (_x55, _x56) {
       return _ref40.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.initiateSelfDestruct = /*#__PURE__*/function () {
+    var _ref41 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee41(txParams) {
+      return regenerator_default.a.wrap(function _callee41$(_context41) {
+        while (1) {
+          switch (_context41.prev = _context41.next) {
+            case 0:
+              txParams = txParams || {};
+              _context41.next = 3;
+              return _this.contract.initiateSelfDestruct(txParams);
+
+            case 3:
+              return _context41.abrupt("return", _context41.sent);
+
+            case 4:
+            case "end":
+              return _context41.stop();
+          }
+        }
+      }, _callee41);
+    }));
+
+    return function (_x57) {
+      return _ref41.apply(this, arguments);
     };
   }();
   /**
@@ -33853,23 +33886,23 @@ function FeePool_FeePool(contractSettings) {
    **/
 
 
-  this.selfDestructBeneficiary = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee41() {
-    return regenerator_default.a.wrap(function _callee41$(_context41) {
+  this.selfDestructBeneficiary = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee42() {
+    return regenerator_default.a.wrap(function _callee42$(_context42) {
       while (1) {
-        switch (_context41.prev = _context41.next) {
+        switch (_context42.prev = _context42.next) {
           case 0:
-            _context41.next = 2;
+            _context42.next = 2;
             return _this.contract.selfDestructBeneficiary();
 
           case 2:
-            return _context41.abrupt("return", _context41.sent);
+            return _context42.abrupt("return", _context42.sent);
 
           case 3:
           case "end":
-            return _context41.stop();
+            return _context42.stop();
         }
       }
-    }, _callee41);
+    }, _callee42);
   }));
   /**
    * Call (no gas consumed, doesn't require signer)
@@ -33878,27 +33911,27 @@ function FeePool_FeePool(contractSettings) {
    **/
 
   this.exchangeFeeIncurred = /*#__PURE__*/function () {
-    var _ref42 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee42(value) {
-      return regenerator_default.a.wrap(function _callee42$(_context42) {
+    var _ref43 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee43(value) {
+      return regenerator_default.a.wrap(function _callee43$(_context43) {
         while (1) {
-          switch (_context42.prev = _context42.next) {
+          switch (_context43.prev = _context43.next) {
             case 0:
-              _context42.next = 2;
+              _context43.next = 2;
               return _this.contract.exchangeFeeIncurred(value);
 
             case 2:
-              return _context42.abrupt("return", _context42.sent);
+              return _context43.abrupt("return", _context43.sent);
 
             case 3:
             case "end":
-              return _context42.stop();
+              return _context43.stop();
           }
         }
-      }, _callee42);
+      }, _callee43);
     }));
 
-    return function (_x56) {
-      return _ref42.apply(this, arguments);
+    return function (_x58) {
+      return _ref43.apply(this, arguments);
     };
   }();
   /**
@@ -33907,23 +33940,23 @@ function FeePool_FeePool(contractSettings) {
    **/
 
 
-  this.FEE_PERIOD_LENGTH = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee43() {
-    return regenerator_default.a.wrap(function _callee43$(_context43) {
+  this.FEE_PERIOD_LENGTH = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee44() {
+    return regenerator_default.a.wrap(function _callee44$(_context44) {
       while (1) {
-        switch (_context43.prev = _context43.next) {
+        switch (_context44.prev = _context44.next) {
           case 0:
-            _context43.next = 2;
+            _context44.next = 2;
             return _this.contract.FEE_PERIOD_LENGTH();
 
           case 2:
-            return _context43.abrupt("return", _context43.sent);
+            return _context44.abrupt("return", _context44.sent);
 
           case 3:
           case "end":
-            return _context43.stop();
+            return _context44.stop();
         }
       }
-    }, _callee43);
+    }, _callee44);
   }));
   /**
    * Transaction (consumes gas, requires signer)
@@ -33932,28 +33965,28 @@ function FeePool_FeePool(contractSettings) {
    **/
 
   this.claimFees = /*#__PURE__*/function () {
-    var _ref44 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee44(txParams) {
-      return regenerator_default.a.wrap(function _callee44$(_context44) {
+    var _ref45 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee45(txParams) {
+      return regenerator_default.a.wrap(function _callee45$(_context45) {
         while (1) {
-          switch (_context44.prev = _context44.next) {
+          switch (_context45.prev = _context45.next) {
             case 0:
               txParams = txParams || {};
-              _context44.next = 3;
+              _context45.next = 3;
               return _this.contract.claimFees(txParams);
 
             case 3:
-              return _context44.abrupt("return", _context44.sent);
+              return _context45.abrupt("return", _context45.sent);
 
             case 4:
             case "end":
-              return _context44.stop();
+              return _context45.stop();
           }
         }
-      }, _callee44);
+      }, _callee45);
     }));
 
-    return function (_x57) {
-      return _ref44.apply(this, arguments);
+    return function (_x59) {
+      return _ref45.apply(this, arguments);
     };
   }();
   /**
@@ -33962,36 +33995,13 @@ function FeePool_FeePool(contractSettings) {
    **/
 
 
-  this.MIN_FEE_PERIOD_DURATION = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee45() {
-    return regenerator_default.a.wrap(function _callee45$(_context45) {
-      while (1) {
-        switch (_context45.prev = _context45.next) {
-          case 0:
-            _context45.next = 2;
-            return _this.contract.MIN_FEE_PERIOD_DURATION();
-
-          case 2:
-            return _context45.abrupt("return", _context45.sent);
-
-          case 3:
-          case "end":
-            return _context45.stop();
-        }
-      }
-    }, _callee45);
-  }));
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String<EthAddress>
-   **/
-
-  this.messageSender = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee46() {
+  this.MIN_FEE_PERIOD_DURATION = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee46() {
     return regenerator_default.a.wrap(function _callee46$(_context46) {
       while (1) {
         switch (_context46.prev = _context46.next) {
           case 0:
             _context46.next = 2;
-            return _this.contract.messageSender();
+            return _this.contract.MIN_FEE_PERIOD_DURATION();
 
           case 2:
             return _context46.abrupt("return", _context46.sent);
@@ -34005,32 +34015,55 @@ function FeePool_FeePool(contractSettings) {
   }));
   /**
    * Call (no gas consumed, doesn't require signer)
+   * @returns String<EthAddress>
+   **/
+
+  this.messageSender = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee47() {
+    return regenerator_default.a.wrap(function _callee47$(_context47) {
+      while (1) {
+        switch (_context47.prev = _context47.next) {
+          case 0:
+            _context47.next = 2;
+            return _this.contract.messageSender();
+
+          case 2:
+            return _context47.abrupt("return", _context47.sent);
+
+          case 3:
+          case "end":
+            return _context47.stop();
+        }
+      }
+    }, _callee47);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
    * @param value {BigNumber}
    * @returns BigNumber
    **/
 
   this.amountReceivedFromExchange = /*#__PURE__*/function () {
-    var _ref47 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee47(value) {
-      return regenerator_default.a.wrap(function _callee47$(_context47) {
+    var _ref48 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee48(value) {
+      return regenerator_default.a.wrap(function _callee48$(_context48) {
         while (1) {
-          switch (_context47.prev = _context47.next) {
+          switch (_context48.prev = _context48.next) {
             case 0:
-              _context47.next = 2;
+              _context48.next = 2;
               return _this.contract.amountReceivedFromExchange(value);
 
             case 2:
-              return _context47.abrupt("return", _context47.sent);
+              return _context48.abrupt("return", _context48.sent);
 
             case 3:
             case "end":
-              return _context47.stop();
+              return _context48.stop();
           }
         }
-      }, _callee47);
+      }, _callee48);
     }));
 
-    return function (_x58) {
-      return _ref47.apply(this, arguments);
+    return function (_x60) {
+      return _ref48.apply(this, arguments);
     };
   }();
   /**
@@ -34039,36 +34072,13 @@ function FeePool_FeePool(contractSettings) {
    **/
 
 
-  this.targetThreshold = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee48() {
-    return regenerator_default.a.wrap(function _callee48$(_context48) {
-      while (1) {
-        switch (_context48.prev = _context48.next) {
-          case 0:
-            _context48.next = 2;
-            return _this.contract.targetThreshold();
-
-          case 2:
-            return _context48.abrupt("return", _context48.sent);
-
-          case 3:
-          case "end":
-            return _context48.stop();
-        }
-      }
-    }, _callee48);
-  }));
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String<EthAddress>
-   **/
-
-  this.FEE_ADDRESS = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee49() {
+  this.targetThreshold = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee49() {
     return regenerator_default.a.wrap(function _callee49$(_context49) {
       while (1) {
         switch (_context49.prev = _context49.next) {
           case 0:
             _context49.next = 2;
-            return _this.contract.FEE_ADDRESS();
+            return _this.contract.targetThreshold();
 
           case 2:
             return _context49.abrupt("return", _context49.sent);
@@ -34085,13 +34095,13 @@ function FeePool_FeePool(contractSettings) {
    * @returns String<EthAddress>
    **/
 
-  this.proxy = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee50() {
+  this.FEE_ADDRESS = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee50() {
     return regenerator_default.a.wrap(function _callee50$(_context50) {
       while (1) {
         switch (_context50.prev = _context50.next) {
           case 0:
             _context50.next = 2;
-            return _this.contract.proxy();
+            return _this.contract.FEE_ADDRESS();
 
           case 2:
             return _context50.abrupt("return", _context50.sent);
@@ -34104,42 +34114,32 @@ function FeePool_FeePool(contractSettings) {
     }, _callee50);
   }));
   /**
-   * Transaction (consumes gas, requires signer)
-   * @param exchangeRatesAddress {String<EthAddress>}
-   * @param txParams {TxParams}
-  
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<EthAddress>
    **/
 
-  this.convertXDRFeesTosUSD = /*#__PURE__*/function () {
-    var _ref51 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee51(exchangeRatesAddress, txParams) {
-      return regenerator_default.a.wrap(function _callee51$(_context51) {
-        while (1) {
-          switch (_context51.prev = _context51.next) {
-            case 0:
-              txParams = txParams || {};
-              _context51.next = 3;
-              return _this.contract.convertXDRFeesTosUSD(exchangeRatesAddress, txParams);
+  this.proxy = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee51() {
+    return regenerator_default.a.wrap(function _callee51$(_context51) {
+      while (1) {
+        switch (_context51.prev = _context51.next) {
+          case 0:
+            _context51.next = 2;
+            return _this.contract.proxy();
 
-            case 3:
-              return _context51.abrupt("return", _context51.sent);
+          case 2:
+            return _context51.abrupt("return", _context51.sent);
 
-            case 4:
-            case "end":
-              return _context51.stop();
-          }
+          case 3:
+          case "end":
+            return _context51.stop();
         }
-      }, _callee51);
-    }));
-
-    return function (_x59, _x60) {
-      return _ref51.apply(this, arguments);
-    };
-  }();
+      }
+    }, _callee51);
+  }));
   /**
    * Call (no gas consumed, doesn't require signer)
    * @returns BigNumber
    **/
-
 
   this.MAX_FEE_PERIOD_DURATION = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee52() {
     return regenerator_default.a.wrap(function _callee52$(_context52) {
