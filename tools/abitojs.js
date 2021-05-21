@@ -48,6 +48,7 @@ const contracts = {
   EtherCollateral: true,
   Issuer: true,
   AddressResolver: true,
+  BNBCollateral: true,
   // the synths will be added on for each network
 };
 

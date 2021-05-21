@@ -10,6 +10,7 @@ import RewardEscrow from './RewardEscrow';
 import Exchanger from './Exchanger';
 import Issuer from './Issuer';
 import AddressResolver from './AddressResolver';
+import BNBCollateral from './BNBCollateral';
 import ODR from './ODR';
 import oUSD from './oUSD';
 import oXAU from './oXAU';
@@ -33,6 +34,7 @@ export default {
   Exchanger,
   Issuer,
   AddressResolver,
+  BNBCollateral,
   ODR,
   oUSD,
   oXAU,
