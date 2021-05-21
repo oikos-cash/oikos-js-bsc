@@ -16,6 +16,7 @@
     "abitojs": "node ./tools/abitojs.js",
     "webpack": "webpack --mode=production",
     "build": "npm run clear && npm run abitojs && npm run format && npm run docs && npm run webpack && npm test",
+    "rates": "babel-node examples/rates.js",
     "repl": "NODE_OPTIONS='--experimental-repl-await' node ./repl",
     "repl:shasta": "TRON_NETWORK=shasta npm run repl",
     "repl:mainnet": "TRON_NETWORK=mainnet npm run repl"

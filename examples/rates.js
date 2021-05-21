@@ -1,10 +1,10 @@
 import { OikosJs } from '../src/index.node';
-import {getDefaultProvider} from 'ethers';
+import { getDefaultProvider } from 'ethers';
 
 const run = async () => {
-    const provider = getDefaultProvider('https://data-seed-prebsc-2-s3.binance.org:8545');
-    const networkId = 97;
-    const snx = new OikosJs({ networkId, provider });
+  // const provider = getDefaultProvider('https://bsc-dataseed.binance.org/');
+  const networkId = 56;
+  const snx = new OikosJs({ networkId });
 
   const b32 = snx.ethers.utils.formatBytes32String;
 
@@ -12,8 +12,8 @@ const run = async () => {
 
   const currKeys = [b32('OKS'), ...(await snx.Oikos.availableCurrencyKeys())];
 
-  console.log(snx.ExchangeRates);
-  
+  // console.log(snx.ExchangeRates);
+
   // TODO: XDR handled specially...
   const rates = await Promise.all(currKeys.map(k => snx.ExchangeRates.rateForCurrency(k)));
   const times = await Promise.all(currKeys.map(k => snx.ExchangeRates.lastRateUpdateTimes(k)));
