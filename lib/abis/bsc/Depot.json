@@ -70,6 +70,21 @@
 		"signature": "0x0c928f05"
 	},
 	{
+		"constant": true,
+		"inputs": [],
+		"name": "maxBNBPurchase",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function",
+		"signature": "0x11c270f8"
+	},
+	{
 		"constant": false,
 		"inputs": [
 			{
@@ -405,6 +420,21 @@
 	},
 	{
 		"constant": false,
+		"inputs": [
+			{
+				"name": "_maxBNBPurchase",
+				"type": "uint256"
+			}
+		],
+		"name": "setMaxBNBPurchase",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function",
+		"signature": "0x93e5b088"
+	},
+	{
+		"constant": false,
 		"inputs": [],
 		"name": "selfDestruct",
 		"outputs": [],
@@ -470,21 +500,6 @@
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "maxEthPurchase",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function",
-		"signature": "0xb1338cc4"
-	},
-	{
-		"constant": true,
-		"inputs": [],
 		"name": "selfDestructInitiated",
 		"outputs": [
 			{
@@ -496,21 +511,6 @@
 		"stateMutability": "view",
 		"type": "function",
 		"signature": "0xb8225dec"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_maxEthPurchase",
-				"type": "uint256"
-			}
-		],
-		"name": "setMaxEthPurchase",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function",
-		"signature": "0xbb7df172"
 	},
 	{
 		"constant": false,
@@ -664,9 +664,9 @@
 				"type": "uint256"
 			}
 		],
-		"name": "MaxEthPurchaseUpdated",
+		"name": "MaxBNBPurchaseUpdated",
 		"type": "event",
-		"signature": "0xdc2be810a133e01cb21a41082f15b2863d96f9fe79d1f84d7e2d5b810c5c8243"
+		"signature": "0xa3dcc875278975f25cff57788c81b6fdb265d78bb516c7453b5412f2d015e24a"
 	},
 	{
 		"anonymous": false,
@@ -842,7 +842,7 @@
 			},
 			{
 				"indexed": false,
-				"name": "fromETHAmount",
+				"name": "fromBNBAmount",
 				"type": "uint256"
 			},
 			{

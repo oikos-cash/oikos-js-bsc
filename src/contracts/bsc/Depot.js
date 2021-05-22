@@ -54,6 +54,14 @@ function Depot(contractSettings) {
   };
 
   /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+  this.maxBNBPurchase = async () => {
+    return await this.contract.maxBNBPurchase();
+  };
+
+  /**
    * Transaction (consumes gas, requires signer)
    * @param _owner {String<EthAddress>}
    * @param txParams {TxParams}
@@ -274,6 +282,17 @@ function Depot(contractSettings) {
 
   /**
    * Transaction (consumes gas, requires signer)
+   * @param _maxBNBPurchase {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+  this.setMaxBNBPurchase = async (_maxBNBPurchase, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.setMaxBNBPurchase(_maxBNBPurchase, txParams);
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
    * @param txParams {TxParams}
   
    **/
@@ -313,29 +332,10 @@ function Depot(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
-  this.maxEthPurchase = async () => {
-    return await this.contract.maxEthPurchase();
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
    * @returns boolean
    **/
   this.selfDestructInitiated = async () => {
     return await this.contract.selfDestructInitiated();
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param _maxEthPurchase {BigNumber}
-   * @param txParams {TxParams}
-  
-   **/
-  this.setMaxEthPurchase = async (_maxEthPurchase, txParams) => {
-    txParams = txParams || {};
-    return await this.contract.setMaxEthPurchase(_maxEthPurchase, txParams);
   };
 
   /**
