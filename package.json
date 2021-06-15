@@ -28,7 +28,7 @@
     "@ledgerhq/hw-app-eth": "4.74.2",
     "@ledgerhq/hw-transport": "4.74.2",
     "@ledgerhq/hw-transport-u2f": "4.74.2",
-    "@oikos/oikos-bsc": "^0.2.23",
+    "@oikos/oikos-bsc": "^0.2.24",
     "@oikos/oikos-data": "^0.1.7",
     "@walletconnect/web3-provider": "1.0.0-beta.47",
     "bignumber.js": "^9.0.1",

@@ -23970,7 +23970,7 @@ var BSC_ADDRESSES = {
   SafeDecimalMath: '0xEB7bA0e19ef6dCe1C59C0baA8c68a6168d4949a3',
   Math: '0x250E2f8a80001153c7e62200376C753832A68CBE',
   AddressResolver: '0x24bc02eB05CcaD6e6a620144f71922EAf9b3b64A',
-  ExchangeRates: '0x87549B864013149630fb33D7E2BC64EE9f14E5Be',
+  ExchangeRates: '0x59472bA96b74439a7f1676d97bCbEa880592bD66',
   RewardEscrow: '0x769989C007489ADC818C5f9149e5c93b19E412Bb',
   OikosEscrow: '0xb09280811Fb5b73D9e3e80C6CE37bC81B767013A',
   OikosState: '0x5065DfD3598D6Dfdc43E6621FAe5ECF78aadbeC1',
@@ -25423,7 +25423,8 @@ var BSC_ADDRESSES = {
   }],
   payable: false,
   stateMutability: 'nonpayable',
-  type: 'constructor'
+  type: 'constructor',
+  signature: 'constructor'
 }, {
   anonymous: false,
   inputs: [{
@@ -30680,8 +30681,7 @@ var BSC_ADDRESSES = {
   }],
   payable: false,
   stateMutability: 'nonpayable',
-  type: 'constructor',
-  signature: 'constructor'
+  type: 'constructor'
 }, {
   anonymous: false,
   inputs: [{
