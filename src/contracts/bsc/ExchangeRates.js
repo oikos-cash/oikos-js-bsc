@@ -356,6 +356,15 @@ function ExchangeRates(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
+   * @param  {bytes32}
+   * @returns Number
+   **/
+  this.currencyKeyDecimals = async bytes32_1 => {
+    return await this.contract.currencyKeyDecimals(bytes32_1);
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
    * @returns boolean
    **/
   this.selfDestructInitiated = async () => {

@@ -573,6 +573,26 @@
 	},
 	{
 		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"name": "currencyKeyDecimals",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function",
+		"signature": "0xb295ad34"
+	},
+	{
+		"constant": true,
 		"inputs": [],
 		"name": "selfDestructInitiated",
 		"outputs": [
