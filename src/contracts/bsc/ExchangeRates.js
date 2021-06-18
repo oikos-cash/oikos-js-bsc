@@ -118,6 +118,15 @@ function ExchangeRates(contractSettings) {
   };
 
   /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param aggregator {String<EthAddress>}
+   * @returns bytes32[]
+   **/
+  this.currenciesUsingAggregator = async aggregator => {
+    return await this.contract.currenciesUsingAggregator(aggregator);
+  };
+
+  /**
    * Transaction (consumes gas, requires signer)
    * @param currencyKey {bytes32}
    * @param txParams {TxParams}
