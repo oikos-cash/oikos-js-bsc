@@ -30935,9 +30935,9 @@ var BSC_SYNTHS = [{
   sign: '₿',
   desc: 'Inverted Bitcoin',
   inverted: {
-    entryPoint: 10600,
-    upperLimit: 15900,
-    lowerLimit: 5300
+    entryPoint: 34360.1,
+    upperLimit: 51540.15,
+    lowerLimit: 22906.73
   },
   subclass: 'PurgeableSynth'
 }, {
@@ -30947,9 +30947,9 @@ var BSC_SYNTHS = [{
   sign: 'Ξ',
   desc: 'Inverted Ether',
   inverted: {
-    entryPoint: 220,
-    upperLimit: 330,
-    lowerLimit: 110
+    entryPoint: 2111.65,
+    upperLimit: 3167.47,
+    lowerLimit: 1407.76
   },
   subclass: 'PurgeableSynth'
 }, {
@@ -30959,9 +30959,9 @@ var BSC_SYNTHS = [{
   sign: '',
   desc: 'Inverted Binance Coin',
   inverted: {
-    entryPoint: 29,
-    upperLimit: 44,
-    lowerLimit: 14.5
+    entryPoint: 322.89,
+    upperLimit: 484.33,
+    lowerLimit: 215.26
   },
   subclass: 'PurgeableSynth'
 }];
