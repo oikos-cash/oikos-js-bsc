@@ -5,12 +5,12 @@ import synths from '../lib/synths';
 
 const SUPPORTED_NETWORKS = {
   56: 'bsc',
-  // 97: 'bsctestnet',
+  97: 'testnet',
 };
 
 const network2providerUrl = {
   bsc: 'https://bsc-dataseed.binance.org',
-  bsctestnet: 'https://data-seed-prebsc-2-s3.binance.org:8545',
+  testnet: 'https://data-seed-prebsc-2-s3.binance.org:8545',
 };
 
 class ContractSettings {

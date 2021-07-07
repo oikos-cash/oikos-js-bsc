@@ -6,7 +6,7 @@ const docsDescriptions = require('../lib/docSrc/descriptions');
 
 const SUPPORTED_NETWORKS = {
   56: 'bsc',
-  //97: 'bsctestnet',
+  97: 'testnet',
 };
 
 /**

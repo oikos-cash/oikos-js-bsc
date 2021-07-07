@@ -151,13 +151,13 @@ function OikosState(contractSettings) {
   /**
    * Transaction (consumes gas, requires signer)
    * @param accounts {address[]}
-   * @param sUSDAmounts {uint256[]}
+   * @param oUSDAmounts {uint256[]}
    * @param txParams {TxParams}
   
    **/
-  this.importIssuerData = async (accounts, sUSDAmounts, txParams) => {
+  this.importIssuerData = async (accounts, oUSDAmounts, txParams) => {
     txParams = txParams || {};
-    return await this.contract.importIssuerData(accounts, sUSDAmounts, txParams);
+    return await this.contract.importIssuerData(accounts, oUSDAmounts, txParams);
   };
 
   /**

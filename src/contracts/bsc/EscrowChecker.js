@@ -27,8 +27,8 @@ function EscrowChecker(contractSettings) {
    * Call (no gas consumed, doesn't require signer)
    * @returns String<EthAddress>
    **/
-  this.oikos_escrow = async () => {
-    return await this.contract.oikos_escrow();
+  this.Oikos_escrow = async () => {
+    return await this.contract.Oikos_escrow();
   };
 }
 

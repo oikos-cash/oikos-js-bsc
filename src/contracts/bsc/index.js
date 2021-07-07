@@ -11,9 +11,7 @@ import Exchanger from './Exchanger';
 import Issuer from './Issuer';
 import AddressResolver from './AddressResolver';
 import BNBCollateral from './BNBCollateral';
-import ODR from './ODR';
 import oUSD from './oUSD';
-import oXAU from './oXAU';
 import oBTC from './oBTC';
 import oETH from './oETH';
 import oBNB from './oBNB';
@@ -35,9 +33,7 @@ export default {
   Issuer,
   AddressResolver,
   BNBCollateral,
-  ODR,
   oUSD,
-  oXAU,
   oBTC,
   oETH,
   oBNB,

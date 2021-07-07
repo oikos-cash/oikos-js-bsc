@@ -16,20 +16,32 @@ function Exchanger(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @returns String<EthAddress>
+   * @returns BigNumber
    **/
-  this.resolver = async () => {
-    return await this.contract.resolver();
+  this.MAX_ADDRESSES_FROM_RESOLVER = async () => {
+    return await this.contract.MAX_ADDRESSES_FROM_RESOLVER();
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+  
+   **/
+  this.acceptOwnership = async txParams => {
+    txParams = txParams || {};
+    return await this.contract.acceptOwnership(txParams);
   };
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @param account {String<EthAddress>}
+   * @param from {String<EthAddress>}
    * @param currencyKey {bytes32}
+   * @param amount {BigNumber}
+   * @param refunded {BigNumber}
    * @returns BigNumber
    **/
-  this.maxSecsLeftInWaitingPeriod = async (account, currencyKey) => {
-    return await this.contract.maxSecsLeftInWaitingPeriod(account, currencyKey);
+  this.calculateAmountAfterSettlement = async (from, currencyKey, amount, refunded) => {
+    return await this.contract.calculateAmountAfterSettlement(from, currencyKey, amount, refunded);
   };
 
   /**
@@ -63,6 +75,108 @@ function Exchanger(contractSettings) {
 
   /**
    * Transaction (consumes gas, requires signer)
+   * @param exchangeForAddress {String<EthAddress>}
+   * @param from {String<EthAddress>}
+   * @param sourceCurrencyKey {bytes32}
+   * @param sourceAmount {BigNumber}
+   * @param destinationCurrencyKey {bytes32}
+   * @param txParams {TxParams}
+   * @returns BigNumber
+   **/
+  this.exchangeOnBehalf = async (
+    exchangeForAddress,
+    from,
+    sourceCurrencyKey,
+    sourceAmount,
+    destinationCurrencyKey,
+    txParams
+  ) => {
+    txParams = txParams || {};
+    return await this.contract.exchangeOnBehalf(
+      exchangeForAddress,
+      from,
+      sourceCurrencyKey,
+      sourceAmount,
+      destinationCurrencyKey,
+      txParams
+    );
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param sourceCurrencyKey {bytes32}
+   * @param destinationCurrencyKey {bytes32}
+   * @returns BigNumber
+   **/
+  this.feeRateForExchange = async (sourceCurrencyKey, destinationCurrencyKey) => {
+    return await this.contract.feeRateForExchange(sourceCurrencyKey, destinationCurrencyKey);
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param sourceAmount {BigNumber}
+   * @param sourceCurrencyKey {bytes32}
+   * @param destinationCurrencyKey {bytes32}
+   * @returns Object
+   **/
+  this.getAmountsForExchange = async (sourceAmount, sourceCurrencyKey, destinationCurrencyKey) => {
+    return await this.contract.getAmountsForExchange(
+      sourceAmount,
+      sourceCurrencyKey,
+      destinationCurrencyKey
+    );
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param sourceCurrencyKey {bytes32}
+   * @param sourceAmount {BigNumber}
+   * @param destinationCurrencyKey {bytes32}
+   * @returns BigNumber
+   **/
+  this.getPrice = async (sourceCurrencyKey, sourceAmount, destinationCurrencyKey) => {
+    return await this.contract.getPrice(sourceCurrencyKey, sourceAmount, destinationCurrencyKey);
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns bytes32[24]
+   **/
+  this.getResolverAddressesRequired = async () => {
+    return await this.contract.getResolverAddressesRequired();
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param account {String<EthAddress>}
+   * @param currencyKey {bytes32}
+   * @returns boolean
+   **/
+  this.hasWaitingPeriodOrSettlementOwing = async (account, currencyKey) => {
+    return await this.contract.hasWaitingPeriodOrSettlementOwing(account, currencyKey);
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param _resolver {String<EthAddress>}
+   * @returns boolean
+   **/
+  this.isResolverCached = async _resolver => {
+    return await this.contract.isResolverCached(_resolver);
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param account {String<EthAddress>}
+   * @param currencyKey {bytes32}
+   * @returns BigNumber
+   **/
+  this.maxSecsLeftInWaitingPeriod = async (account, currencyKey) => {
+    return await this.contract.maxSecsLeftInWaitingPeriod(account, currencyKey);
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
    * @param _owner {String<EthAddress>}
    * @param txParams {TxParams}
   
@@ -74,22 +188,57 @@ function Exchanger(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @param account {String<EthAddress>}
-   * @param currencyKey {bytes32}
-   * @returns Object
+   * @returns String<EthAddress>
    **/
-  this.settlementOwing = async (account, currencyKey) => {
-    return await this.contract.settlementOwing(account, currencyKey);
+  this.nominatedOwner = async () => {
+    return await this.contract.nominatedOwner();
   };
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @param sourceCurrencyKey {bytes32}
-   * @param destinationCurrencyKey {bytes32}
-   * @returns BigNumber
+   * @returns String<EthAddress>
    **/
-  this.feeRateForExchange = async (sourceCurrencyKey, destinationCurrencyKey) => {
-    return await this.contract.feeRateForExchange(sourceCurrencyKey, destinationCurrencyKey);
+  this.owner = async () => {
+    return await this.contract.owner();
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<EthAddress>
+   **/
+  this.resolver = async () => {
+    return await this.contract.resolver();
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param  {BigNumber}
+   * @returns bytes32
+   **/
+  this.resolverAddressesRequired = async uint256_1 => {
+    return await this.contract.resolverAddressesRequired(uint256_1);
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _resolver {String<EthAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+  this.setResolverAndSyncCache = async (_resolver, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.setResolverAndSyncCache(_resolver, txParams);
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _waitingPeriodSecs {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+  this.setWaitingPeriodSecs = async (_waitingPeriodSecs, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.setWaitingPeriodSecs(_waitingPeriodSecs, txParams);
   };
 
   /**
@@ -106,54 +255,12 @@ function Exchanger(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @param from {String<EthAddress>}
+   * @param account {String<EthAddress>}
    * @param currencyKey {bytes32}
-   * @param amount {BigNumber}
-   * @param refunded {BigNumber}
-   * @returns BigNumber
+   * @returns Object
    **/
-  this.calculateAmountAfterSettlement = async (from, currencyKey, amount, refunded) => {
-    return await this.contract.calculateAmountAfterSettlement(from, currencyKey, amount, refunded);
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param _resolver {String<EthAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-  this.setResolver = async (_resolver, txParams) => {
-    txParams = txParams || {};
-    return await this.contract.setResolver(_resolver, txParams);
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String<EthAddress>
-   **/
-  this.nominatedOwner = async () => {
-    return await this.contract.nominatedOwner();
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param _waitingPeriodSecs {BigNumber}
-   * @param txParams {TxParams}
-  
-   **/
-  this.setWaitingPeriodSecs = async (_waitingPeriodSecs, txParams) => {
-    txParams = txParams || {};
-    return await this.contract.setWaitingPeriodSecs(_waitingPeriodSecs, txParams);
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param txParams {TxParams}
-  
-   **/
-  this.acceptOwnership = async txParams => {
-    txParams = txParams || {};
-    return await this.contract.acceptOwnership(txParams);
+  this.settlementOwing = async (account, currencyKey) => {
+    return await this.contract.settlementOwing(account, currencyKey);
   };
 
   /**
@@ -162,33 +269,6 @@ function Exchanger(contractSettings) {
    **/
   this.waitingPeriodSecs = async () => {
     return await this.contract.waitingPeriodSecs();
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String<EthAddress>
-   **/
-  this.owner = async () => {
-    return await this.contract.owner();
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param _exchangeEnabled {boolean}
-   * @param txParams {TxParams}
-  
-   **/
-  this.setExchangeEnabled = async (_exchangeEnabled, txParams) => {
-    txParams = txParams || {};
-    return await this.contract.setExchangeEnabled(_exchangeEnabled, txParams);
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns boolean
-   **/
-  this.exchangeEnabled = async () => {
-    return await this.contract.exchangeEnabled();
   };
 }
 
