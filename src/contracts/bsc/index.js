@@ -13,6 +13,7 @@ import AddressResolver from './AddressResolver';
 import BNBCollateral from './BNBCollateral';
 import oUSD from './oUSD';
 import oBTC from './oBTC';
+import oXAU from './oXAU';
 import oETH from './oETH';
 import oBNB from './oBNB';
 import iBTC from './iBTC';
@@ -35,6 +36,7 @@ export default {
   BNBCollateral,
   oUSD,
   oBTC,
+  oXAU,
   oETH,
   oBNB,
   iBTC,
