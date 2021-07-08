@@ -23996,7 +23996,7 @@ var BSC_ADDRESSES = {
   ProxyOikos: '0xC32Af9ad3B0E242b97A68485a2D79EEF30584C20',
   TokenStateOikos: '0x2c09F1a267936F353b6d996f4613f8abd45A4747',
   Oikos: '0x2Cf82EC748753aD5d07E70B4E73a0A7935995D91',
-  Exchanger: '0xf283B16be2C742AdC682facB5a06609De05A032D',
+  Exchanger: '0xDe318f3F4292C0733f148eA47701529d2593511f',
   ExchangeState: '0x78fdE2e2A0fbcB84Fd75a31C640F7aCa5D8F17b0',
   Issuer: '0xBA302021b7694c7ffe7267B727F1eD509767c02B',
   IssuanceEternalStorage: '0x3c9225fCeF09d63B80B9A0Eb7004804328bD98CC',
@@ -30263,6 +30263,103 @@ var TESTNET_ADDRESSES = {
 }, {
   anonymous: false,
   inputs: [{
+    indexed: true,
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }, {
+    indexed: false,
+    internalType: 'bytes32',
+    name: 'src',
+    type: 'bytes32'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'amount',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'bytes32',
+    name: 'dest',
+    type: 'bytes32'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'amountReceived',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'exchangeFeeRate',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'roundIdForSrc',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'roundIdForDest',
+    type: 'uint256'
+  }],
+  name: 'ExchangeEntryAppended',
+  type: 'event',
+  signature: '0x62e40d554c7abcdd31074960d8347a2225daeb04d93bc748f049ba2ce9462398'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: true,
+    internalType: 'address',
+    name: 'from',
+    type: 'address'
+  }, {
+    indexed: false,
+    internalType: 'bytes32',
+    name: 'src',
+    type: 'bytes32'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'amount',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'bytes32',
+    name: 'dest',
+    type: 'bytes32'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'reclaim',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'rebate',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'srcRoundIdAtPeriodEnd',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'destRoundIdAtPeriodEnd',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'exchangeTimestamp',
+    type: 'uint256'
+  }],
+  name: 'ExchangeEntrySettled',
+  type: 'event',
+  signature: '0x8e3ad1f68bec55de3b6fa12ae2674a2a683a17c918a4cbf5157ac5d9ddc6e940'
+}, {
+  anonymous: false,
+  inputs: [{
     indexed: false,
     internalType: 'address',
     name: 'oldOwner',
@@ -35416,9 +35513,9 @@ var BSC_SYNTHS = [{
   desc: 'Inverse Bitcoin',
   subclass: 'PurgeableSynth',
   inverted: {
-    entryPoint: 9659,
-    upperLimit: 14488.5,
-    lowerLimit: 4829.5
+    entryPoint: 34360.1,
+    upperLimit: 51540.15,
+    lowerLimit: 22906.73
   }
 }, {
   name: 'iETH',
@@ -35428,9 +35525,9 @@ var BSC_SYNTHS = [{
   desc: 'Inverse Ether',
   subclass: 'PurgeableSynth',
   inverted: {
-    entryPoint: 180.16,
-    upperLimit: 315.28,
-    lowerLimit: 45.04
+    entryPoint: 2111.65,
+    upperLimit: 3167.47,
+    lowerLimit: 1407.76
   }
 }, {
   name: 'iBNB',
@@ -35440,9 +35537,9 @@ var BSC_SYNTHS = [{
   desc: 'Inverse Binance Coin',
   subclass: 'PurgeableSynth',
   inverted: {
-    entryPoint: 16.13,
-    upperLimit: 24.195,
-    lowerLimit: 8.065
+    entryPoint: 322.89,
+    upperLimit: 484.33,
+    lowerLimit: 215.26
   }
 }];
 var TESTNET_SYNTHS = [{
