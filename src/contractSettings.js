@@ -21,7 +21,6 @@ class ContractSettings {
    * @param networkId {Number} - default 1 - mainnet, also supports 42 (Kovan)
    */
   constructor(contractSettings) {
-    console.log({ contractSettings });
     contractSettings = contractSettings || {};
     const { provider, signer, networkId } = contractSettings;
     this.networkId = networkId || 56;
