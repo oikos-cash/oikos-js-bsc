@@ -32,6 +32,7 @@ const ctx = {
   oks: oksjs,
   BigNumber,
   b32: oksjs.ethers.utils.formatBytes32String,
+  pb32: oksjs.ethers.utils.parseBytes32String,
   bn,
   //Tronweb: require('tronweb'),
   //tronweb: snxjs.contractSettings.tronWeb,
