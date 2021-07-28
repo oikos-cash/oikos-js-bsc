@@ -5,11 +5,11 @@ import abi from '../../../lib/abis/bsc/Synth';
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function oUSD(contractSettings) {
+function oCAKE(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxyoUSD'],
+    this.contractSettings.addressList['ProxyoCAKE'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -437,4 +437,4 @@ function oUSD(contractSettings) {
   };
 }
 
-export default oUSD;
+export default oCAKE;

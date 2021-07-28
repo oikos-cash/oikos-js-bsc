@@ -19,6 +19,7 @@ import oBNB from './oBNB';
 import iBTC from './iBTC';
 import iETH from './iETH';
 import iBNB from './iBNB';
+import oCAKE from './oCAKE';
 
 export default {
   Depot,
@@ -42,4 +43,5 @@ export default {
   iBTC,
   iETH,
   iBNB,
+  oCAKE,
 };
