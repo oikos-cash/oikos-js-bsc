@@ -8,10 +8,12 @@ import Coinbase from '../lib/signers/coinbaseSigner';
 import PrivateKey from '../lib/signers/privateKeySigner';
 import WalletConnect from '../lib/signers/walletConnectSigner';
 import BSCWallet from '../lib/signers/bscSigner';
+import MathWallet from '../lib/signers/mathwalletSigner';
 
 const signers = {
   Trezor,
   Ledger,
+  MathWallet,
   Metamask,
   BSCWallet,
   PrivateKey,
