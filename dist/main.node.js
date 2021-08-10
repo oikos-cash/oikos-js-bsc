@@ -23984,10 +23984,10 @@ var BSC_ADDRESSES = {
   AddressResolver: '0x24bc02eB05CcaD6e6a620144f71922EAf9b3b64A',
   ExchangeRates: '0xe1ff83762F2db7274b6AC2c1C9Bb75B2A8574EaF',
   RewardEscrow: '0x769989C007489ADC818C5f9149e5c93b19E412Bb',
-  OikosEscrow: '0xb09280811Fb5b73D9e3e80C6CE37bC81B767013A',
+  OikosEscrow: '0x94b8B68Ad4c673355378A575f203dCFdA21e16E1',
   OikosState: '0x5065DfD3598D6Dfdc43E6621FAe5ECF78aadbeC1',
   ProxyFeePool: '0x3cFAa9FC30F6277990A96E9d11c1207dbf0d654C',
-  DelegateApprovals: '0xf718ebB2bA2587F8f146c85FF750CaB9238909C6',
+  DelegateApprovals: '0xD01A5518136Fb2635d13010Eb824EC081Df741bf',
   FeePoolEternalStorage: '0xfC3b24375D0a1E59E64612a7a816Ff442e89c4e5',
   FeePool: '0x4a7644B4b3ae6E4e2c53D01a39E7C4afA25061aF',
   FeePoolState: '0xdaF492F4cAdC2Ae2197663CB769329221b47109A',
@@ -29153,191 +29153,117 @@ var TESTNET_ADDRESSES = {
 }]);
 // CONCATENATED MODULE: ./lib/abis/bsc/OikosEscrow.js
 /* harmony default export */ var OikosEscrow = ([{
-  constant: true,
-  inputs: [],
-  name: 'oikos',
-  outputs: [{
-    name: '',
-    type: 'address'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x0c7c95ad'
-}, {
-  constant: false,
   inputs: [{
-    name: 'account',
-    type: 'address'
-  }],
-  name: 'purgeAccount',
-  outputs: [],
-  payable: false,
-  stateMutability: 'nonpayable',
-  type: 'function',
-  signature: '0x135c0701'
-}, {
-  constant: false,
-  inputs: [{
+    internalType: 'address',
     name: '_owner',
     type: 'address'
+  }, {
+    internalType: 'contract IOikos',
+    name: '_oikos',
+    type: 'address'
   }],
-  name: 'nominateNewOwner',
-  outputs: [],
   payable: false,
   stateMutability: 'nonpayable',
-  type: 'function',
-  signature: '0x1627540c'
+  type: 'constructor',
+  signature: 'constructor'
 }, {
-  constant: true,
+  anonymous: false,
   inputs: [{
-    name: 'account',
+    indexed: false,
+    internalType: 'address',
+    name: 'newOikos',
     type: 'address'
   }],
-  name: 'getNextVestingIndex',
-  outputs: [{
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x19e740c0'
+  name: 'OikosUpdated',
+  type: 'event',
+  signature: '0xcb046e61ab451d5fec11d3dfc4c550475bd0abd8df74a421c34be433f197c4df'
 }, {
-  constant: false,
+  anonymous: false,
   inputs: [{
-    name: 'account',
+    indexed: false,
+    internalType: 'address',
+    name: 'oldOwner',
     type: 'address'
   }, {
+    indexed: false,
+    internalType: 'address',
+    name: 'newOwner',
+    type: 'address'
+  }],
+  name: 'OwnerChanged',
+  type: 'event',
+  signature: '0xb532073b38c83145e3e5135377a08bf9aab55bc0fd7c1179cd4fb995d2a5159c'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    internalType: 'address',
+    name: 'newOwner',
+    type: 'address'
+  }],
+  name: 'OwnerNominated',
+  type: 'event',
+  signature: '0x906a1c6bd7e3091ea86693dd029a831c19049ce77f1dce2ce0bab1cacbabce22'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: true,
+    internalType: 'address',
+    name: 'beneficiary',
+    type: 'address'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
     name: 'time',
     type: 'uint256'
   }, {
-    name: 'quantity',
+    indexed: false,
+    internalType: 'uint256',
+    name: 'value',
     type: 'uint256'
   }],
-  name: 'appendVestingEntry',
-  outputs: [],
-  payable: false,
-  stateMutability: 'nonpayable',
-  type: 'function',
-  signature: '0x1bb47b44'
-}, {
-  constant: true,
-  inputs: [{
-    name: 'account',
-    type: 'address'
-  }],
-  name: 'numVestingEntries',
-  outputs: [{
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x204b676a'
-}, {
-  constant: true,
-  inputs: [{
-    name: '',
-    type: 'address'
-  }],
-  name: 'totalVestedAccountBalance',
-  outputs: [{
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x227d517a'
-}, {
-  constant: true,
-  inputs: [{
-    name: 'account',
-    type: 'address'
-  }],
-  name: 'getNextVestingEntry',
-  outputs: [{
-    name: '',
-    type: 'uint256[2]'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x2f5bb661'
-}, {
-  constant: false,
-  inputs: [],
-  name: 'vest',
-  outputs: [],
-  payable: false,
-  stateMutability: 'nonpayable',
-  type: 'function',
-  signature: '0x458efde3'
-}, {
-  constant: true,
-  inputs: [{
-    name: '',
-    type: 'address'
-  }, {
-    name: '',
-    type: 'uint256'
-  }, {
-    name: '',
-    type: 'uint256'
-  }],
-  name: 'vestingSchedules',
-  outputs: [{
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x45e5441f'
+  name: 'Vested',
+  type: 'event',
+  signature: '0xfbeff59d2bfda0d79ea8a29f8c57c66d48c7a13eabbdb90908d9115ec41c9dc6'
 }, {
   constant: true,
   inputs: [],
-  name: 'nominatedOwner',
+  name: 'MAX_VESTING_ENTRIES',
   outputs: [{
-    name: '',
-    type: 'address'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x53a47bb7'
-}, {
-  constant: true,
-  inputs: [{
-    name: 'account',
-    type: 'address'
-  }],
-  name: 'getNextVestingTime',
-  outputs: [{
+    internalType: 'uint256',
     name: '',
     type: 'uint256'
   }],
   payable: false,
   stateMutability: 'view',
   type: 'function',
-  signature: '0x6b3905c4'
+  signature: '0xd0cc82e3'
 }, {
   constant: true,
-  inputs: [{
-    name: 'account',
-    type: 'address'
-  }],
-  name: 'balanceOf',
+  inputs: [],
+  name: 'QUANTITY_INDEX',
   outputs: [{
+    internalType: 'uint256',
     name: '',
     type: 'uint256'
   }],
   payable: false,
   stateMutability: 'view',
   type: 'function',
-  signature: '0x70a08231'
+  signature: '0x8ad58777'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'TIME_INDEX',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x63667eb7'
 }, {
   constant: false,
   inputs: [],
@@ -29350,81 +29276,15 @@ var TESTNET_ADDRESSES = {
 }, {
   constant: false,
   inputs: [{
-    name: 'quantity',
-    type: 'uint256'
-  }],
-  name: 'withdrawOikos',
-  outputs: [],
-  payable: false,
-  stateMutability: 'nonpayable',
-  type: 'function',
-  signature: '0x7abad8e3'
-}, {
-  constant: true,
-  inputs: [],
-  name: 'owner',
-  outputs: [{
-    name: '',
-    type: 'address'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x8da5cb5b'
-}, {
-  constant: true,
-  inputs: [{
-    name: 'account',
-    type: 'address'
-  }],
-  name: 'getNextVestingQuantity',
-  outputs: [{
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x97f46527'
-}, {
-  constant: true,
-  inputs: [{
+    internalType: 'address',
     name: 'account',
     type: 'address'
   }, {
-    name: 'index',
-    type: 'uint256'
-  }],
-  name: 'getVestingTime',
-  outputs: [{
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x9b217f90'
-}, {
-  constant: true,
-  inputs: [],
-  name: 'totalVestedBalance',
-  outputs: [{
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0xa15d59ce'
-}, {
-  constant: false,
-  inputs: [{
-    name: 'account',
-    type: 'address'
-  }, {
+    internalType: 'uint256[]',
     name: 'times',
     type: 'uint256[]'
   }, {
+    internalType: 'uint256[]',
     name: 'quantities',
     type: 'uint256[]'
   }],
@@ -29435,16 +29295,146 @@ var TESTNET_ADDRESSES = {
   type: 'function',
   signature: '0xbb2a7d0c'
 }, {
-  constant: true,
+  constant: false,
   inputs: [{
+    internalType: 'address',
     name: 'account',
     type: 'address'
   }, {
+    internalType: 'uint256',
+    name: 'time',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'quantity',
+    type: 'uint256'
+  }],
+  name: 'appendVestingEntry',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x1bb47b44'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }],
+  name: 'balanceOf',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x70a08231'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }],
+  name: 'getNextVestingEntry',
+  outputs: [{
+    internalType: 'uint256[2]',
+    name: '',
+    type: 'uint256[2]'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x2f5bb661'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }],
+  name: 'getNextVestingIndex',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x19e740c0'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }],
+  name: 'getNextVestingQuantity',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x97f46527'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }],
+  name: 'getNextVestingTime',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x6b3905c4'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
+    name: 'index',
+    type: 'uint256'
+  }],
+  name: 'getVestingQuantity',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xee1d036c'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
     name: 'index',
     type: 'uint256'
   }],
   name: 'getVestingScheduleEntry',
   outputs: [{
+    internalType: 'uint256[2]',
     name: '',
     type: 'uint256[2]'
   }],
@@ -29455,24 +29445,110 @@ var TESTNET_ADDRESSES = {
 }, {
   constant: true,
   inputs: [{
+    internalType: 'address',
     name: 'account',
     type: 'address'
   }, {
+    internalType: 'uint256',
     name: 'index',
     type: 'uint256'
   }],
-  name: 'getVestingQuantity',
+  name: 'getVestingTime',
   outputs: [{
+    internalType: 'uint256',
     name: '',
     type: 'uint256'
   }],
   payable: false,
   stateMutability: 'view',
   type: 'function',
-  signature: '0xee1d036c'
+  signature: '0x9b217f90'
 }, {
   constant: false,
   inputs: [{
+    internalType: 'address',
+    name: '_owner',
+    type: 'address'
+  }],
+  name: 'nominateNewOwner',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x1627540c'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'nominatedOwner',
+  outputs: [{
+    internalType: 'address',
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x53a47bb7'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }],
+  name: 'numVestingEntries',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x204b676a'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'oikos',
+  outputs: [{
+    internalType: 'contract IOikos',
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x0c7c95ad'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'owner',
+  outputs: [{
+    internalType: 'address',
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x8da5cb5b'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }],
+  name: 'purgeAccount',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x135c0701'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'contract IOikos',
     name: '_oikos',
     type: 'address'
   }],
@@ -29483,68 +29559,82 @@ var TESTNET_ADDRESSES = {
   type: 'function',
   signature: '0xfe46a480'
 }, {
-  inputs: [{
-    name: '_owner',
-    type: 'address'
-  }, {
-    name: '_oikos',
-    type: 'address'
+  constant: true,
+  inputs: [],
+  name: 'setupExpiryTime',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
   }],
   payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x46ba2d90'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: '',
+    type: 'address'
+  }],
+  name: 'totalVestedAccountBalance',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x227d517a'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'totalVestedBalance',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xa15d59ce'
+}, {
+  constant: false,
+  inputs: [],
+  name: 'vest',
+  outputs: [],
+  payable: false,
   stateMutability: 'nonpayable',
-  type: 'constructor'
+  type: 'function',
+  signature: '0x458efde3'
 }, {
-  anonymous: false,
+  constant: true,
   inputs: [{
-    indexed: false,
-    name: 'newOikos',
-    type: 'address'
-  }],
-  name: 'OikosUpdated',
-  type: 'event',
-  signature: '0xcb046e61ab451d5fec11d3dfc4c550475bd0abd8df74a421c34be433f197c4df'
-}, {
-  anonymous: false,
-  inputs: [{
-    indexed: true,
-    name: 'beneficiary',
+    internalType: 'address',
+    name: '',
     type: 'address'
   }, {
-    indexed: false,
-    name: 'time',
+    internalType: 'uint256',
+    name: '',
     type: 'uint256'
   }, {
-    indexed: false,
-    name: 'value',
+    internalType: 'uint256',
+    name: '',
     type: 'uint256'
   }],
-  name: 'Vested',
-  type: 'event',
-  signature: '0xfbeff59d2bfda0d79ea8a29f8c57c66d48c7a13eabbdb90908d9115ec41c9dc6'
-}, {
-  anonymous: false,
-  inputs: [{
-    indexed: false,
-    name: 'newOwner',
-    type: 'address'
+  name: 'vestingSchedules',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
   }],
-  name: 'OwnerNominated',
-  type: 'event',
-  signature: '0x906a1c6bd7e3091ea86693dd029a831c19049ce77f1dce2ce0bab1cacbabce22'
-}, {
-  anonymous: false,
-  inputs: [{
-    indexed: false,
-    name: 'oldOwner',
-    type: 'address'
-  }, {
-    indexed: false,
-    name: 'newOwner',
-    type: 'address'
-  }],
-  name: 'OwnerChanged',
-  type: 'event',
-  signature: '0xb532073b38c83145e3e5135377a08bf9aab55bc0fd7c1179cd4fb995d2a5159c'
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x45e5441f'
 }]);
 // CONCATENATED MODULE: ./lib/abis/bsc/OikosState.js
 /* harmony default export */ var OikosState = ([{
@@ -32902,490 +32992,8 @@ var TESTNET_ADDRESSES = {
 
 /* harmony default export */ var testnet_Oikos = (bsc_Oikos);
 // CONCATENATED MODULE: ./lib/abis/testnet/OikosEscrow.js
-/* harmony default export */ var testnet_OikosEscrow = ([{
-  inputs: [{
-    internalType: 'address',
-    name: '_owner',
-    type: 'address'
-  }, {
-    internalType: 'contract IOikos',
-    name: '_oikos',
-    type: 'address'
-  }],
-  payable: false,
-  stateMutability: 'nonpayable',
-  type: 'constructor',
-  signature: 'constructor'
-}, {
-  anonymous: false,
-  inputs: [{
-    indexed: false,
-    internalType: 'address',
-    name: 'newOikos',
-    type: 'address'
-  }],
-  name: 'OikosUpdated',
-  type: 'event',
-  signature: '0xcb046e61ab451d5fec11d3dfc4c550475bd0abd8df74a421c34be433f197c4df'
-}, {
-  anonymous: false,
-  inputs: [{
-    indexed: false,
-    internalType: 'address',
-    name: 'oldOwner',
-    type: 'address'
-  }, {
-    indexed: false,
-    internalType: 'address',
-    name: 'newOwner',
-    type: 'address'
-  }],
-  name: 'OwnerChanged',
-  type: 'event',
-  signature: '0xb532073b38c83145e3e5135377a08bf9aab55bc0fd7c1179cd4fb995d2a5159c'
-}, {
-  anonymous: false,
-  inputs: [{
-    indexed: false,
-    internalType: 'address',
-    name: 'newOwner',
-    type: 'address'
-  }],
-  name: 'OwnerNominated',
-  type: 'event',
-  signature: '0x906a1c6bd7e3091ea86693dd029a831c19049ce77f1dce2ce0bab1cacbabce22'
-}, {
-  anonymous: false,
-  inputs: [{
-    indexed: true,
-    internalType: 'address',
-    name: 'beneficiary',
-    type: 'address'
-  }, {
-    indexed: false,
-    internalType: 'uint256',
-    name: 'time',
-    type: 'uint256'
-  }, {
-    indexed: false,
-    internalType: 'uint256',
-    name: 'value',
-    type: 'uint256'
-  }],
-  name: 'Vested',
-  type: 'event',
-  signature: '0xfbeff59d2bfda0d79ea8a29f8c57c66d48c7a13eabbdb90908d9115ec41c9dc6'
-}, {
-  constant: true,
-  inputs: [],
-  name: 'MAX_VESTING_ENTRIES',
-  outputs: [{
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0xd0cc82e3'
-}, {
-  constant: true,
-  inputs: [],
-  name: 'QUANTITY_INDEX',
-  outputs: [{
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x8ad58777'
-}, {
-  constant: true,
-  inputs: [],
-  name: 'TIME_INDEX',
-  outputs: [{
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x63667eb7'
-}, {
-  constant: false,
-  inputs: [],
-  name: 'acceptOwnership',
-  outputs: [],
-  payable: false,
-  stateMutability: 'nonpayable',
-  type: 'function',
-  signature: '0x79ba5097'
-}, {
-  constant: false,
-  inputs: [{
-    internalType: 'address',
-    name: 'account',
-    type: 'address'
-  }, {
-    internalType: 'uint256[]',
-    name: 'times',
-    type: 'uint256[]'
-  }, {
-    internalType: 'uint256[]',
-    name: 'quantities',
-    type: 'uint256[]'
-  }],
-  name: 'addVestingSchedule',
-  outputs: [],
-  payable: false,
-  stateMutability: 'nonpayable',
-  type: 'function',
-  signature: '0xbb2a7d0c'
-}, {
-  constant: false,
-  inputs: [{
-    internalType: 'address',
-    name: 'account',
-    type: 'address'
-  }, {
-    internalType: 'uint256',
-    name: 'time',
-    type: 'uint256'
-  }, {
-    internalType: 'uint256',
-    name: 'quantity',
-    type: 'uint256'
-  }],
-  name: 'appendVestingEntry',
-  outputs: [],
-  payable: false,
-  stateMutability: 'nonpayable',
-  type: 'function',
-  signature: '0x1bb47b44'
-}, {
-  constant: true,
-  inputs: [{
-    internalType: 'address',
-    name: 'account',
-    type: 'address'
-  }],
-  name: 'balanceOf',
-  outputs: [{
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x70a08231'
-}, {
-  constant: true,
-  inputs: [{
-    internalType: 'address',
-    name: 'account',
-    type: 'address'
-  }],
-  name: 'getNextVestingEntry',
-  outputs: [{
-    internalType: 'uint256[2]',
-    name: '',
-    type: 'uint256[2]'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x2f5bb661'
-}, {
-  constant: true,
-  inputs: [{
-    internalType: 'address',
-    name: 'account',
-    type: 'address'
-  }],
-  name: 'getNextVestingIndex',
-  outputs: [{
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x19e740c0'
-}, {
-  constant: true,
-  inputs: [{
-    internalType: 'address',
-    name: 'account',
-    type: 'address'
-  }],
-  name: 'getNextVestingQuantity',
-  outputs: [{
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x97f46527'
-}, {
-  constant: true,
-  inputs: [{
-    internalType: 'address',
-    name: 'account',
-    type: 'address'
-  }],
-  name: 'getNextVestingTime',
-  outputs: [{
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x6b3905c4'
-}, {
-  constant: true,
-  inputs: [{
-    internalType: 'address',
-    name: 'account',
-    type: 'address'
-  }, {
-    internalType: 'uint256',
-    name: 'index',
-    type: 'uint256'
-  }],
-  name: 'getVestingQuantity',
-  outputs: [{
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0xee1d036c'
-}, {
-  constant: true,
-  inputs: [{
-    internalType: 'address',
-    name: 'account',
-    type: 'address'
-  }, {
-    internalType: 'uint256',
-    name: 'index',
-    type: 'uint256'
-  }],
-  name: 'getVestingScheduleEntry',
-  outputs: [{
-    internalType: 'uint256[2]',
-    name: '',
-    type: 'uint256[2]'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0xda7bd3e9'
-}, {
-  constant: true,
-  inputs: [{
-    internalType: 'address',
-    name: 'account',
-    type: 'address'
-  }, {
-    internalType: 'uint256',
-    name: 'index',
-    type: 'uint256'
-  }],
-  name: 'getVestingTime',
-  outputs: [{
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x9b217f90'
-}, {
-  constant: false,
-  inputs: [{
-    internalType: 'address',
-    name: '_owner',
-    type: 'address'
-  }],
-  name: 'nominateNewOwner',
-  outputs: [],
-  payable: false,
-  stateMutability: 'nonpayable',
-  type: 'function',
-  signature: '0x1627540c'
-}, {
-  constant: true,
-  inputs: [],
-  name: 'nominatedOwner',
-  outputs: [{
-    internalType: 'address',
-    name: '',
-    type: 'address'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x53a47bb7'
-}, {
-  constant: true,
-  inputs: [{
-    internalType: 'address',
-    name: 'account',
-    type: 'address'
-  }],
-  name: 'numVestingEntries',
-  outputs: [{
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x204b676a'
-}, {
-  constant: true,
-  inputs: [],
-  name: 'oikos',
-  outputs: [{
-    internalType: 'contract IOikos',
-    name: '',
-    type: 'address'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x0c7c95ad'
-}, {
-  constant: true,
-  inputs: [],
-  name: 'owner',
-  outputs: [{
-    internalType: 'address',
-    name: '',
-    type: 'address'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x8da5cb5b'
-}, {
-  constant: false,
-  inputs: [{
-    internalType: 'address',
-    name: 'account',
-    type: 'address'
-  }],
-  name: 'purgeAccount',
-  outputs: [],
-  payable: false,
-  stateMutability: 'nonpayable',
-  type: 'function',
-  signature: '0x135c0701'
-}, {
-  constant: false,
-  inputs: [{
-    internalType: 'contract IOikos',
-    name: '_oikos',
-    type: 'address'
-  }],
-  name: 'setOikos',
-  outputs: [],
-  payable: false,
-  stateMutability: 'nonpayable',
-  type: 'function',
-  signature: '0xfe46a480'
-}, {
-  constant: true,
-  inputs: [],
-  name: 'setupExpiryTime',
-  outputs: [{
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x46ba2d90'
-}, {
-  constant: true,
-  inputs: [{
-    internalType: 'address',
-    name: '',
-    type: 'address'
-  }],
-  name: 'totalVestedAccountBalance',
-  outputs: [{
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x227d517a'
-}, {
-  constant: true,
-  inputs: [],
-  name: 'totalVestedBalance',
-  outputs: [{
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0xa15d59ce'
-}, {
-  constant: false,
-  inputs: [],
-  name: 'vest',
-  outputs: [],
-  payable: false,
-  stateMutability: 'nonpayable',
-  type: 'function',
-  signature: '0x458efde3'
-}, {
-  constant: true,
-  inputs: [{
-    internalType: 'address',
-    name: '',
-    type: 'address'
-  }, {
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }, {
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  name: 'vestingSchedules',
-  outputs: [{
-    internalType: 'uint256',
-    name: '',
-    type: 'uint256'
-  }],
-  payable: false,
-  stateMutability: 'view',
-  type: 'function',
-  signature: '0x45e5441f'
-}]);
+
+/* harmony default export */ var testnet_OikosEscrow = (OikosEscrow);
 // CONCATENATED MODULE: ./lib/abis/testnet/OikosState.js
 /* harmony default export */ var testnet_OikosState = ([{
   inputs: [{
@@ -42534,16 +42142,16 @@ function OikosEscrow_OikosEscrow(contractSettings) {
   this.contract = new lib_esm_Contract(this.contractSettings.addressList['OikosEscrow'], OikosEscrow, this.contractSettings.signer || this.contractSettings.provider);
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @returns String<EthAddress>
+   * @returns BigNumber
    **/
 
-  this.oikos = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {
+  this.MAX_VESTING_ENTRIES = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {
     return regenerator_default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return _this.contract.oikos();
+            return _this.contract.MAX_VESTING_ENTRIES();
 
           case 2:
             return _context.abrupt("return", _context.sent);
@@ -42556,92 +42164,71 @@ function OikosEscrow_OikosEscrow(contractSettings) {
     }, _callee);
   }));
   /**
-   * Destroy the vesting information associated with an account.<br>
-   * Transaction (consumes gas, requires signer)
-   * @param account {String<EthAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-
-  this.purgeAccount = /*#__PURE__*/function () {
-    var _ref2 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee2(account, txParams) {
-      return regenerator_default.a.wrap(function _callee2$(_context2) {
-        while (1) {
-          switch (_context2.prev = _context2.next) {
-            case 0:
-              txParams = txParams || {};
-              _context2.next = 3;
-              return _this.contract.purgeAccount(account, txParams);
-
-            case 3:
-              return _context2.abrupt("return", _context2.sent);
-
-            case 4:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, _callee2);
-    }));
-
-    return function (_x, _x2) {
-      return _ref2.apply(this, arguments);
-    };
-  }();
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param _owner {String<EthAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-
-
-  this.nominateNewOwner = /*#__PURE__*/function () {
-    var _ref3 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee3(_owner, txParams) {
-      return regenerator_default.a.wrap(function _callee3$(_context3) {
-        while (1) {
-          switch (_context3.prev = _context3.next) {
-            case 0:
-              txParams = txParams || {};
-              _context3.next = 3;
-              return _this.contract.nominateNewOwner(_owner, txParams);
-
-            case 3:
-              return _context3.abrupt("return", _context3.sent);
-
-            case 4:
-            case "end":
-              return _context3.stop();
-          }
-        }
-      }, _callee3);
-    }));
-
-    return function (_x3, _x4) {
-      return _ref3.apply(this, arguments);
-    };
-  }();
-  /**
-   * Obtain the index of the next schedule entry that will vest for a given user.<br>
    * Call (no gas consumed, doesn't require signer)
-   * @param account {String<EthAddress>}
    * @returns BigNumber
    **/
 
+  this.QUANTITY_INDEX = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee2() {
+    return regenerator_default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return _this.contract.QUANTITY_INDEX();
 
-  this.getNextVestingIndex = /*#__PURE__*/function () {
-    var _ref4 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee4(account) {
+          case 2:
+            return _context2.abrupt("return", _context2.sent);
+
+          case 3:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+  this.TIME_INDEX = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee3() {
+    return regenerator_default.a.wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            _context3.next = 2;
+            return _this.contract.TIME_INDEX();
+
+          case 2:
+            return _context3.abrupt("return", _context3.sent);
+
+          case 3:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.acceptOwnership = /*#__PURE__*/function () {
+    var _ref4 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee4(txParams) {
       return regenerator_default.a.wrap(function _callee4$(_context4) {
         while (1) {
           switch (_context4.prev = _context4.next) {
             case 0:
-              _context4.next = 2;
-              return _this.contract.getNextVestingIndex(account);
-
-            case 2:
-              return _context4.abrupt("return", _context4.sent);
+              txParams = txParams || {};
+              _context4.next = 3;
+              return _this.contract.acceptOwnership(txParams);
 
             case 3:
+              return _context4.abrupt("return", _context4.sent);
+
+            case 4:
             case "end":
               return _context4.stop();
           }
@@ -42649,8 +42236,44 @@ function OikosEscrow_OikosEscrow(contractSettings) {
       }, _callee4);
     }));
 
-    return function (_x5) {
+    return function (_x) {
       return _ref4.apply(this, arguments);
+    };
+  }();
+  /**
+   * Assumes that the quantities are nonzero and that the sequence of timestamps is strictly increasing. This may only be called by the owner during the contract's setup period., Construct a vesting schedule to release a quantities of SNX over a series of intervals.<br>
+   * Transaction (consumes gas, requires signer)
+   * @param account {String<EthAddress>}
+   * @param times {uint256[]}
+   * @param quantities {uint256[]}
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.addVestingSchedule = /*#__PURE__*/function () {
+    var _ref5 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee5(account, times, quantities, txParams) {
+      return regenerator_default.a.wrap(function _callee5$(_context5) {
+        while (1) {
+          switch (_context5.prev = _context5.next) {
+            case 0:
+              txParams = txParams || {};
+              _context5.next = 3;
+              return _this.contract.addVestingSchedule(account, times, quantities, txParams);
+
+            case 3:
+              return _context5.abrupt("return", _context5.sent);
+
+            case 4:
+            case "end":
+              return _context5.stop();
+          }
+        }
+      }, _callee5);
+    }));
+
+    return function (_x2, _x3, _x4, _x5) {
+      return _ref5.apply(this, arguments);
     };
   }();
   /**
@@ -42665,51 +42288,19 @@ function OikosEscrow_OikosEscrow(contractSettings) {
 
 
   this.appendVestingEntry = /*#__PURE__*/function () {
-    var _ref5 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee5(account, time, quantity, txParams) {
-      return regenerator_default.a.wrap(function _callee5$(_context5) {
-        while (1) {
-          switch (_context5.prev = _context5.next) {
-            case 0:
-              txParams = txParams || {};
-              _context5.next = 3;
-              return _this.contract.appendVestingEntry(account, time, quantity, txParams);
-
-            case 3:
-              return _context5.abrupt("return", _context5.sent);
-
-            case 4:
-            case "end":
-              return _context5.stop();
-          }
-        }
-      }, _callee5);
-    }));
-
-    return function (_x6, _x7, _x8, _x9) {
-      return _ref5.apply(this, arguments);
-    };
-  }();
-  /**
-   * The number of vesting dates in an account's schedule.<br>
-   * Call (no gas consumed, doesn't require signer)
-   * @param account {String<EthAddress>}
-   * @returns BigNumber
-   **/
-
-
-  this.numVestingEntries = /*#__PURE__*/function () {
-    var _ref6 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee6(account) {
+    var _ref6 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee6(account, time, quantity, txParams) {
       return regenerator_default.a.wrap(function _callee6$(_context6) {
         while (1) {
           switch (_context6.prev = _context6.next) {
             case 0:
-              _context6.next = 2;
-              return _this.contract.numVestingEntries(account);
-
-            case 2:
-              return _context6.abrupt("return", _context6.sent);
+              txParams = txParams || {};
+              _context6.next = 3;
+              return _this.contract.appendVestingEntry(account, time, quantity, txParams);
 
             case 3:
+              return _context6.abrupt("return", _context6.sent);
+
+            case 4:
             case "end":
               return _context6.stop();
           }
@@ -42717,25 +42308,26 @@ function OikosEscrow_OikosEscrow(contractSettings) {
       }, _callee6);
     }));
 
-    return function (_x10) {
+    return function (_x6, _x7, _x8, _x9) {
       return _ref6.apply(this, arguments);
     };
   }();
   /**
+   * A simple alias to totalVestedAccountBalance: provides ERC20 balance integration.<br>
    * Call (no gas consumed, doesn't require signer)
-   * @param  {String<EthAddress>}
+   * @param account {String<EthAddress>}
    * @returns BigNumber
    **/
 
 
-  this.totalVestedAccountBalance = /*#__PURE__*/function () {
-    var _ref7 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee7(address_1) {
+  this.balanceOf = /*#__PURE__*/function () {
+    var _ref7 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee7(account) {
       return regenerator_default.a.wrap(function _callee7$(_context7) {
         while (1) {
           switch (_context7.prev = _context7.next) {
             case 0:
               _context7.next = 2;
-              return _this.contract.totalVestedAccountBalance(address_1);
+              return _this.contract.balanceOf(account);
 
             case 2:
               return _context7.abrupt("return", _context7.sent);
@@ -42748,7 +42340,7 @@ function OikosEscrow_OikosEscrow(contractSettings) {
       }, _callee7);
     }));
 
-    return function (_x11) {
+    return function (_x10) {
       return _ref7.apply(this, arguments);
     };
   }();
@@ -42780,32 +42372,31 @@ function OikosEscrow_OikosEscrow(contractSettings) {
       }, _callee8);
     }));
 
-    return function (_x12) {
+    return function (_x11) {
       return _ref8.apply(this, arguments);
     };
   }();
   /**
-   * Allow a user to withdraw any SNX in their schedule that have vested.<br>
-   * Transaction (consumes gas, requires signer)
-   * @param txParams {TxParams}
-  
+   * Obtain the index of the next schedule entry that will vest for a given user.<br>
+   * Call (no gas consumed, doesn't require signer)
+   * @param account {String<EthAddress>}
+   * @returns BigNumber
    **/
 
 
-  this.vest = /*#__PURE__*/function () {
-    var _ref9 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee9(txParams) {
+  this.getNextVestingIndex = /*#__PURE__*/function () {
+    var _ref9 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee9(account) {
       return regenerator_default.a.wrap(function _callee9$(_context9) {
         while (1) {
           switch (_context9.prev = _context9.next) {
             case 0:
-              txParams = txParams || {};
-              _context9.next = 3;
-              return _this.contract.vest(txParams);
+              _context9.next = 2;
+              return _this.contract.getNextVestingIndex(account);
 
-            case 3:
+            case 2:
               return _context9.abrupt("return", _context9.sent);
 
-            case 4:
+            case 3:
             case "end":
               return _context9.stop();
           }
@@ -42813,27 +42404,26 @@ function OikosEscrow_OikosEscrow(contractSettings) {
       }, _callee9);
     }));
 
-    return function (_x13) {
+    return function (_x12) {
       return _ref9.apply(this, arguments);
     };
   }();
   /**
+   * Obtain the quantity which the next schedule entry will vest for a given user.<br>
    * Call (no gas consumed, doesn't require signer)
-   * @param  {String<EthAddress>}
-   * @param  {BigNumber}
-   * @param  {BigNumber}
+   * @param account {String<EthAddress>}
    * @returns BigNumber
    **/
 
 
-  this.vestingSchedules = /*#__PURE__*/function () {
-    var _ref10 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee10(address_1, uint256_1, uint256_2) {
+  this.getNextVestingQuantity = /*#__PURE__*/function () {
+    var _ref10 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee10(account) {
       return regenerator_default.a.wrap(function _callee10$(_context10) {
         while (1) {
           switch (_context10.prev = _context10.next) {
             case 0:
               _context10.next = 2;
-              return _this.contract.vestingSchedules(address_1, uint256_1, uint256_2);
+              return _this.contract.getNextVestingQuantity(account);
 
             case 2:
               return _context10.abrupt("return", _context10.sent);
@@ -42846,34 +42436,10 @@ function OikosEscrow_OikosEscrow(contractSettings) {
       }, _callee10);
     }));
 
-    return function (_x14, _x15, _x16) {
+    return function (_x13) {
       return _ref10.apply(this, arguments);
     };
   }();
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String<EthAddress>
-   **/
-
-
-  this.nominatedOwner = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee11() {
-    return regenerator_default.a.wrap(function _callee11$(_context11) {
-      while (1) {
-        switch (_context11.prev = _context11.next) {
-          case 0:
-            _context11.next = 2;
-            return _this.contract.nominatedOwner();
-
-          case 2:
-            return _context11.abrupt("return", _context11.sent);
-
-          case 3:
-          case "end":
-            return _context11.stop();
-        }
-      }
-    }, _callee11);
-  }));
   /**
    * Obtain the time at which the next schedule entry will vest for a given user.<br>
    * Call (no gas consumed, doesn't require signer)
@@ -42881,306 +42447,29 @@ function OikosEscrow_OikosEscrow(contractSettings) {
    * @returns BigNumber
    **/
 
+
   this.getNextVestingTime = /*#__PURE__*/function () {
-    var _ref12 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee12(account) {
-      return regenerator_default.a.wrap(function _callee12$(_context12) {
+    var _ref11 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee11(account) {
+      return regenerator_default.a.wrap(function _callee11$(_context11) {
         while (1) {
-          switch (_context12.prev = _context12.next) {
+          switch (_context11.prev = _context11.next) {
             case 0:
-              _context12.next = 2;
+              _context11.next = 2;
               return _this.contract.getNextVestingTime(account);
 
             case 2:
-              return _context12.abrupt("return", _context12.sent);
+              return _context11.abrupt("return", _context11.sent);
 
             case 3:
             case "end":
-              return _context12.stop();
+              return _context11.stop();
           }
         }
-      }, _callee12);
+      }, _callee11);
     }));
 
-    return function (_x17) {
-      return _ref12.apply(this, arguments);
-    };
-  }();
-  /**
-   * A simple alias to totalVestedAccountBalance: provides ERC20 balance integration.<br>
-   * Call (no gas consumed, doesn't require signer)
-   * @param account {String<EthAddress>}
-   * @returns BigNumber
-   **/
-
-
-  this.balanceOf = /*#__PURE__*/function () {
-    var _ref13 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee13(account) {
-      return regenerator_default.a.wrap(function _callee13$(_context13) {
-        while (1) {
-          switch (_context13.prev = _context13.next) {
-            case 0:
-              _context13.next = 2;
-              return _this.contract.balanceOf(account);
-
-            case 2:
-              return _context13.abrupt("return", _context13.sent);
-
-            case 3:
-            case "end":
-              return _context13.stop();
-          }
-        }
-      }, _callee13);
-    }));
-
-    return function (_x18) {
-      return _ref13.apply(this, arguments);
-    };
-  }();
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param txParams {TxParams}
-  
-   **/
-
-
-  this.acceptOwnership = /*#__PURE__*/function () {
-    var _ref14 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee14(txParams) {
-      return regenerator_default.a.wrap(function _callee14$(_context14) {
-        while (1) {
-          switch (_context14.prev = _context14.next) {
-            case 0:
-              txParams = txParams || {};
-              _context14.next = 3;
-              return _this.contract.acceptOwnership(txParams);
-
-            case 3:
-              return _context14.abrupt("return", _context14.sent);
-
-            case 4:
-            case "end":
-              return _context14.stop();
-          }
-        }
-      }, _callee14);
-    }));
-
-    return function (_x19) {
-      return _ref14.apply(this, arguments);
-    };
-  }();
-  /**
-   * This may only be called by the owner during the contract's setup period., Withdraws a quantity of SNX back to the oikos contract.<br>
-   * Transaction (consumes gas, requires signer)
-   * @param quantity {BigNumber}
-   * @param txParams {TxParams}
-  
-   **/
-
-
-  this.withdrawOikos = /*#__PURE__*/function () {
-    var _ref15 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee15(quantity, txParams) {
-      return regenerator_default.a.wrap(function _callee15$(_context15) {
-        while (1) {
-          switch (_context15.prev = _context15.next) {
-            case 0:
-              txParams = txParams || {};
-              _context15.next = 3;
-              return _this.contract.withdrawOikos(quantity, txParams);
-
-            case 3:
-              return _context15.abrupt("return", _context15.sent);
-
-            case 4:
-            case "end":
-              return _context15.stop();
-          }
-        }
-      }, _callee15);
-    }));
-
-    return function (_x20, _x21) {
-      return _ref15.apply(this, arguments);
-    };
-  }();
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String<EthAddress>
-   **/
-
-
-  this.owner = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee16() {
-    return regenerator_default.a.wrap(function _callee16$(_context16) {
-      while (1) {
-        switch (_context16.prev = _context16.next) {
-          case 0:
-            _context16.next = 2;
-            return _this.contract.owner();
-
-          case 2:
-            return _context16.abrupt("return", _context16.sent);
-
-          case 3:
-          case "end":
-            return _context16.stop();
-        }
-      }
-    }, _callee16);
-  }));
-  /**
-   * Obtain the quantity which the next schedule entry will vest for a given user.<br>
-   * Call (no gas consumed, doesn't require signer)
-   * @param account {String<EthAddress>}
-   * @returns BigNumber
-   **/
-
-  this.getNextVestingQuantity = /*#__PURE__*/function () {
-    var _ref17 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee17(account) {
-      return regenerator_default.a.wrap(function _callee17$(_context17) {
-        while (1) {
-          switch (_context17.prev = _context17.next) {
-            case 0:
-              _context17.next = 2;
-              return _this.contract.getNextVestingQuantity(account);
-
-            case 2:
-              return _context17.abrupt("return", _context17.sent);
-
-            case 3:
-            case "end":
-              return _context17.stop();
-          }
-        }
-      }, _callee17);
-    }));
-
-    return function (_x22) {
-      return _ref17.apply(this, arguments);
-    };
-  }();
-  /**
-   * Get the time at which a given schedule entry will vest.<br>
-   * Call (no gas consumed, doesn't require signer)
-   * @param account {String<EthAddress>}
-   * @param index {BigNumber}
-   * @returns BigNumber
-   **/
-
-
-  this.getVestingTime = /*#__PURE__*/function () {
-    var _ref18 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee18(account, index) {
-      return regenerator_default.a.wrap(function _callee18$(_context18) {
-        while (1) {
-          switch (_context18.prev = _context18.next) {
-            case 0:
-              _context18.next = 2;
-              return _this.contract.getVestingTime(account, index);
-
-            case 2:
-              return _context18.abrupt("return", _context18.sent);
-
-            case 3:
-            case "end":
-              return _context18.stop();
-          }
-        }
-      }, _callee18);
-    }));
-
-    return function (_x23, _x24) {
-      return _ref18.apply(this, arguments);
-    };
-  }();
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
-
-
-  this.totalVestedBalance = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee19() {
-    return regenerator_default.a.wrap(function _callee19$(_context19) {
-      while (1) {
-        switch (_context19.prev = _context19.next) {
-          case 0:
-            _context19.next = 2;
-            return _this.contract.totalVestedBalance();
-
-          case 2:
-            return _context19.abrupt("return", _context19.sent);
-
-          case 3:
-          case "end":
-            return _context19.stop();
-        }
-      }
-    }, _callee19);
-  }));
-  /**
-   * Assumes that the quantities are nonzero and that the sequence of timestamps is strictly increasing. This may only be called by the owner during the contract's setup period., Construct a vesting schedule to release a quantities of SNX over a series of intervals.<br>
-   * Transaction (consumes gas, requires signer)
-   * @param account {String<EthAddress>}
-   * @param times {uint256[]}
-   * @param quantities {uint256[]}
-   * @param txParams {TxParams}
-  
-   **/
-
-  this.addVestingSchedule = /*#__PURE__*/function () {
-    var _ref20 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee20(account, times, quantities, txParams) {
-      return regenerator_default.a.wrap(function _callee20$(_context20) {
-        while (1) {
-          switch (_context20.prev = _context20.next) {
-            case 0:
-              txParams = txParams || {};
-              _context20.next = 3;
-              return _this.contract.addVestingSchedule(account, times, quantities, txParams);
-
-            case 3:
-              return _context20.abrupt("return", _context20.sent);
-
-            case 4:
-            case "end":
-              return _context20.stop();
-          }
-        }
-      }, _callee20);
-    }));
-
-    return function (_x25, _x26, _x27, _x28) {
-      return _ref20.apply(this, arguments);
-    };
-  }();
-  /**
-   * Get a particular schedule entry for an account.<br>
-   * Call (no gas consumed, doesn't require signer)
-   * @param account {String<EthAddress>}
-   * @param index {BigNumber}
-   * @returns uint256[2]
-   **/
-
-
-  this.getVestingScheduleEntry = /*#__PURE__*/function () {
-    var _ref21 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee21(account, index) {
-      return regenerator_default.a.wrap(function _callee21$(_context21) {
-        while (1) {
-          switch (_context21.prev = _context21.next) {
-            case 0:
-              _context21.next = 2;
-              return _this.contract.getVestingScheduleEntry(account, index);
-
-            case 2:
-              return _context21.abrupt("return", _context21.sent);
-
-            case 3:
-            case "end":
-              return _context21.stop();
-          }
-        }
-      }, _callee21);
-    }));
-
-    return function (_x29, _x30) {
-      return _ref21.apply(this, arguments);
+    return function (_x14) {
+      return _ref11.apply(this, arguments);
     };
   }();
   /**
@@ -43193,27 +42482,261 @@ function OikosEscrow_OikosEscrow(contractSettings) {
 
 
   this.getVestingQuantity = /*#__PURE__*/function () {
-    var _ref22 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee22(account, index) {
-      return regenerator_default.a.wrap(function _callee22$(_context22) {
+    var _ref12 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee12(account, index) {
+      return regenerator_default.a.wrap(function _callee12$(_context12) {
         while (1) {
-          switch (_context22.prev = _context22.next) {
+          switch (_context12.prev = _context12.next) {
             case 0:
-              _context22.next = 2;
+              _context12.next = 2;
               return _this.contract.getVestingQuantity(account, index);
 
             case 2:
-              return _context22.abrupt("return", _context22.sent);
+              return _context12.abrupt("return", _context12.sent);
 
             case 3:
             case "end":
-              return _context22.stop();
+              return _context12.stop();
           }
         }
-      }, _callee22);
+      }, _callee12);
     }));
 
-    return function (_x31, _x32) {
-      return _ref22.apply(this, arguments);
+    return function (_x15, _x16) {
+      return _ref12.apply(this, arguments);
+    };
+  }();
+  /**
+   * Get a particular schedule entry for an account.<br>
+   * Call (no gas consumed, doesn't require signer)
+   * @param account {String<EthAddress>}
+   * @param index {BigNumber}
+   * @returns uint256[2]
+   **/
+
+
+  this.getVestingScheduleEntry = /*#__PURE__*/function () {
+    var _ref13 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee13(account, index) {
+      return regenerator_default.a.wrap(function _callee13$(_context13) {
+        while (1) {
+          switch (_context13.prev = _context13.next) {
+            case 0:
+              _context13.next = 2;
+              return _this.contract.getVestingScheduleEntry(account, index);
+
+            case 2:
+              return _context13.abrupt("return", _context13.sent);
+
+            case 3:
+            case "end":
+              return _context13.stop();
+          }
+        }
+      }, _callee13);
+    }));
+
+    return function (_x17, _x18) {
+      return _ref13.apply(this, arguments);
+    };
+  }();
+  /**
+   * Get the time at which a given schedule entry will vest.<br>
+   * Call (no gas consumed, doesn't require signer)
+   * @param account {String<EthAddress>}
+   * @param index {BigNumber}
+   * @returns BigNumber
+   **/
+
+
+  this.getVestingTime = /*#__PURE__*/function () {
+    var _ref14 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee14(account, index) {
+      return regenerator_default.a.wrap(function _callee14$(_context14) {
+        while (1) {
+          switch (_context14.prev = _context14.next) {
+            case 0:
+              _context14.next = 2;
+              return _this.contract.getVestingTime(account, index);
+
+            case 2:
+              return _context14.abrupt("return", _context14.sent);
+
+            case 3:
+            case "end":
+              return _context14.stop();
+          }
+        }
+      }, _callee14);
+    }));
+
+    return function (_x19, _x20) {
+      return _ref14.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _owner {String<EthAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.nominateNewOwner = /*#__PURE__*/function () {
+    var _ref15 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee15(_owner, txParams) {
+      return regenerator_default.a.wrap(function _callee15$(_context15) {
+        while (1) {
+          switch (_context15.prev = _context15.next) {
+            case 0:
+              txParams = txParams || {};
+              _context15.next = 3;
+              return _this.contract.nominateNewOwner(_owner, txParams);
+
+            case 3:
+              return _context15.abrupt("return", _context15.sent);
+
+            case 4:
+            case "end":
+              return _context15.stop();
+          }
+        }
+      }, _callee15);
+    }));
+
+    return function (_x21, _x22) {
+      return _ref15.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<EthAddress>
+   **/
+
+
+  this.nominatedOwner = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee16() {
+    return regenerator_default.a.wrap(function _callee16$(_context16) {
+      while (1) {
+        switch (_context16.prev = _context16.next) {
+          case 0:
+            _context16.next = 2;
+            return _this.contract.nominatedOwner();
+
+          case 2:
+            return _context16.abrupt("return", _context16.sent);
+
+          case 3:
+          case "end":
+            return _context16.stop();
+        }
+      }
+    }, _callee16);
+  }));
+  /**
+   * The number of vesting dates in an account's schedule.<br>
+   * Call (no gas consumed, doesn't require signer)
+   * @param account {String<EthAddress>}
+   * @returns BigNumber
+   **/
+
+  this.numVestingEntries = /*#__PURE__*/function () {
+    var _ref17 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee17(account) {
+      return regenerator_default.a.wrap(function _callee17$(_context17) {
+        while (1) {
+          switch (_context17.prev = _context17.next) {
+            case 0:
+              _context17.next = 2;
+              return _this.contract.numVestingEntries(account);
+
+            case 2:
+              return _context17.abrupt("return", _context17.sent);
+
+            case 3:
+            case "end":
+              return _context17.stop();
+          }
+        }
+      }, _callee17);
+    }));
+
+    return function (_x23) {
+      return _ref17.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<EthAddress>
+   **/
+
+
+  this.oikos = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee18() {
+    return regenerator_default.a.wrap(function _callee18$(_context18) {
+      while (1) {
+        switch (_context18.prev = _context18.next) {
+          case 0:
+            _context18.next = 2;
+            return _this.contract.oikos();
+
+          case 2:
+            return _context18.abrupt("return", _context18.sent);
+
+          case 3:
+          case "end":
+            return _context18.stop();
+        }
+      }
+    }, _callee18);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<EthAddress>
+   **/
+
+  this.owner = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee19() {
+    return regenerator_default.a.wrap(function _callee19$(_context19) {
+      while (1) {
+        switch (_context19.prev = _context19.next) {
+          case 0:
+            _context19.next = 2;
+            return _this.contract.owner();
+
+          case 2:
+            return _context19.abrupt("return", _context19.sent);
+
+          case 3:
+          case "end":
+            return _context19.stop();
+        }
+      }
+    }, _callee19);
+  }));
+  /**
+   * Destroy the vesting information associated with an account.<br>
+   * Transaction (consumes gas, requires signer)
+   * @param account {String<EthAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.purgeAccount = /*#__PURE__*/function () {
+    var _ref20 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee20(account, txParams) {
+      return regenerator_default.a.wrap(function _callee20$(_context20) {
+        while (1) {
+          switch (_context20.prev = _context20.next) {
+            case 0:
+              txParams = txParams || {};
+              _context20.next = 3;
+              return _this.contract.purgeAccount(account, txParams);
+
+            case 3:
+              return _context20.abrupt("return", _context20.sent);
+
+            case 4:
+            case "end":
+              return _context20.stop();
+          }
+        }
+      }, _callee20);
+    }));
+
+    return function (_x24, _x25) {
+      return _ref20.apply(this, arguments);
     };
   }();
   /**
@@ -43225,19 +42748,73 @@ function OikosEscrow_OikosEscrow(contractSettings) {
 
 
   this.setOikos = /*#__PURE__*/function () {
-    var _ref23 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee23(_oikos, txParams) {
+    var _ref21 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee21(_oikos, txParams) {
+      return regenerator_default.a.wrap(function _callee21$(_context21) {
+        while (1) {
+          switch (_context21.prev = _context21.next) {
+            case 0:
+              txParams = txParams || {};
+              _context21.next = 3;
+              return _this.contract.setOikos(_oikos, txParams);
+
+            case 3:
+              return _context21.abrupt("return", _context21.sent);
+
+            case 4:
+            case "end":
+              return _context21.stop();
+          }
+        }
+      }, _callee21);
+    }));
+
+    return function (_x26, _x27) {
+      return _ref21.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+
+  this.setupExpiryTime = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee22() {
+    return regenerator_default.a.wrap(function _callee22$(_context22) {
+      while (1) {
+        switch (_context22.prev = _context22.next) {
+          case 0:
+            _context22.next = 2;
+            return _this.contract.setupExpiryTime();
+
+          case 2:
+            return _context22.abrupt("return", _context22.sent);
+
+          case 3:
+          case "end":
+            return _context22.stop();
+        }
+      }
+    }, _callee22);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param  {String<EthAddress>}
+   * @returns BigNumber
+   **/
+
+  this.totalVestedAccountBalance = /*#__PURE__*/function () {
+    var _ref23 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee23(address_1) {
       return regenerator_default.a.wrap(function _callee23$(_context23) {
         while (1) {
           switch (_context23.prev = _context23.next) {
             case 0:
-              txParams = txParams || {};
-              _context23.next = 3;
-              return _this.contract.setOikos(_oikos, txParams);
+              _context23.next = 2;
+              return _this.contract.totalVestedAccountBalance(address_1);
 
-            case 3:
+            case 2:
               return _context23.abrupt("return", _context23.sent);
 
-            case 4:
+            case 3:
             case "end":
               return _context23.stop();
           }
@@ -43245,8 +42822,97 @@ function OikosEscrow_OikosEscrow(contractSettings) {
       }, _callee23);
     }));
 
-    return function (_x33, _x34) {
+    return function (_x28) {
       return _ref23.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+
+  this.totalVestedBalance = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee24() {
+    return regenerator_default.a.wrap(function _callee24$(_context24) {
+      while (1) {
+        switch (_context24.prev = _context24.next) {
+          case 0:
+            _context24.next = 2;
+            return _this.contract.totalVestedBalance();
+
+          case 2:
+            return _context24.abrupt("return", _context24.sent);
+
+          case 3:
+          case "end":
+            return _context24.stop();
+        }
+      }
+    }, _callee24);
+  }));
+  /**
+   * Allow a user to withdraw any SNX in their schedule that have vested.<br>
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.vest = /*#__PURE__*/function () {
+    var _ref25 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee25(txParams) {
+      return regenerator_default.a.wrap(function _callee25$(_context25) {
+        while (1) {
+          switch (_context25.prev = _context25.next) {
+            case 0:
+              txParams = txParams || {};
+              _context25.next = 3;
+              return _this.contract.vest(txParams);
+
+            case 3:
+              return _context25.abrupt("return", _context25.sent);
+
+            case 4:
+            case "end":
+              return _context25.stop();
+          }
+        }
+      }, _callee25);
+    }));
+
+    return function (_x29) {
+      return _ref25.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param  {String<EthAddress>}
+   * @param  {BigNumber}
+   * @param  {BigNumber}
+   * @returns BigNumber
+   **/
+
+
+  this.vestingSchedules = /*#__PURE__*/function () {
+    var _ref26 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee26(address_1, uint256_1, uint256_2) {
+      return regenerator_default.a.wrap(function _callee26$(_context26) {
+        while (1) {
+          switch (_context26.prev = _context26.next) {
+            case 0:
+              _context26.next = 2;
+              return _this.contract.vestingSchedules(address_1, uint256_1, uint256_2);
+
+            case 2:
+              return _context26.abrupt("return", _context26.sent);
+
+            case 3:
+            case "end":
+              return _context26.stop();
+          }
+        }
+      }, _callee26);
+    }));
+
+    return function (_x30, _x31, _x32) {
+      return _ref26.apply(this, arguments);
     };
   }();
 }
