@@ -23996,7 +23996,7 @@ var BSC_ADDRESSES = {
   ProxyOikos: '0xC32Af9ad3B0E242b97A68485a2D79EEF30584C20',
   TokenStateOikos: '0x2c09F1a267936F353b6d996f4613f8abd45A4747',
   Oikos: '0x2Cf82EC748753aD5d07E70B4E73a0A7935995D91',
-  Exchanger: '0xF2306Bfe229e13768b0b433285445CC388707C6f',
+  Exchanger: '0xdc3a305e1CE234A27F6B1E0B8Ef1a6C63eaEB633',
   ExchangeState: '0x78fdE2e2A0fbcB84Fd75a31C640F7aCa5D8F17b0',
   Issuer: '0x37C714BB8944feC32c527615734E24fa2CAdcB5e',
   IssuanceEternalStorage: '0x3c9225fCeF09d63B80B9A0Eb7004804328bD98CC',
@@ -30991,6 +30991,39 @@ var TESTNET_ADDRESSES = {
   stateMutability: 'view',
   type: 'function',
   signature: '0x19d5c665'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'address',
+    name: 'from',
+    type: 'address'
+  }, {
+    internalType: 'bytes32',
+    name: 'sourceCurrencyKey',
+    type: 'bytes32'
+  }, {
+    internalType: 'uint256',
+    name: 'sourceAmount',
+    type: 'uint256'
+  }, {
+    internalType: 'bytes32',
+    name: 'destinationCurrencyKey',
+    type: 'bytes32'
+  }, {
+    internalType: 'address',
+    name: 'destinationAddress',
+    type: 'address'
+  }],
+  name: 'swap',
+  outputs: [{
+    internalType: 'uint256',
+    name: 'amountReceived',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x5723654c'
 }, {
   constant: true,
   inputs: [],
@@ -45026,28 +45059,65 @@ function Exchanger_Exchanger(contractSettings) {
     };
   }();
   /**
+   * Transaction (consumes gas, requires signer)
+   * @param from {String<EthAddress>}
+   * @param sourceCurrencyKey {bytes32}
+   * @param sourceAmount {BigNumber}
+   * @param destinationCurrencyKey {bytes32}
+   * @param destinationAddress {String<EthAddress>}
+   * @param txParams {TxParams}
+   * @returns BigNumber
+   **/
+
+
+  this.swap = /*#__PURE__*/function () {
+    var _ref22 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee22(from, sourceCurrencyKey, sourceAmount, destinationCurrencyKey, destinationAddress, txParams) {
+      return regenerator_default.a.wrap(function _callee22$(_context22) {
+        while (1) {
+          switch (_context22.prev = _context22.next) {
+            case 0:
+              txParams = txParams || {};
+              _context22.next = 3;
+              return _this.contract.swap(from, sourceCurrencyKey, sourceAmount, destinationCurrencyKey, destinationAddress, txParams);
+
+            case 3:
+              return _context22.abrupt("return", _context22.sent);
+
+            case 4:
+            case "end":
+              return _context22.stop();
+          }
+        }
+      }, _callee22);
+    }));
+
+    return function (_x43, _x44, _x45, _x46, _x47, _x48) {
+      return _ref22.apply(this, arguments);
+    };
+  }();
+  /**
    * Call (no gas consumed, doesn't require signer)
    * @returns BigNumber
    **/
 
 
-  this.waitingPeriodSecs = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee22() {
-    return regenerator_default.a.wrap(function _callee22$(_context22) {
+  this.waitingPeriodSecs = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee23() {
+    return regenerator_default.a.wrap(function _callee23$(_context23) {
       while (1) {
-        switch (_context22.prev = _context22.next) {
+        switch (_context23.prev = _context23.next) {
           case 0:
-            _context22.next = 2;
+            _context23.next = 2;
             return _this.contract.waitingPeriodSecs();
 
           case 2:
-            return _context22.abrupt("return", _context22.sent);
+            return _context23.abrupt("return", _context23.sent);
 
           case 3:
           case "end":
-            return _context22.stop();
+            return _context23.stop();
         }
       }
-    }, _callee22);
+    }, _callee23);
   }));
 }
 
