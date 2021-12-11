@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>oETH - Documentation</title>
+    <title>VBNBCollateraloUSD - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -31,7 +31,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">oETH</h1>
+    <h1 class="page-title">VBNBCollateraloUSD</h1>
     
 
     
@@ -44,7 +44,7 @@
 <header>
     
         <h2>
-        oETH
+        VBNBCollateraloUSD
         </h2>
         
     
@@ -58,7 +58,7 @@
 
     
 
-    <h4 class="name" id="oETH"><span class="type-signature"></span>new oETH<span class="signature">(contractSettings)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="VBNBCollateraloUSD"><span class="type-signature"></span>new VBNBCollateraloUSD<span class="signature">(contractSettings)</span><span class="type-signature"></span></h4>
 
     
 
@@ -70,7 +70,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line8">line 8</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line8">line 8</a>
     </li></ul></dd>
     
 
@@ -223,7 +223,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line54">line 54</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line54">line 54</a>
     </li></ul></dd>
     
 
@@ -347,7 +347,7 @@
 
     
 
-    <h4 class="name" id="allowance"><span class="type-signature"></span>allowance<span class="signature">(owner, spender)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="accountLoanLimit"><span class="type-signature"></span>accountLoanLimit<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -359,7 +359,104 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line65">line 65</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line63">line 63</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="accountOpenLoanCounter"><span class="type-signature"></span>accountOpenLoanCounter<span class="signature">(address_1)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line72">line 72</a>
     </li></ul></dd>
     
 
@@ -437,30 +534,7 @@
 
         <tr>
             
-                <td class="name"><code>owner</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;EthAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>spender</code></td>
+                <td class="name"><code>address_1</code></td>
             
 
             <td class="type">
@@ -516,7 +590,7 @@
 
     
 
-    <h4 class="name" id="approve"><span class="type-signature"></span>approve<span class="signature">(spender, value, txParams)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="accountsSynthLoans"><span class="type-signature"></span>accountsSynthLoans<span class="signature">(address_1, uint256_1)</span><span class="type-signature"></span></h4>
 
     
 
@@ -528,199 +602,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line76">line 76</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>spender</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;EthAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    boolean
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="balanceOf"><span class="type-signature"></span>balanceOf<span class="signature">(account)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line86">line 86</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line82">line 82</a>
     </li></ul></dd>
     
 
@@ -798,13 +680,205 @@
 
         <tr>
             
-                <td class="name"><code>account</code></td>
+                <td class="name"><code>address_1</code></td>
             
 
             <td class="type">
             
                 
 <span class="param-type">String.&lt;EthAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>uint256_1</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Object
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="accruedInterestOnLoan"><span class="type-signature"></span>accruedInterestOnLoan<span class="signature">(_loanAmount, _seconds)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line92">line 92</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_loanAmount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_seconds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
 
 
             
@@ -854,7 +928,7 @@
 
     
 
-    <h4 class="name" id="burn"><span class="type-signature"></span>burn<span class="signature">(account, amount, txParams)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="calculateAmountToLiquidate"><span class="type-signature"></span>calculateAmountToLiquidate<span class="signature">(debtBalance, collateral)</span><span class="type-signature"></span></h4>
 
     
 
@@ -866,7 +940,176 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line97">line 97</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line102">line 102</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>debtBalance</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>collateral</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="closeLoan"><span class="type-signature"></span>closeLoan<span class="signature">(loanID, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line112">line 112</a>
     </li></ul></dd>
     
 
@@ -944,30 +1187,7 @@
 
         <tr>
             
-                <td class="name"><code>account</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;EthAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>amount</code></td>
+                <td class="name"><code>loanID</code></td>
             
 
             <td class="type">
@@ -1036,7 +1256,7 @@
 
     
 
-    <h4 class="name" id="currencyKey"><span class="type-signature"></span>currencyKey<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="COLLATERAL"><span class="type-signature"></span>COLLATERAL<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -1048,7 +1268,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line106">line 106</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line21">line 21</a>
     </li></ul></dd>
     
 
@@ -1133,7 +1353,7 @@
 
     
 
-    <h4 class="name" id="DECIMALS"><span class="type-signature"></span>DECIMALS<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="collateralAmountForLoan"><span class="type-signature"></span>collateralAmountForLoan<span class="signature">(loanAmount)</span><span class="type-signature"></span></h4>
 
     
 
@@ -1145,7 +1365,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line21">line 21</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line122">line 122</a>
     </li></ul></dd>
     
 
@@ -1186,394 +1406,6 @@
 
 <div class="description">
     Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    Number
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="decimals"><span class="type-signature"></span>decimals<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line114">line 114</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    Number
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="FEE_ADDRESS"><span class="type-signature"></span>FEE_ADDRESS<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line29">line 29</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    String<EthAddress>
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="getResolverAddressesRequired"><span class="type-signature"></span>getResolverAddressesRequired<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line122">line 122</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    bytes32[24]
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="initiateSelfDestruct"><span class="type-signature"></span>initiateSelfDestruct<span class="signature">(txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line131">line 131</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
 </div>
 
 
@@ -1611,13 +1443,13 @@
 
         <tr>
             
-                <td class="name"><code>txParams</code></td>
+                <td class="name"><code>loanAmount</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">TxParams</span>
+<span class="param-type">BigNumber</span>
 
 
             
@@ -1649,6 +1481,16 @@
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
 
 
 
@@ -1657,7 +1499,7 @@
 
     
 
-    <h4 class="name" id="initiationTime"><span class="type-signature"></span>initiationTime<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="collateralizationRatio"><span class="type-signature"></span>collateralizationRatio<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -1669,7 +1511,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line140">line 140</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line130">line 130</a>
     </li></ul></dd>
     
 
@@ -1754,7 +1596,7 @@
 
     
 
-    <h4 class="name" id="integrationProxy"><span class="type-signature"></span>integrationProxy<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="currentInterestOnLoan"><span class="type-signature"></span>currentInterestOnLoan<span class="signature">(_account, _loanID)</span><span class="type-signature"></span></h4>
 
     
 
@@ -1766,7 +1608,381 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line148">line 148</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line140">line 140</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_account</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;EthAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_loanID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="depositCollateral"><span class="type-signature"></span>depositCollateral<span class="signature">(account, loanID, _amount, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line152">line 152</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>account</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;EthAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>loanID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_amount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getContractInfo"><span class="type-signature"></span>getContractInfo<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line161">line 161</a>
     </li></ul></dd>
     
 
@@ -1837,7 +2053,805 @@
 
         
 <div class="param-desc">
-    String<EthAddress>
+    Object
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getLoan"><span class="type-signature"></span>getLoan<span class="signature">(_account, _loanID)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line171">line 171</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_account</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;EthAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_loanID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Object
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getLoanCollateralRatio"><span class="type-signature"></span>getLoanCollateralRatio<span class="signature">(_account, _loanID)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line181">line 181</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_account</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;EthAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_loanID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getMintingFee"><span class="type-signature"></span>getMintingFee<span class="signature">(_account, _loanID)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line191">line 191</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_account</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;EthAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_loanID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getResolverAddressesRequired"><span class="type-signature"></span>getResolverAddressesRequired<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line199">line 199</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    bytes32[24]
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="interestPerSecond"><span class="type-signature"></span>interestPerSecond<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line207">line 207</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="interestRate"><span class="type-signature"></span>interestRate<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line215">line 215</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
 </div>
 
 
@@ -1863,7 +2877,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line157">line 157</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line224">line 224</a>
     </li></ul></dd>
     
 
@@ -1997,7 +3011,7 @@
 
     
 
-    <h4 class="name" id="issue"><span class="type-signature"></span>issue<span class="signature">(account, amount, txParams)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="issuanceRatio"><span class="type-signature"></span>issuanceRatio<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -2009,189 +3023,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line168">line 168</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>account</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;EthAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>amount</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="MAX_ADDRESSES_FROM_RESOLVER"><span class="type-signature"></span>MAX_ADDRESSES_FROM_RESOLVER<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line37">line 37</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line232">line 232</a>
     </li></ul></dd>
     
 
@@ -2276,7 +3108,7 @@
 
     
 
-    <h4 class="name" id="messageSender"><span class="type-signature"></span>messageSender<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="issueFeeRate"><span class="type-signature"></span>issueFeeRate<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -2288,7 +3120,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line177">line 177</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line240">line 240</a>
     </li></ul></dd>
     
 
@@ -2359,7 +3191,7 @@
 
         
 <div class="param-desc">
-    String<EthAddress>
+    BigNumber
 </div>
 
 
@@ -2373,7 +3205,7 @@
 
     
 
-    <h4 class="name" id="multiCollateralKey"><span class="type-signature"></span>multiCollateralKey<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="issueLimit"><span class="type-signature"></span>issueLimit<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -2385,7 +3217,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line185">line 185</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line248">line 248</a>
     </li></ul></dd>
     
 
@@ -2456,7 +3288,7 @@
 
         
 <div class="param-desc">
-    bytes32
+    BigNumber
 </div>
 
 
@@ -2470,7 +3302,7 @@
 
     
 
-    <h4 class="name" id="name"><span class="type-signature"></span>name<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="lastPauseTime"><span class="type-signature"></span>lastPauseTime<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -2482,7 +3314,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line193">line 193</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line256">line 256</a>
     </li></ul></dd>
     
 
@@ -2553,7 +3385,1122 @@
 
         
 <div class="param-desc">
-    String
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="liquidateLoan"><span class="type-signature"></span>liquidateLoan<span class="signature">(_loanCreatorsAddress, _loanID, _debtToCover, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line268">line 268</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_loanCreatorsAddress</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;EthAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_loanID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_debtToCover</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="liquidateUnclosedLoan"><span class="type-signature"></span>liquidateUnclosedLoan<span class="signature">(_loanCreatorsAddress, _loanID, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line280">line 280</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_loanCreatorsAddress</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;EthAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_loanID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="liquidationDeadline"><span class="type-signature"></span>liquidationDeadline<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line289">line 289</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="liquidationPenalty"><span class="type-signature"></span>liquidationPenalty<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line297">line 297</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="liquidationRatio"><span class="type-signature"></span>liquidationRatio<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line305">line 305</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="loanAmountFromCollateral"><span class="type-signature"></span>loanAmountFromCollateral<span class="signature">(collateralAmount)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line314">line 314</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>collateralAmount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="loanLiquidationOpen"><span class="type-signature"></span>loanLiquidationOpen<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line322">line 322</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    boolean
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="MAX_ADDRESSES_FROM_RESOLVER"><span class="type-signature"></span>MAX_ADDRESSES_FROM_RESOLVER<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line29">line 29</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="minLoanCollateralSize"><span class="type-signature"></span>minLoanCollateralSize<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line330">line 330</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
 </div>
 
 
@@ -2579,7 +4526,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line212">line 212</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line349">line 349</a>
     </li></ul></dd>
     
 
@@ -2676,7 +4623,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line203">line 203</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line340">line 340</a>
     </li></ul></dd>
     
 
@@ -2823,6 +4770,418 @@
 
     
 
+    <h4 class="name" id="openLoan"><span class="type-signature"></span>openLoan<span class="signature">(_amount, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line359">line 359</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_amount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="openLoanIDsByAccount"><span class="type-signature"></span>openLoanIDsByAccount<span class="signature">(_account)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line369">line 369</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_account</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;EthAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    uint256[]
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="OUSD_DECIMALS"><span class="type-signature"></span>OUSD_DECIMALS<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line37">line 37</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
     <h4 class="name" id="owner"><span class="type-signature"></span>owner<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
@@ -2835,7 +5194,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line220">line 220</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line377">line 377</a>
     </li></ul></dd>
     
 
@@ -2920,7 +5279,7 @@
 
     
 
-    <h4 class="name" id="proxy"><span class="type-signature"></span>proxy<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="paused"><span class="type-signature"></span>paused<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -2932,7 +5291,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line228">line 228</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line385">line 385</a>
     </li></ul></dd>
     
 
@@ -3003,12 +5362,217 @@
 
         
 <div class="param-desc">
-    String<EthAddress>
+    boolean
 </div>
 
 
 
     
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="repayLoan"><span class="type-signature"></span>repayLoan<span class="signature">(_loanCreatorsAddress, _loanID, _repayAmount, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line397">line 397</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_loanCreatorsAddress</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;EthAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_loanID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_repayAmount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3029,7 +5593,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line236">line 236</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line406">line 406</a>
     </li></ul></dd>
     
 
@@ -3126,7 +5690,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line245">line 245</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line415">line 415</a>
     </li></ul></dd>
     
 
@@ -3260,7 +5824,7 @@
 
     
 
-    <h4 class="name" id="selfDestruct"><span class="type-signature"></span>selfDestruct<span class="signature">(txParams)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setAccountLoanLimit"><span class="type-signature"></span>setAccountLoanLimit<span class="signature">(_loanLimit, txParams)</span><span class="type-signature"></span></h4>
 
     
 
@@ -3272,7 +5836,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line254">line 254</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line425">line 425</a>
     </li></ul></dd>
     
 
@@ -3350,440 +5914,13 @@
 
         <tr>
             
-                <td class="name"><code>txParams</code></td>
+                <td class="name"><code>_loanLimit</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="SELFDESTRUCT_DELAY"><span class="type-signature"></span>SELFDESTRUCT_DELAY<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line45">line 45</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    BigNumber
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="selfDestructBeneficiary"><span class="type-signature"></span>selfDestructBeneficiary<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line263">line 263</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    String<EthAddress>
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="selfDestructInitiated"><span class="type-signature"></span>selfDestructInitiated<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line271">line 271</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    boolean
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="setIntegrationProxy"><span class="type-signature"></span>setIntegrationProxy<span class="signature">(_integrationProxy, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line281">line 281</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>_integrationProxy</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;EthAddress></span>
+<span class="param-type">BigNumber</span>
 
 
             
@@ -3846,7 +5983,7 @@
 
     
 
-    <h4 class="name" id="setMessageSender"><span class="type-signature"></span>setMessageSender<span class="signature">(sender, txParams)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setCollateralizationRatio"><span class="type-signature"></span>setCollateralizationRatio<span class="signature">(ratio, txParams)</span><span class="type-signature"></span></h4>
 
     
 
@@ -3858,7 +5995,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line292">line 292</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line436">line 436</a>
     </li></ul></dd>
     
 
@@ -3936,13 +6073,13 @@
 
         <tr>
             
-                <td class="name"><code>sender</code></td>
+                <td class="name"><code>ratio</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String.&lt;EthAddress></span>
+<span class="param-type">BigNumber</span>
 
 
             
@@ -4005,7 +6142,7 @@
 
     
 
-    <h4 class="name" id="setProxy"><span class="type-signature"></span>setProxy<span class="signature">(_proxy, txParams)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setInterestRate"><span class="type-signature"></span>setInterestRate<span class="signature">(_interestRate, txParams)</span><span class="type-signature"></span></h4>
 
     
 
@@ -4017,7 +6154,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line303">line 303</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line447">line 447</a>
     </li></ul></dd>
     
 
@@ -4095,13 +6232,967 @@
 
         <tr>
             
-                <td class="name"><code>_proxy</code></td>
+                <td class="name"><code>_interestRate</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String.&lt;EthAddress></span>
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setIssueFeeRate"><span class="type-signature"></span>setIssueFeeRate<span class="signature">(_issueFeeRate, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line458">line 458</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_issueFeeRate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setIssueLimit"><span class="type-signature"></span>setIssueLimit<span class="signature">(_issueLimit, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line469">line 469</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_issueLimit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setLiquidationRatio"><span class="type-signature"></span>setLiquidationRatio<span class="signature">(_liquidationRatio, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line480">line 480</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_liquidationRatio</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setLoanLiquidationOpen"><span class="type-signature"></span>setLoanLiquidationOpen<span class="signature">(_loanLiquidationOpen, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line491">line 491</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_loanLiquidationOpen</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setMinLoanCollateralSize"><span class="type-signature"></span>setMinLoanCollateralSize<span class="signature">(_minLoanCollateralSize, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line502">line 502</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_minLoanCollateralSize</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setPaused"><span class="type-signature"></span>setPaused<span class="signature">(_paused, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line513">line 513</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_paused</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
 
 
             
@@ -4176,7 +7267,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line314">line 314</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line524">line 524</a>
     </li></ul></dd>
     
 
@@ -4323,7 +7414,7 @@
 
     
 
-    <h4 class="name" id="setSelfDestructBeneficiary"><span class="type-signature"></span>setSelfDestructBeneficiary<span class="signature">(_beneficiary, txParams)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setVToken"><span class="type-signature"></span>setVToken<span class="signature">(_vToken, txParams)</span><span class="type-signature"></span></h4>
 
     
 
@@ -4335,7 +7426,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line325">line 325</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line535">line 535</a>
     </li></ul></dd>
     
 
@@ -4413,7 +7504,7 @@
 
         <tr>
             
-                <td class="name"><code>_beneficiary</code></td>
+                <td class="name"><code>_vToken</code></td>
             
 
             <td class="type">
@@ -4482,7 +7573,7 @@
 
     
 
-    <h4 class="name" id="setTokenState"><span class="type-signature"></span>setTokenState<span class="signature">(_tokenState, txParams)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="timeSinceInterestAccrualOnLoan"><span class="type-signature"></span>timeSinceInterestAccrualOnLoan<span class="signature">(_account, _loanID)</span><span class="type-signature"></span></h4>
 
     
 
@@ -4494,7 +7585,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line336">line 336</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line546">line 546</a>
     </li></ul></dd>
     
 
@@ -4534,7 +7625,7 @@
 
 
 <div class="description">
-    Transaction (consumes gas, requires signer)
+    Call (no gas consumed, doesn't require signer)
 </div>
 
 
@@ -4572,7 +7663,7 @@
 
         <tr>
             
-                <td class="name"><code>_tokenState</code></td>
+                <td class="name"><code>_account</code></td>
             
 
             <td class="type">
@@ -4595,143 +7686,7 @@
 
         <tr>
             
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="setTotalSupply"><span class="type-signature"></span>setTotalSupply<span class="signature">(amount, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line347">line 347</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>amount</code></td>
+                <td class="name"><code>_loanID</code></td>
             
 
             <td class="type">
@@ -4751,16 +7706,162 @@
         </tr>
 
     
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="totalFeesOnLoan"><span class="type-signature"></span>totalFeesOnLoan<span class="signature">(_account, _loanID)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line556">line 556</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
 
         <tr>
             
-                <td class="name"><code>txParams</code></td>
+                <td class="name"><code>_account</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">TxParams</span>
+<span class="param-type">String.&lt;EthAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_loanID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
 
 
             
@@ -4792,6 +7893,16 @@
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Object
+</div>
+
+
+
+    
 
 
 
@@ -4800,7 +7911,7 @@
 
     
 
-    <h4 class="name" id="symbol"><span class="type-signature"></span>symbol<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="totalIssuedSynths"><span class="type-signature"></span>totalIssuedSynths<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -4812,7 +7923,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line356">line 356</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line564">line 564</a>
     </li></ul></dd>
     
 
@@ -4883,7 +7994,7 @@
 
         
 <div class="param-desc">
-    String
+    BigNumber
 </div>
 
 
@@ -4897,7 +8008,7 @@
 
     
 
-    <h4 class="name" id="terminateSelfDestruct"><span class="type-signature"></span>terminateSelfDestruct<span class="signature">(txParams)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="totalLoansCreated"><span class="type-signature"></span>totalLoansCreated<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -4909,7 +8020,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line365">line 365</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line572">line 572</a>
     </li></ul></dd>
     
 
@@ -4949,7 +8060,7 @@
 
 
 <div class="description">
-    Transaction (consumes gas, requires signer)
+    Call (no gas consumed, doesn't require signer)
 </div>
 
 
@@ -4962,69 +8073,30 @@
 
 
 
-    <h5>Parameters:</h5>
-    
 
-<table class="params">
-    <thead>
-    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
         
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
+<div class="param-desc">
+    BigNumber
+</div>
 
 
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
 
     
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5033,7 +8105,7 @@
 
     
 
-    <h4 class="name" id="tokenState"><span class="type-signature"></span>tokenState<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="totalOpenLoanCount"><span class="type-signature"></span>totalOpenLoanCount<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -5045,7 +8117,201 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line374">line 374</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line580">line 580</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="VBNB_DECIMALS"><span class="type-signature"></span>VBNB_DECIMALS<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line45">line 45</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="vToken"><span class="type-signature"></span>vToken<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line588">line 588</a>
     </li></ul></dd>
     
 
@@ -5130,7 +8396,7 @@
 
     
 
-    <h4 class="name" id="totalSupply"><span class="type-signature"></span>totalSupply<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="withdrawCollateral"><span class="type-signature"></span>withdrawCollateral<span class="signature">(loanID, withdrawAmount, txParams)</span><span class="type-signature"></span></h4>
 
     
 
@@ -5142,104 +8408,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line382">line 382</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    BigNumber
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="transfer"><span class="type-signature"></span>transfer<span class="signature">(to, value, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line393">line 393</a>
+        <a href="contracts_bsc_VBNBCollateraloUSD.js.html">contracts/bsc/VBNBCollateraloUSD.js</a>, <a href="contracts_bsc_VBNBCollateraloUSD.js.html#line599">line 599</a>
     </li></ul></dd>
     
 
@@ -5317,13 +8486,13 @@
 
         <tr>
             
-                <td class="name"><code>to</code></td>
+                <td class="name"><code>loanID</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String.&lt;EthAddress></span>
+<span class="param-type">BigNumber</span>
 
 
             
@@ -5340,7 +8509,7 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>withdrawAmount</code></td>
             
 
             <td class="type">
@@ -5401,784 +8570,6 @@
 
 
 
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    boolean
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="transferableSynths"><span class="type-signature"></span>transferableSynths<span class="signature">(account)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line441">line 441</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>account</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;EthAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    BigNumber
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="transferAndSettle"><span class="type-signature"></span>transferAndSettle<span class="signature">(to, value, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line405">line 405</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>to</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;EthAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    boolean
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="transferFrom"><span class="type-signature"></span>transferFrom<span class="signature">(from, to, value, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line418">line 418</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>from</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;EthAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>to</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;EthAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    boolean
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="transferFromAndSettle"><span class="type-signature"></span>transferFromAndSettle<span class="signature">(from, to, value, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_bsc_oETH.js.html">contracts/bsc/oETH.js</a>, <a href="contracts_bsc_oETH.js.html#line431">line 431</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>from</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;EthAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>to</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;EthAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    boolean
-</div>
-
-
-
-    
 
 
 
