@@ -1,18 +1,26 @@
 import { Contract } from 'ethers';
 import ContractSettings from '../../contractSettings';
-import abi from '../../../lib/abis/bsc/BNBCollateral';
+import abi from '../../../lib/abis/bsc/EtherCollateraloUSD';
 
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function BNBCollateral(contractSettings) {
+function EtherCollateraloUSD(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['BNBCollateral'],
+    this.contractSettings.addressList['EtherCollateraloUSD'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns bytes32
+   **/
+  this.COLLATERAL = async () => {
+    return await this.contract.COLLATERAL();
+  };
 
   /**
    * Call (no gas consumed, doesn't require signer)
@@ -71,12 +79,12 @@ function BNBCollateral(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @param _account {String<EthAddress>}
-   * @param _loanID {BigNumber}
+   * @param debtBalance {BigNumber}
+   * @param collateral {BigNumber}
    * @returns BigNumber
    **/
-  this.calculateMintingFee = async (_account, _loanID) => {
-    return await this.contract.calculateMintingFee(_account, _loanID);
+  this.calculateAmountToLiquidate = async (debtBalance, collateral) => {
+    return await this.contract.calculateAmountToLiquidate(debtBalance, collateral);
   };
 
   /**
@@ -118,12 +126,30 @@ function BNBCollateral(contractSettings) {
   };
 
   /**
-   * Call (no gas consumed, doesn't require signer)
+   * Transaction (consumes gas, requires signer)
+<br>Payable (to enter ETH amount set txParams.value)
+   * @param account {String<EthAddress>}
+   * @param loanID {BigNumber}
    * @param _amount {BigNumber}
-   * @returns BigNumber
+   * @param txParams {TxParams}
+  
    **/
-  this.getBNBValue = async _amount => {
-    return await this.contract.getBNBValue(_amount);
+  this.depositCollateral = async (account, loanID, _amount, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.depositCollateral(account, loanID, _amount, txParams);
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+<br>Payable (to enter ETH amount set txParams.value)
+   * @param account {String<EthAddress>}
+   * @param loanID {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+  this.depositCollateral = async (account, loanID, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.depositCollateral(account, loanID, txParams);
   };
 
   /**
@@ -146,19 +172,30 @@ function BNBCollateral(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @returns bytes32[24]
+   * @param _account {String<EthAddress>}
+   * @param _loanID {BigNumber}
+   * @returns BigNumber
    **/
-  this.getResolverAddressesRequired = async () => {
-    return await this.contract.getResolverAddressesRequired();
+  this.getLoanCollateralRatio = async (_account, _loanID) => {
+    return await this.contract.getLoanCollateralRatio(_account, _loanID);
   };
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @param _amount {BigNumber}
+   * @param _account {String<EthAddress>}
+   * @param _loanID {BigNumber}
    * @returns BigNumber
    **/
-  this.getVBNBValue = async _amount => {
-    return await this.contract.getVBNBValue(_amount);
+  this.getMintingFee = async (_account, _loanID) => {
+    return await this.contract.getMintingFee(_account, _loanID);
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns bytes32[24]
+   **/
+  this.getResolverAddressesRequired = async () => {
+    return await this.contract.getResolverAddressesRequired();
   };
 
   /**
@@ -222,6 +259,19 @@ function BNBCollateral(contractSettings) {
    * Transaction (consumes gas, requires signer)
    * @param _loanCreatorsAddress {String<EthAddress>}
    * @param _loanID {BigNumber}
+   * @param _debtToCover {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+  this.liquidateLoan = async (_loanCreatorsAddress, _loanID, _debtToCover, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.liquidateLoan(_loanCreatorsAddress, _loanID, _debtToCover, txParams);
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _loanCreatorsAddress {String<EthAddress>}
+   * @param _loanID {BigNumber}
    * @param txParams {TxParams}
   
    **/
@@ -240,21 +290,27 @@ function BNBCollateral(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+  this.liquidationPenalty = async () => {
+    return await this.contract.liquidationPenalty();
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+  this.liquidationRatio = async () => {
+    return await this.contract.liquidationRatio();
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
    * @param collateralAmount {BigNumber}
    * @returns BigNumber
    **/
   this.loanAmountFromCollateral = async collateralAmount => {
     return await this.contract.loanAmountFromCollateral(collateralAmount);
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @param _account {String<EthAddress>}
-   * @param _loanID {BigNumber}
-   * @returns BigNumber
-   **/
-  this.loanLifeSpan = async (_account, _loanID) => {
-    return await this.contract.loanLifeSpan(_account, _loanID);
   };
 
   /**
@@ -269,8 +325,8 @@ function BNBCollateral(contractSettings) {
    * Call (no gas consumed, doesn't require signer)
    * @returns BigNumber
    **/
-  this.minLoanSize = async () => {
-    return await this.contract.minLoanSize();
+  this.minLoanCollateralSize = async () => {
+    return await this.contract.minLoanCollateralSize();
   };
 
   /**
@@ -304,17 +360,6 @@ function BNBCollateral(contractSettings) {
   };
 
   /**
-   * Transaction (consumes gas, requires signer)
-<br>Payable (to enter ETH amount set txParams.value)
-   * @param txParams {TxParams}
-   * @returns BigNumber
-   **/
-  this.openLoan = async txParams => {
-    txParams = txParams || {};
-    return await this.contract.openLoan(txParams);
-  };
-
-  /**
    * Call (no gas consumed, doesn't require signer)
    * @param _account {String<EthAddress>}
    * @returns uint256[]
@@ -337,6 +382,19 @@ function BNBCollateral(contractSettings) {
    **/
   this.paused = async () => {
     return await this.contract.paused();
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _loanCreatorsAddress {String<EthAddress>}
+   * @param _loanID {BigNumber}
+   * @param _repayAmount {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+  this.repayLoan = async (_loanCreatorsAddress, _loanID, _repayAmount, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.repayLoan(_loanCreatorsAddress, _loanID, _repayAmount, txParams);
   };
 
   /**
@@ -413,6 +471,17 @@ function BNBCollateral(contractSettings) {
 
   /**
    * Transaction (consumes gas, requires signer)
+   * @param _liquidationRatio {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+  this.setLiquidationRatio = async (_liquidationRatio, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.setLiquidationRatio(_liquidationRatio, txParams);
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
    * @param _loanLiquidationOpen {boolean}
    * @param txParams {TxParams}
   
@@ -424,13 +493,13 @@ function BNBCollateral(contractSettings) {
 
   /**
    * Transaction (consumes gas, requires signer)
-   * @param _minLoanSize {BigNumber}
+   * @param _minLoanCollateralSize {BigNumber}
    * @param txParams {TxParams}
   
    **/
-  this.setMinLoanSize = async (_minLoanSize, txParams) => {
+  this.setMinLoanCollateralSize = async (_minLoanCollateralSize, txParams) => {
     txParams = txParams || {};
-    return await this.contract.setMinLoanSize(_minLoanSize, txParams);
+    return await this.contract.setMinLoanCollateralSize(_minLoanCollateralSize, txParams);
   };
 
   /**
@@ -468,6 +537,26 @@ function BNBCollateral(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
+   * @param _account {String<EthAddress>}
+   * @param _loanID {BigNumber}
+   * @returns BigNumber
+   **/
+  this.timeSinceInterestAccrualOnLoan = async (_account, _loanID) => {
+    return await this.contract.timeSinceInterestAccrualOnLoan(_account, _loanID);
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param _account {String<EthAddress>}
+   * @param _loanID {BigNumber}
+   * @returns Object
+   **/
+  this.totalFeesOnLoan = async (_account, _loanID) => {
+    return await this.contract.totalFeesOnLoan(_account, _loanID);
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
    * @returns BigNumber
    **/
   this.totalIssuedSynths = async () => {
@@ -497,6 +586,18 @@ function BNBCollateral(contractSettings) {
   this.vToken = async () => {
     return await this.contract.vToken();
   };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param loanID {BigNumber}
+   * @param withdrawAmount {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+  this.withdrawCollateral = async (loanID, withdrawAmount, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.withdrawCollateral(loanID, withdrawAmount, txParams);
+  };
 }
 
-export default BNBCollateral;
+export default EtherCollateraloUSD;

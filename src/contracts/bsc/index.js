@@ -8,6 +8,7 @@ import OikosEscrow from './OikosEscrow';
 import OikosState from './OikosState';
 import RewardEscrow from './RewardEscrow';
 import Exchanger from './Exchanger';
+import EtherCollateraloUSD from './EtherCollateraloUSD';
 import Issuer from './Issuer';
 import AddressResolver from './AddressResolver';
 import BNBCollateral from './BNBCollateral';
@@ -34,6 +35,7 @@ export default {
   OikosState,
   RewardEscrow,
   Exchanger,
+  EtherCollateraloUSD,
   Issuer,
   AddressResolver,
   BNBCollateral,

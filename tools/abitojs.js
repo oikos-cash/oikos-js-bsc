@@ -45,7 +45,7 @@ const contracts = {
   RewardEscrow: true,
   DappMaintenance: true,
   Exchanger: true,
-  EtherCollateral: true,
+  EtherCollateraloUSD: true,
   Issuer: true,
   AddressResolver: true,
   BNBCollateral: true,
