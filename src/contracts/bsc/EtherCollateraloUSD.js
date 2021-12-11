@@ -31,6 +31,22 @@ function EtherCollateraloUSD(contractSettings) {
   };
 
   /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+  this.OUSD_DECIMALS = async () => {
+    return await this.contract.OUSD_DECIMALS();
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+  this.VBNB_DECIMALS = async () => {
+    return await this.contract.VBNB_DECIMALS();
+  };
+
+  /**
    * Transaction (consumes gas, requires signer)
    * @param txParams {TxParams}
   
@@ -127,7 +143,6 @@ function EtherCollateraloUSD(contractSettings) {
 
   /**
    * Transaction (consumes gas, requires signer)
-<br>Payable (to enter ETH amount set txParams.value)
    * @param account {String<EthAddress>}
    * @param loanID {BigNumber}
    * @param _amount {BigNumber}
@@ -137,19 +152,6 @@ function EtherCollateraloUSD(contractSettings) {
   this.depositCollateral = async (account, loanID, _amount, txParams) => {
     txParams = txParams || {};
     return await this.contract.depositCollateral(account, loanID, _amount, txParams);
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-<br>Payable (to enter ETH amount set txParams.value)
-   * @param account {String<EthAddress>}
-   * @param loanID {BigNumber}
-   * @param txParams {TxParams}
-  
-   **/
-  this.depositCollateral = async (account, loanID, txParams) => {
-    txParams = txParams || {};
-    return await this.contract.depositCollateral(account, loanID, txParams);
   };
 
   /**

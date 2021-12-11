@@ -24047,7 +24047,7 @@ var BSC_ADDRESSES = {
   SynthoCAKE: '0x3b823D1d88099a268ec8Ba636b3Fd8db85CAa249',
   SynthoDOT: '0xbEE3A7a91cc02ac3519C31a7348e1648E6192F38',
   SynthoICP: '0x93385170983bC4778eb9F8E24dF2423e467dBd41',
-  EtherCollateraloUSD: '0x7042c05A1e30902575803210Ae0DA6fe2390A35a'
+  EtherCollateraloUSD: '0xA90a21824e1848780dbeef70dF8Ddf9E8Ec5fDae'
 };
 var TESTNET_ADDRESSES = {
   SafeDecimalMath: '0x674F2407cE710B93ADE35D7F0c9076d935a4aA5d',
@@ -31379,6 +31379,32 @@ var TESTNET_ADDRESSES = {
   type: 'function',
   signature: '0xe3235c91'
 }, {
+  constant: true,
+  inputs: [],
+  name: 'OUSD_DECIMALS',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x6d9ca3e9'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'VBNB_DECIMALS',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x5b8e55a0'
+}, {
   constant: false,
   inputs: [],
   name: 'acceptOwnership',
@@ -31597,27 +31623,10 @@ var TESTNET_ADDRESSES = {
   }],
   name: 'depositCollateral',
   outputs: [],
-  payable: true,
-  stateMutability: 'payable',
+  payable: false,
+  stateMutability: 'nonpayable',
   type: 'function',
   signature: '0x1a74856b'
-}, {
-  constant: false,
-  inputs: [{
-    internalType: 'address',
-    name: 'account',
-    type: 'address'
-  }, {
-    internalType: 'uint256',
-    name: 'loanID',
-    type: 'uint256'
-  }],
-  name: 'depositCollateral',
-  outputs: [],
-  payable: true,
-  stateMutability: 'payable',
-  type: 'function',
-  signature: '0xa5d5db0c'
 }, {
   constant: true,
   inputs: [],
@@ -47594,49 +47603,40 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
     }, _callee2);
   }));
   /**
-   * Transaction (consumes gas, requires signer)
-   * @param txParams {TxParams}
-  
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
    **/
 
-  this.acceptOwnership = /*#__PURE__*/function () {
-    var _ref3 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee3(txParams) {
-      return regenerator_default.a.wrap(function _callee3$(_context3) {
-        while (1) {
-          switch (_context3.prev = _context3.next) {
-            case 0:
-              txParams = txParams || {};
-              _context3.next = 3;
-              return _this.contract.acceptOwnership(txParams);
+  this.OUSD_DECIMALS = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee3() {
+    return regenerator_default.a.wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            _context3.next = 2;
+            return _this.contract.OUSD_DECIMALS();
 
-            case 3:
-              return _context3.abrupt("return", _context3.sent);
+          case 2:
+            return _context3.abrupt("return", _context3.sent);
 
-            case 4:
-            case "end":
-              return _context3.stop();
-          }
+          case 3:
+          case "end":
+            return _context3.stop();
         }
-      }, _callee3);
-    }));
-
-    return function (_x) {
-      return _ref3.apply(this, arguments);
-    };
-  }();
+      }
+    }, _callee3);
+  }));
   /**
    * Call (no gas consumed, doesn't require signer)
    * @returns BigNumber
    **/
 
-
-  this.accountLoanLimit = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee4() {
+  this.VBNB_DECIMALS = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee4() {
     return regenerator_default.a.wrap(function _callee4$(_context4) {
       while (1) {
         switch (_context4.prev = _context4.next) {
           case 0:
             _context4.next = 2;
-            return _this.contract.accountLoanLimit();
+            return _this.contract.VBNB_DECIMALS();
 
           case 2:
             return _context4.abrupt("return", _context4.sent);
@@ -47649,24 +47649,25 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
     }, _callee4);
   }));
   /**
-   * Call (no gas consumed, doesn't require signer)
-   * @param  {String<EthAddress>}
-   * @returns BigNumber
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+  
    **/
 
-  this.accountOpenLoanCounter = /*#__PURE__*/function () {
-    var _ref5 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee5(address_1) {
+  this.acceptOwnership = /*#__PURE__*/function () {
+    var _ref5 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee5(txParams) {
       return regenerator_default.a.wrap(function _callee5$(_context5) {
         while (1) {
           switch (_context5.prev = _context5.next) {
             case 0:
-              _context5.next = 2;
-              return _this.contract.accountOpenLoanCounter(address_1);
-
-            case 2:
-              return _context5.abrupt("return", _context5.sent);
+              txParams = txParams || {};
+              _context5.next = 3;
+              return _this.contract.acceptOwnership(txParams);
 
             case 3:
+              return _context5.abrupt("return", _context5.sent);
+
+            case 4:
             case "end":
               return _context5.stop();
           }
@@ -47674,58 +47675,48 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee5);
     }));
 
-    return function (_x2) {
+    return function (_x) {
       return _ref5.apply(this, arguments);
     };
   }();
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @param  {String<EthAddress>}
-   * @param  {BigNumber}
-   * @returns Object
-   **/
-
-
-  this.accountsSynthLoans = /*#__PURE__*/function () {
-    var _ref6 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee6(address_1, uint256_1) {
-      return regenerator_default.a.wrap(function _callee6$(_context6) {
-        while (1) {
-          switch (_context6.prev = _context6.next) {
-            case 0:
-              _context6.next = 2;
-              return _this.contract.accountsSynthLoans(address_1, uint256_1);
-
-            case 2:
-              return _context6.abrupt("return", _context6.sent);
-
-            case 3:
-            case "end":
-              return _context6.stop();
-          }
-        }
-      }, _callee6);
-    }));
-
-    return function (_x3, _x4) {
-      return _ref6.apply(this, arguments);
-    };
-  }();
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @param _loanAmount {BigNumber}
-   * @param _seconds {BigNumber}
    * @returns BigNumber
    **/
 
 
-  this.accruedInterestOnLoan = /*#__PURE__*/function () {
-    var _ref7 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee7(_loanAmount, _seconds) {
+  this.accountLoanLimit = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee6() {
+    return regenerator_default.a.wrap(function _callee6$(_context6) {
+      while (1) {
+        switch (_context6.prev = _context6.next) {
+          case 0:
+            _context6.next = 2;
+            return _this.contract.accountLoanLimit();
+
+          case 2:
+            return _context6.abrupt("return", _context6.sent);
+
+          case 3:
+          case "end":
+            return _context6.stop();
+        }
+      }
+    }, _callee6);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param  {String<EthAddress>}
+   * @returns BigNumber
+   **/
+
+  this.accountOpenLoanCounter = /*#__PURE__*/function () {
+    var _ref7 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee7(address_1) {
       return regenerator_default.a.wrap(function _callee7$(_context7) {
         while (1) {
           switch (_context7.prev = _context7.next) {
             case 0:
               _context7.next = 2;
-              return _this.contract.accruedInterestOnLoan(_loanAmount, _seconds);
+              return _this.contract.accountOpenLoanCounter(address_1);
 
             case 2:
               return _context7.abrupt("return", _context7.sent);
@@ -47738,26 +47729,26 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee7);
     }));
 
-    return function (_x5, _x6) {
+    return function (_x2) {
       return _ref7.apply(this, arguments);
     };
   }();
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @param debtBalance {BigNumber}
-   * @param collateral {BigNumber}
-   * @returns BigNumber
+   * @param  {String<EthAddress>}
+   * @param  {BigNumber}
+   * @returns Object
    **/
 
 
-  this.calculateAmountToLiquidate = /*#__PURE__*/function () {
-    var _ref8 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee8(debtBalance, collateral) {
+  this.accountsSynthLoans = /*#__PURE__*/function () {
+    var _ref8 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee8(address_1, uint256_1) {
       return regenerator_default.a.wrap(function _callee8$(_context8) {
         while (1) {
           switch (_context8.prev = _context8.next) {
             case 0:
               _context8.next = 2;
-              return _this.contract.calculateAmountToLiquidate(debtBalance, collateral);
+              return _this.contract.accountsSynthLoans(address_1, uint256_1);
 
             case 2:
               return _context8.abrupt("return", _context8.sent);
@@ -47770,32 +47761,31 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee8);
     }));
 
-    return function (_x7, _x8) {
+    return function (_x3, _x4) {
       return _ref8.apply(this, arguments);
     };
   }();
   /**
-   * Transaction (consumes gas, requires signer)
-   * @param loanID {BigNumber}
-   * @param txParams {TxParams}
-  
+   * Call (no gas consumed, doesn't require signer)
+   * @param _loanAmount {BigNumber}
+   * @param _seconds {BigNumber}
+   * @returns BigNumber
    **/
 
 
-  this.closeLoan = /*#__PURE__*/function () {
-    var _ref9 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee9(loanID, txParams) {
+  this.accruedInterestOnLoan = /*#__PURE__*/function () {
+    var _ref9 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee9(_loanAmount, _seconds) {
       return regenerator_default.a.wrap(function _callee9$(_context9) {
         while (1) {
           switch (_context9.prev = _context9.next) {
             case 0:
-              txParams = txParams || {};
-              _context9.next = 3;
-              return _this.contract.closeLoan(loanID, txParams);
+              _context9.next = 2;
+              return _this.contract.accruedInterestOnLoan(_loanAmount, _seconds);
 
-            case 3:
+            case 2:
               return _context9.abrupt("return", _context9.sent);
 
-            case 4:
+            case 3:
             case "end":
               return _context9.stop();
           }
@@ -47803,25 +47793,26 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee9);
     }));
 
-    return function (_x9, _x10) {
+    return function (_x5, _x6) {
       return _ref9.apply(this, arguments);
     };
   }();
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @param loanAmount {BigNumber}
+   * @param debtBalance {BigNumber}
+   * @param collateral {BigNumber}
    * @returns BigNumber
    **/
 
 
-  this.collateralAmountForLoan = /*#__PURE__*/function () {
-    var _ref10 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee10(loanAmount) {
+  this.calculateAmountToLiquidate = /*#__PURE__*/function () {
+    var _ref10 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee10(debtBalance, collateral) {
       return regenerator_default.a.wrap(function _callee10$(_context10) {
         while (1) {
           switch (_context10.prev = _context10.next) {
             case 0:
               _context10.next = 2;
-              return _this.contract.collateralAmountForLoan(loanAmount);
+              return _this.contract.calculateAmountToLiquidate(debtBalance, collateral);
 
             case 2:
               return _context10.abrupt("return", _context10.sent);
@@ -47834,49 +47825,58 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee10);
     }));
 
-    return function (_x11) {
+    return function (_x7, _x8) {
       return _ref10.apply(this, arguments);
     };
   }();
   /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
+   * Transaction (consumes gas, requires signer)
+   * @param loanID {BigNumber}
+   * @param txParams {TxParams}
+  
    **/
 
 
-  this.collateralizationRatio = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee11() {
-    return regenerator_default.a.wrap(function _callee11$(_context11) {
-      while (1) {
-        switch (_context11.prev = _context11.next) {
-          case 0:
-            _context11.next = 2;
-            return _this.contract.collateralizationRatio();
+  this.closeLoan = /*#__PURE__*/function () {
+    var _ref11 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee11(loanID, txParams) {
+      return regenerator_default.a.wrap(function _callee11$(_context11) {
+        while (1) {
+          switch (_context11.prev = _context11.next) {
+            case 0:
+              txParams = txParams || {};
+              _context11.next = 3;
+              return _this.contract.closeLoan(loanID, txParams);
 
-          case 2:
-            return _context11.abrupt("return", _context11.sent);
+            case 3:
+              return _context11.abrupt("return", _context11.sent);
 
-          case 3:
-          case "end":
-            return _context11.stop();
+            case 4:
+            case "end":
+              return _context11.stop();
+          }
         }
-      }
-    }, _callee11);
-  }));
+      }, _callee11);
+    }));
+
+    return function (_x9, _x10) {
+      return _ref11.apply(this, arguments);
+    };
+  }();
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @param _account {String<EthAddress>}
-   * @param _loanID {BigNumber}
+   * @param loanAmount {BigNumber}
    * @returns BigNumber
    **/
 
-  this.currentInterestOnLoan = /*#__PURE__*/function () {
-    var _ref12 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee12(_account, _loanID) {
+
+  this.collateralAmountForLoan = /*#__PURE__*/function () {
+    var _ref12 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee12(loanAmount) {
       return regenerator_default.a.wrap(function _callee12$(_context12) {
         while (1) {
           switch (_context12.prev = _context12.next) {
             case 0:
               _context12.next = 2;
-              return _this.contract.currentInterestOnLoan(_account, _loanID);
+              return _this.contract.collateralAmountForLoan(loanAmount);
 
             case 2:
               return _context12.abrupt("return", _context12.sent);
@@ -47889,13 +47889,67 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee12);
     }));
 
-    return function (_x12, _x13) {
+    return function (_x11) {
       return _ref12.apply(this, arguments);
     };
   }();
   /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+
+  this.collateralizationRatio = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee13() {
+    return regenerator_default.a.wrap(function _callee13$(_context13) {
+      while (1) {
+        switch (_context13.prev = _context13.next) {
+          case 0:
+            _context13.next = 2;
+            return _this.contract.collateralizationRatio();
+
+          case 2:
+            return _context13.abrupt("return", _context13.sent);
+
+          case 3:
+          case "end":
+            return _context13.stop();
+        }
+      }
+    }, _callee13);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param _account {String<EthAddress>}
+   * @param _loanID {BigNumber}
+   * @returns BigNumber
+   **/
+
+  this.currentInterestOnLoan = /*#__PURE__*/function () {
+    var _ref14 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee14(_account, _loanID) {
+      return regenerator_default.a.wrap(function _callee14$(_context14) {
+        while (1) {
+          switch (_context14.prev = _context14.next) {
+            case 0:
+              _context14.next = 2;
+              return _this.contract.currentInterestOnLoan(_account, _loanID);
+
+            case 2:
+              return _context14.abrupt("return", _context14.sent);
+
+            case 3:
+            case "end":
+              return _context14.stop();
+          }
+        }
+      }, _callee14);
+    }));
+
+    return function (_x12, _x13) {
+      return _ref14.apply(this, arguments);
+    };
+  }();
+  /**
    * Transaction (consumes gas, requires signer)
-  <br>Payable (to enter ETH amount set txParams.value)
    * @param account {String<EthAddress>}
    * @param loanID {BigNumber}
    * @param _amount {BigNumber}
@@ -47905,63 +47959,28 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
 
 
   this.depositCollateral = /*#__PURE__*/function () {
-    var _ref13 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee13(account, loanID, _amount, txParams) {
-      return regenerator_default.a.wrap(function _callee13$(_context13) {
+    var _ref15 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee15(account, loanID, _amount, txParams) {
+      return regenerator_default.a.wrap(function _callee15$(_context15) {
         while (1) {
-          switch (_context13.prev = _context13.next) {
+          switch (_context15.prev = _context15.next) {
             case 0:
               txParams = txParams || {};
-              _context13.next = 3;
+              _context15.next = 3;
               return _this.contract.depositCollateral(account, loanID, _amount, txParams);
 
             case 3:
-              return _context13.abrupt("return", _context13.sent);
+              return _context15.abrupt("return", _context15.sent);
 
             case 4:
             case "end":
-              return _context13.stop();
+              return _context15.stop();
           }
         }
-      }, _callee13);
+      }, _callee15);
     }));
 
     return function (_x14, _x15, _x16, _x17) {
-      return _ref13.apply(this, arguments);
-    };
-  }();
-  /**
-   * Transaction (consumes gas, requires signer)
-  <br>Payable (to enter ETH amount set txParams.value)
-   * @param account {String<EthAddress>}
-   * @param loanID {BigNumber}
-   * @param txParams {TxParams}
-  
-   **/
-
-
-  this.depositCollateral = /*#__PURE__*/function () {
-    var _ref14 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee14(account, loanID, txParams) {
-      return regenerator_default.a.wrap(function _callee14$(_context14) {
-        while (1) {
-          switch (_context14.prev = _context14.next) {
-            case 0:
-              txParams = txParams || {};
-              _context14.next = 3;
-              return _this.contract.depositCollateral(account, loanID, txParams);
-
-            case 3:
-              return _context14.abrupt("return", _context14.sent);
-
-            case 4:
-            case "end":
-              return _context14.stop();
-          }
-        }
-      }, _callee14);
-    }));
-
-    return function (_x18, _x19, _x20) {
-      return _ref14.apply(this, arguments);
+      return _ref15.apply(this, arguments);
     };
   }();
   /**
@@ -47970,23 +47989,23 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
 
-  this.getContractInfo = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee15() {
-    return regenerator_default.a.wrap(function _callee15$(_context15) {
+  this.getContractInfo = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee16() {
+    return regenerator_default.a.wrap(function _callee16$(_context16) {
       while (1) {
-        switch (_context15.prev = _context15.next) {
+        switch (_context16.prev = _context16.next) {
           case 0:
-            _context15.next = 2;
+            _context16.next = 2;
             return _this.contract.getContractInfo();
 
           case 2:
-            return _context15.abrupt("return", _context15.sent);
+            return _context16.abrupt("return", _context16.sent);
 
           case 3:
           case "end":
-            return _context15.stop();
+            return _context16.stop();
         }
       }
-    }, _callee15);
+    }, _callee16);
   }));
   /**
    * Call (no gas consumed, doesn't require signer)
@@ -47996,45 +48015,13 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
   this.getLoan = /*#__PURE__*/function () {
-    var _ref16 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee16(_account, _loanID) {
-      return regenerator_default.a.wrap(function _callee16$(_context16) {
-        while (1) {
-          switch (_context16.prev = _context16.next) {
-            case 0:
-              _context16.next = 2;
-              return _this.contract.getLoan(_account, _loanID);
-
-            case 2:
-              return _context16.abrupt("return", _context16.sent);
-
-            case 3:
-            case "end":
-              return _context16.stop();
-          }
-        }
-      }, _callee16);
-    }));
-
-    return function (_x21, _x22) {
-      return _ref16.apply(this, arguments);
-    };
-  }();
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @param _account {String<EthAddress>}
-   * @param _loanID {BigNumber}
-   * @returns BigNumber
-   **/
-
-
-  this.getLoanCollateralRatio = /*#__PURE__*/function () {
     var _ref17 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee17(_account, _loanID) {
       return regenerator_default.a.wrap(function _callee17$(_context17) {
         while (1) {
           switch (_context17.prev = _context17.next) {
             case 0:
               _context17.next = 2;
-              return _this.contract.getLoanCollateralRatio(_account, _loanID);
+              return _this.contract.getLoan(_account, _loanID);
 
             case 2:
               return _context17.abrupt("return", _context17.sent);
@@ -48047,7 +48034,7 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee17);
     }));
 
-    return function (_x23, _x24) {
+    return function (_x18, _x19) {
       return _ref17.apply(this, arguments);
     };
   }();
@@ -48059,14 +48046,14 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
 
-  this.getMintingFee = /*#__PURE__*/function () {
+  this.getLoanCollateralRatio = /*#__PURE__*/function () {
     var _ref18 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee18(_account, _loanID) {
       return regenerator_default.a.wrap(function _callee18$(_context18) {
         while (1) {
           switch (_context18.prev = _context18.next) {
             case 0:
               _context18.next = 2;
-              return _this.contract.getMintingFee(_account, _loanID);
+              return _this.contract.getLoanCollateralRatio(_account, _loanID);
 
             case 2:
               return _context18.abrupt("return", _context18.sent);
@@ -48079,8 +48066,40 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee18);
     }));
 
-    return function (_x25, _x26) {
+    return function (_x20, _x21) {
       return _ref18.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param _account {String<EthAddress>}
+   * @param _loanID {BigNumber}
+   * @returns BigNumber
+   **/
+
+
+  this.getMintingFee = /*#__PURE__*/function () {
+    var _ref19 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee19(_account, _loanID) {
+      return regenerator_default.a.wrap(function _callee19$(_context19) {
+        while (1) {
+          switch (_context19.prev = _context19.next) {
+            case 0:
+              _context19.next = 2;
+              return _this.contract.getMintingFee(_account, _loanID);
+
+            case 2:
+              return _context19.abrupt("return", _context19.sent);
+
+            case 3:
+            case "end":
+              return _context19.stop();
+          }
+        }
+      }, _callee19);
+    }));
+
+    return function (_x22, _x23) {
+      return _ref19.apply(this, arguments);
     };
   }();
   /**
@@ -48089,36 +48108,13 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
 
-  this.getResolverAddressesRequired = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee19() {
-    return regenerator_default.a.wrap(function _callee19$(_context19) {
-      while (1) {
-        switch (_context19.prev = _context19.next) {
-          case 0:
-            _context19.next = 2;
-            return _this.contract.getResolverAddressesRequired();
-
-          case 2:
-            return _context19.abrupt("return", _context19.sent);
-
-          case 3:
-          case "end":
-            return _context19.stop();
-        }
-      }
-    }, _callee19);
-  }));
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
-
-  this.interestPerSecond = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee20() {
+  this.getResolverAddressesRequired = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee20() {
     return regenerator_default.a.wrap(function _callee20$(_context20) {
       while (1) {
         switch (_context20.prev = _context20.next) {
           case 0:
             _context20.next = 2;
-            return _this.contract.interestPerSecond();
+            return _this.contract.getResolverAddressesRequired();
 
           case 2:
             return _context20.abrupt("return", _context20.sent);
@@ -48135,13 +48131,13 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    * @returns BigNumber
    **/
 
-  this.interestRate = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee21() {
+  this.interestPerSecond = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee21() {
     return regenerator_default.a.wrap(function _callee21$(_context21) {
       while (1) {
         switch (_context21.prev = _context21.next) {
           case 0:
             _context21.next = 2;
-            return _this.contract.interestRate();
+            return _this.contract.interestPerSecond();
 
           case 2:
             return _context21.abrupt("return", _context21.sent);
@@ -48155,32 +48151,55 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
   }));
   /**
    * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+  this.interestRate = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee22() {
+    return regenerator_default.a.wrap(function _callee22$(_context22) {
+      while (1) {
+        switch (_context22.prev = _context22.next) {
+          case 0:
+            _context22.next = 2;
+            return _this.contract.interestRate();
+
+          case 2:
+            return _context22.abrupt("return", _context22.sent);
+
+          case 3:
+          case "end":
+            return _context22.stop();
+        }
+      }
+    }, _callee22);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
    * @param _resolver {String<EthAddress>}
    * @returns boolean
    **/
 
   this.isResolverCached = /*#__PURE__*/function () {
-    var _ref22 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee22(_resolver) {
-      return regenerator_default.a.wrap(function _callee22$(_context22) {
+    var _ref23 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee23(_resolver) {
+      return regenerator_default.a.wrap(function _callee23$(_context23) {
         while (1) {
-          switch (_context22.prev = _context22.next) {
+          switch (_context23.prev = _context23.next) {
             case 0:
-              _context22.next = 2;
+              _context23.next = 2;
               return _this.contract.isResolverCached(_resolver);
 
             case 2:
-              return _context22.abrupt("return", _context22.sent);
+              return _context23.abrupt("return", _context23.sent);
 
             case 3:
             case "end":
-              return _context22.stop();
+              return _context23.stop();
           }
         }
-      }, _callee22);
+      }, _callee23);
     }));
 
-    return function (_x27) {
-      return _ref22.apply(this, arguments);
+    return function (_x24) {
+      return _ref23.apply(this, arguments);
     };
   }();
   /**
@@ -48189,36 +48208,13 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
 
-  this.issuanceRatio = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee23() {
-    return regenerator_default.a.wrap(function _callee23$(_context23) {
-      while (1) {
-        switch (_context23.prev = _context23.next) {
-          case 0:
-            _context23.next = 2;
-            return _this.contract.issuanceRatio();
-
-          case 2:
-            return _context23.abrupt("return", _context23.sent);
-
-          case 3:
-          case "end":
-            return _context23.stop();
-        }
-      }
-    }, _callee23);
-  }));
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
-
-  this.issueFeeRate = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee24() {
+  this.issuanceRatio = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee24() {
     return regenerator_default.a.wrap(function _callee24$(_context24) {
       while (1) {
         switch (_context24.prev = _context24.next) {
           case 0:
             _context24.next = 2;
-            return _this.contract.issueFeeRate();
+            return _this.contract.issuanceRatio();
 
           case 2:
             return _context24.abrupt("return", _context24.sent);
@@ -48235,13 +48231,13 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    * @returns BigNumber
    **/
 
-  this.issueLimit = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee25() {
+  this.issueFeeRate = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee25() {
     return regenerator_default.a.wrap(function _callee25$(_context25) {
       while (1) {
         switch (_context25.prev = _context25.next) {
           case 0:
             _context25.next = 2;
-            return _this.contract.issueLimit();
+            return _this.contract.issueFeeRate();
 
           case 2:
             return _context25.abrupt("return", _context25.sent);
@@ -48258,13 +48254,13 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    * @returns BigNumber
    **/
 
-  this.lastPauseTime = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee26() {
+  this.issueLimit = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee26() {
     return regenerator_default.a.wrap(function _callee26$(_context26) {
       while (1) {
         switch (_context26.prev = _context26.next) {
           case 0:
             _context26.next = 2;
-            return _this.contract.lastPauseTime();
+            return _this.contract.issueLimit();
 
           case 2:
             return _context26.abrupt("return", _context26.sent);
@@ -48277,6 +48273,29 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
     }, _callee26);
   }));
   /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+  this.lastPauseTime = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee27() {
+    return regenerator_default.a.wrap(function _callee27$(_context27) {
+      while (1) {
+        switch (_context27.prev = _context27.next) {
+          case 0:
+            _context27.next = 2;
+            return _this.contract.lastPauseTime();
+
+          case 2:
+            return _context27.abrupt("return", _context27.sent);
+
+          case 3:
+          case "end":
+            return _context27.stop();
+        }
+      }
+    }, _callee27);
+  }));
+  /**
    * Transaction (consumes gas, requires signer)
    * @param _loanCreatorsAddress {String<EthAddress>}
    * @param _loanID {BigNumber}
@@ -48286,48 +48305,14 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
   this.liquidateLoan = /*#__PURE__*/function () {
-    var _ref27 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee27(_loanCreatorsAddress, _loanID, _debtToCover, txParams) {
-      return regenerator_default.a.wrap(function _callee27$(_context27) {
-        while (1) {
-          switch (_context27.prev = _context27.next) {
-            case 0:
-              txParams = txParams || {};
-              _context27.next = 3;
-              return _this.contract.liquidateLoan(_loanCreatorsAddress, _loanID, _debtToCover, txParams);
-
-            case 3:
-              return _context27.abrupt("return", _context27.sent);
-
-            case 4:
-            case "end":
-              return _context27.stop();
-          }
-        }
-      }, _callee27);
-    }));
-
-    return function (_x28, _x29, _x30, _x31) {
-      return _ref27.apply(this, arguments);
-    };
-  }();
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param _loanCreatorsAddress {String<EthAddress>}
-   * @param _loanID {BigNumber}
-   * @param txParams {TxParams}
-  
-   **/
-
-
-  this.liquidateUnclosedLoan = /*#__PURE__*/function () {
-    var _ref28 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee28(_loanCreatorsAddress, _loanID, txParams) {
+    var _ref28 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee28(_loanCreatorsAddress, _loanID, _debtToCover, txParams) {
       return regenerator_default.a.wrap(function _callee28$(_context28) {
         while (1) {
           switch (_context28.prev = _context28.next) {
             case 0:
               txParams = txParams || {};
               _context28.next = 3;
-              return _this.contract.liquidateUnclosedLoan(_loanCreatorsAddress, _loanID, txParams);
+              return _this.contract.liquidateLoan(_loanCreatorsAddress, _loanID, _debtToCover, txParams);
 
             case 3:
               return _context28.abrupt("return", _context28.sent);
@@ -48340,8 +48325,42 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee28);
     }));
 
-    return function (_x32, _x33, _x34) {
+    return function (_x25, _x26, _x27, _x28) {
       return _ref28.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _loanCreatorsAddress {String<EthAddress>}
+   * @param _loanID {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.liquidateUnclosedLoan = /*#__PURE__*/function () {
+    var _ref29 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee29(_loanCreatorsAddress, _loanID, txParams) {
+      return regenerator_default.a.wrap(function _callee29$(_context29) {
+        while (1) {
+          switch (_context29.prev = _context29.next) {
+            case 0:
+              txParams = txParams || {};
+              _context29.next = 3;
+              return _this.contract.liquidateUnclosedLoan(_loanCreatorsAddress, _loanID, txParams);
+
+            case 3:
+              return _context29.abrupt("return", _context29.sent);
+
+            case 4:
+            case "end":
+              return _context29.stop();
+          }
+        }
+      }, _callee29);
+    }));
+
+    return function (_x29, _x30, _x31) {
+      return _ref29.apply(this, arguments);
     };
   }();
   /**
@@ -48350,36 +48369,13 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
 
-  this.liquidationDeadline = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee29() {
-    return regenerator_default.a.wrap(function _callee29$(_context29) {
-      while (1) {
-        switch (_context29.prev = _context29.next) {
-          case 0:
-            _context29.next = 2;
-            return _this.contract.liquidationDeadline();
-
-          case 2:
-            return _context29.abrupt("return", _context29.sent);
-
-          case 3:
-          case "end":
-            return _context29.stop();
-        }
-      }
-    }, _callee29);
-  }));
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
-
-  this.liquidationPenalty = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee30() {
+  this.liquidationDeadline = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee30() {
     return regenerator_default.a.wrap(function _callee30$(_context30) {
       while (1) {
         switch (_context30.prev = _context30.next) {
           case 0:
             _context30.next = 2;
-            return _this.contract.liquidationPenalty();
+            return _this.contract.liquidationDeadline();
 
           case 2:
             return _context30.abrupt("return", _context30.sent);
@@ -48396,13 +48392,13 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    * @returns BigNumber
    **/
 
-  this.liquidationRatio = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee31() {
+  this.liquidationPenalty = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee31() {
     return regenerator_default.a.wrap(function _callee31$(_context31) {
       while (1) {
         switch (_context31.prev = _context31.next) {
           case 0:
             _context31.next = 2;
-            return _this.contract.liquidationRatio();
+            return _this.contract.liquidationPenalty();
 
           case 2:
             return _context31.abrupt("return", _context31.sent);
@@ -48416,32 +48412,55 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
   }));
   /**
    * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+  this.liquidationRatio = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee32() {
+    return regenerator_default.a.wrap(function _callee32$(_context32) {
+      while (1) {
+        switch (_context32.prev = _context32.next) {
+          case 0:
+            _context32.next = 2;
+            return _this.contract.liquidationRatio();
+
+          case 2:
+            return _context32.abrupt("return", _context32.sent);
+
+          case 3:
+          case "end":
+            return _context32.stop();
+        }
+      }
+    }, _callee32);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
    * @param collateralAmount {BigNumber}
    * @returns BigNumber
    **/
 
   this.loanAmountFromCollateral = /*#__PURE__*/function () {
-    var _ref32 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee32(collateralAmount) {
-      return regenerator_default.a.wrap(function _callee32$(_context32) {
+    var _ref33 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee33(collateralAmount) {
+      return regenerator_default.a.wrap(function _callee33$(_context33) {
         while (1) {
-          switch (_context32.prev = _context32.next) {
+          switch (_context33.prev = _context33.next) {
             case 0:
-              _context32.next = 2;
+              _context33.next = 2;
               return _this.contract.loanAmountFromCollateral(collateralAmount);
 
             case 2:
-              return _context32.abrupt("return", _context32.sent);
+              return _context33.abrupt("return", _context33.sent);
 
             case 3:
             case "end":
-              return _context32.stop();
+              return _context33.stop();
           }
         }
-      }, _callee32);
+      }, _callee33);
     }));
 
-    return function (_x35) {
-      return _ref32.apply(this, arguments);
+    return function (_x32) {
+      return _ref33.apply(this, arguments);
     };
   }();
   /**
@@ -48450,36 +48469,13 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
 
-  this.loanLiquidationOpen = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee33() {
-    return regenerator_default.a.wrap(function _callee33$(_context33) {
-      while (1) {
-        switch (_context33.prev = _context33.next) {
-          case 0:
-            _context33.next = 2;
-            return _this.contract.loanLiquidationOpen();
-
-          case 2:
-            return _context33.abrupt("return", _context33.sent);
-
-          case 3:
-          case "end":
-            return _context33.stop();
-        }
-      }
-    }, _callee33);
-  }));
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
-
-  this.minLoanCollateralSize = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee34() {
+  this.loanLiquidationOpen = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee34() {
     return regenerator_default.a.wrap(function _callee34$(_context34) {
       while (1) {
         switch (_context34.prev = _context34.next) {
           case 0:
             _context34.next = 2;
-            return _this.contract.minLoanCollateralSize();
+            return _this.contract.loanLiquidationOpen();
 
           case 2:
             return _context34.abrupt("return", _context34.sent);
@@ -48492,6 +48488,29 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
     }, _callee34);
   }));
   /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+  this.minLoanCollateralSize = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee35() {
+    return regenerator_default.a.wrap(function _callee35$(_context35) {
+      while (1) {
+        switch (_context35.prev = _context35.next) {
+          case 0:
+            _context35.next = 2;
+            return _this.contract.minLoanCollateralSize();
+
+          case 2:
+            return _context35.abrupt("return", _context35.sent);
+
+          case 3:
+          case "end":
+            return _context35.stop();
+        }
+      }
+    }, _callee35);
+  }));
+  /**
    * Transaction (consumes gas, requires signer)
    * @param _owner {String<EthAddress>}
    * @param txParams {TxParams}
@@ -48499,28 +48518,28 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
   this.nominateNewOwner = /*#__PURE__*/function () {
-    var _ref35 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee35(_owner, txParams) {
-      return regenerator_default.a.wrap(function _callee35$(_context35) {
+    var _ref36 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee36(_owner, txParams) {
+      return regenerator_default.a.wrap(function _callee36$(_context36) {
         while (1) {
-          switch (_context35.prev = _context35.next) {
+          switch (_context36.prev = _context36.next) {
             case 0:
               txParams = txParams || {};
-              _context35.next = 3;
+              _context36.next = 3;
               return _this.contract.nominateNewOwner(_owner, txParams);
 
             case 3:
-              return _context35.abrupt("return", _context35.sent);
+              return _context36.abrupt("return", _context36.sent);
 
             case 4:
             case "end":
-              return _context35.stop();
+              return _context36.stop();
           }
         }
-      }, _callee35);
+      }, _callee36);
     }));
 
-    return function (_x36, _x37) {
-      return _ref35.apply(this, arguments);
+    return function (_x33, _x34) {
+      return _ref36.apply(this, arguments);
     };
   }();
   /**
@@ -48529,23 +48548,23 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
 
-  this.nominatedOwner = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee36() {
-    return regenerator_default.a.wrap(function _callee36$(_context36) {
+  this.nominatedOwner = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee37() {
+    return regenerator_default.a.wrap(function _callee37$(_context37) {
       while (1) {
-        switch (_context36.prev = _context36.next) {
+        switch (_context37.prev = _context37.next) {
           case 0:
-            _context36.next = 2;
+            _context37.next = 2;
             return _this.contract.nominatedOwner();
 
           case 2:
-            return _context36.abrupt("return", _context36.sent);
+            return _context37.abrupt("return", _context37.sent);
 
           case 3:
           case "end":
-            return _context36.stop();
+            return _context37.stop();
         }
       }
-    }, _callee36);
+    }, _callee37);
   }));
   /**
    * Transaction (consumes gas, requires signer)
@@ -48555,28 +48574,28 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
   this.openLoan = /*#__PURE__*/function () {
-    var _ref37 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee37(_amount, txParams) {
-      return regenerator_default.a.wrap(function _callee37$(_context37) {
+    var _ref38 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee38(_amount, txParams) {
+      return regenerator_default.a.wrap(function _callee38$(_context38) {
         while (1) {
-          switch (_context37.prev = _context37.next) {
+          switch (_context38.prev = _context38.next) {
             case 0:
               txParams = txParams || {};
-              _context37.next = 3;
+              _context38.next = 3;
               return _this.contract.openLoan(_amount, txParams);
 
             case 3:
-              return _context37.abrupt("return", _context37.sent);
+              return _context38.abrupt("return", _context38.sent);
 
             case 4:
             case "end":
-              return _context37.stop();
+              return _context38.stop();
           }
         }
-      }, _callee37);
+      }, _callee38);
     }));
 
-    return function (_x38, _x39) {
-      return _ref37.apply(this, arguments);
+    return function (_x35, _x36) {
+      return _ref38.apply(this, arguments);
     };
   }();
   /**
@@ -48587,27 +48606,27 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
 
 
   this.openLoanIDsByAccount = /*#__PURE__*/function () {
-    var _ref38 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee38(_account) {
-      return regenerator_default.a.wrap(function _callee38$(_context38) {
+    var _ref39 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee39(_account) {
+      return regenerator_default.a.wrap(function _callee39$(_context39) {
         while (1) {
-          switch (_context38.prev = _context38.next) {
+          switch (_context39.prev = _context39.next) {
             case 0:
-              _context38.next = 2;
+              _context39.next = 2;
               return _this.contract.openLoanIDsByAccount(_account);
 
             case 2:
-              return _context38.abrupt("return", _context38.sent);
+              return _context39.abrupt("return", _context39.sent);
 
             case 3:
             case "end":
-              return _context38.stop();
+              return _context39.stop();
           }
         }
-      }, _callee38);
+      }, _callee39);
     }));
 
-    return function (_x40) {
-      return _ref38.apply(this, arguments);
+    return function (_x37) {
+      return _ref39.apply(this, arguments);
     };
   }();
   /**
@@ -48616,36 +48635,13 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
 
-  this.owner = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee39() {
-    return regenerator_default.a.wrap(function _callee39$(_context39) {
-      while (1) {
-        switch (_context39.prev = _context39.next) {
-          case 0:
-            _context39.next = 2;
-            return _this.contract.owner();
-
-          case 2:
-            return _context39.abrupt("return", _context39.sent);
-
-          case 3:
-          case "end":
-            return _context39.stop();
-        }
-      }
-    }, _callee39);
-  }));
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns boolean
-   **/
-
-  this.paused = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee40() {
+  this.owner = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee40() {
     return regenerator_default.a.wrap(function _callee40$(_context40) {
       while (1) {
         switch (_context40.prev = _context40.next) {
           case 0:
             _context40.next = 2;
-            return _this.contract.paused();
+            return _this.contract.owner();
 
           case 2:
             return _context40.abrupt("return", _context40.sent);
@@ -48658,6 +48654,29 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
     }, _callee40);
   }));
   /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns boolean
+   **/
+
+  this.paused = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee41() {
+    return regenerator_default.a.wrap(function _callee41$(_context41) {
+      while (1) {
+        switch (_context41.prev = _context41.next) {
+          case 0:
+            _context41.next = 2;
+            return _this.contract.paused();
+
+          case 2:
+            return _context41.abrupt("return", _context41.sent);
+
+          case 3:
+          case "end":
+            return _context41.stop();
+        }
+      }
+    }, _callee41);
+  }));
+  /**
    * Transaction (consumes gas, requires signer)
    * @param _loanCreatorsAddress {String<EthAddress>}
    * @param _loanID {BigNumber}
@@ -48667,28 +48686,28 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
   this.repayLoan = /*#__PURE__*/function () {
-    var _ref41 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee41(_loanCreatorsAddress, _loanID, _repayAmount, txParams) {
-      return regenerator_default.a.wrap(function _callee41$(_context41) {
+    var _ref42 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee42(_loanCreatorsAddress, _loanID, _repayAmount, txParams) {
+      return regenerator_default.a.wrap(function _callee42$(_context42) {
         while (1) {
-          switch (_context41.prev = _context41.next) {
+          switch (_context42.prev = _context42.next) {
             case 0:
               txParams = txParams || {};
-              _context41.next = 3;
+              _context42.next = 3;
               return _this.contract.repayLoan(_loanCreatorsAddress, _loanID, _repayAmount, txParams);
 
             case 3:
-              return _context41.abrupt("return", _context41.sent);
+              return _context42.abrupt("return", _context42.sent);
 
             case 4:
             case "end":
-              return _context41.stop();
+              return _context42.stop();
           }
         }
-      }, _callee41);
+      }, _callee42);
     }));
 
-    return function (_x41, _x42, _x43, _x44) {
-      return _ref41.apply(this, arguments);
+    return function (_x38, _x39, _x40, _x41) {
+      return _ref42.apply(this, arguments);
     };
   }();
   /**
@@ -48697,23 +48716,23 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
 
-  this.resolver = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee42() {
-    return regenerator_default.a.wrap(function _callee42$(_context42) {
+  this.resolver = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee43() {
+    return regenerator_default.a.wrap(function _callee43$(_context43) {
       while (1) {
-        switch (_context42.prev = _context42.next) {
+        switch (_context43.prev = _context43.next) {
           case 0:
-            _context42.next = 2;
+            _context43.next = 2;
             return _this.contract.resolver();
 
           case 2:
-            return _context42.abrupt("return", _context42.sent);
+            return _context43.abrupt("return", _context43.sent);
 
           case 3:
           case "end":
-            return _context42.stop();
+            return _context43.stop();
         }
       }
-    }, _callee42);
+    }, _callee43);
   }));
   /**
    * Call (no gas consumed, doesn't require signer)
@@ -48722,27 +48741,27 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
   this.resolverAddressesRequired = /*#__PURE__*/function () {
-    var _ref43 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee43(uint256_1) {
-      return regenerator_default.a.wrap(function _callee43$(_context43) {
+    var _ref44 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee44(uint256_1) {
+      return regenerator_default.a.wrap(function _callee44$(_context44) {
         while (1) {
-          switch (_context43.prev = _context43.next) {
+          switch (_context44.prev = _context44.next) {
             case 0:
-              _context43.next = 2;
+              _context44.next = 2;
               return _this.contract.resolverAddressesRequired(uint256_1);
 
             case 2:
-              return _context43.abrupt("return", _context43.sent);
+              return _context44.abrupt("return", _context44.sent);
 
             case 3:
             case "end":
-              return _context43.stop();
+              return _context44.stop();
           }
         }
-      }, _callee43);
+      }, _callee44);
     }));
 
-    return function (_x45) {
-      return _ref43.apply(this, arguments);
+    return function (_x42) {
+      return _ref44.apply(this, arguments);
     };
   }();
   /**
@@ -48754,47 +48773,14 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
 
 
   this.setAccountLoanLimit = /*#__PURE__*/function () {
-    var _ref44 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee44(_loanLimit, txParams) {
-      return regenerator_default.a.wrap(function _callee44$(_context44) {
-        while (1) {
-          switch (_context44.prev = _context44.next) {
-            case 0:
-              txParams = txParams || {};
-              _context44.next = 3;
-              return _this.contract.setAccountLoanLimit(_loanLimit, txParams);
-
-            case 3:
-              return _context44.abrupt("return", _context44.sent);
-
-            case 4:
-            case "end":
-              return _context44.stop();
-          }
-        }
-      }, _callee44);
-    }));
-
-    return function (_x46, _x47) {
-      return _ref44.apply(this, arguments);
-    };
-  }();
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param ratio {BigNumber}
-   * @param txParams {TxParams}
-  
-   **/
-
-
-  this.setCollateralizationRatio = /*#__PURE__*/function () {
-    var _ref45 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee45(ratio, txParams) {
+    var _ref45 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee45(_loanLimit, txParams) {
       return regenerator_default.a.wrap(function _callee45$(_context45) {
         while (1) {
           switch (_context45.prev = _context45.next) {
             case 0:
               txParams = txParams || {};
               _context45.next = 3;
-              return _this.contract.setCollateralizationRatio(ratio, txParams);
+              return _this.contract.setAccountLoanLimit(_loanLimit, txParams);
 
             case 3:
               return _context45.abrupt("return", _context45.sent);
@@ -48807,27 +48793,27 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee45);
     }));
 
-    return function (_x48, _x49) {
+    return function (_x43, _x44) {
       return _ref45.apply(this, arguments);
     };
   }();
   /**
    * Transaction (consumes gas, requires signer)
-   * @param _interestRate {BigNumber}
+   * @param ratio {BigNumber}
    * @param txParams {TxParams}
   
    **/
 
 
-  this.setInterestRate = /*#__PURE__*/function () {
-    var _ref46 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee46(_interestRate, txParams) {
+  this.setCollateralizationRatio = /*#__PURE__*/function () {
+    var _ref46 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee46(ratio, txParams) {
       return regenerator_default.a.wrap(function _callee46$(_context46) {
         while (1) {
           switch (_context46.prev = _context46.next) {
             case 0:
               txParams = txParams || {};
               _context46.next = 3;
-              return _this.contract.setInterestRate(_interestRate, txParams);
+              return _this.contract.setCollateralizationRatio(ratio, txParams);
 
             case 3:
               return _context46.abrupt("return", _context46.sent);
@@ -48840,27 +48826,27 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee46);
     }));
 
-    return function (_x50, _x51) {
+    return function (_x45, _x46) {
       return _ref46.apply(this, arguments);
     };
   }();
   /**
    * Transaction (consumes gas, requires signer)
-   * @param _issueFeeRate {BigNumber}
+   * @param _interestRate {BigNumber}
    * @param txParams {TxParams}
   
    **/
 
 
-  this.setIssueFeeRate = /*#__PURE__*/function () {
-    var _ref47 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee47(_issueFeeRate, txParams) {
+  this.setInterestRate = /*#__PURE__*/function () {
+    var _ref47 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee47(_interestRate, txParams) {
       return regenerator_default.a.wrap(function _callee47$(_context47) {
         while (1) {
           switch (_context47.prev = _context47.next) {
             case 0:
               txParams = txParams || {};
               _context47.next = 3;
-              return _this.contract.setIssueFeeRate(_issueFeeRate, txParams);
+              return _this.contract.setInterestRate(_interestRate, txParams);
 
             case 3:
               return _context47.abrupt("return", _context47.sent);
@@ -48873,27 +48859,27 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee47);
     }));
 
-    return function (_x52, _x53) {
+    return function (_x47, _x48) {
       return _ref47.apply(this, arguments);
     };
   }();
   /**
    * Transaction (consumes gas, requires signer)
-   * @param _issueLimit {BigNumber}
+   * @param _issueFeeRate {BigNumber}
    * @param txParams {TxParams}
   
    **/
 
 
-  this.setIssueLimit = /*#__PURE__*/function () {
-    var _ref48 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee48(_issueLimit, txParams) {
+  this.setIssueFeeRate = /*#__PURE__*/function () {
+    var _ref48 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee48(_issueFeeRate, txParams) {
       return regenerator_default.a.wrap(function _callee48$(_context48) {
         while (1) {
           switch (_context48.prev = _context48.next) {
             case 0:
               txParams = txParams || {};
               _context48.next = 3;
-              return _this.contract.setIssueLimit(_issueLimit, txParams);
+              return _this.contract.setIssueFeeRate(_issueFeeRate, txParams);
 
             case 3:
               return _context48.abrupt("return", _context48.sent);
@@ -48906,27 +48892,27 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee48);
     }));
 
-    return function (_x54, _x55) {
+    return function (_x49, _x50) {
       return _ref48.apply(this, arguments);
     };
   }();
   /**
    * Transaction (consumes gas, requires signer)
-   * @param _liquidationRatio {BigNumber}
+   * @param _issueLimit {BigNumber}
    * @param txParams {TxParams}
   
    **/
 
 
-  this.setLiquidationRatio = /*#__PURE__*/function () {
-    var _ref49 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee49(_liquidationRatio, txParams) {
+  this.setIssueLimit = /*#__PURE__*/function () {
+    var _ref49 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee49(_issueLimit, txParams) {
       return regenerator_default.a.wrap(function _callee49$(_context49) {
         while (1) {
           switch (_context49.prev = _context49.next) {
             case 0:
               txParams = txParams || {};
               _context49.next = 3;
-              return _this.contract.setLiquidationRatio(_liquidationRatio, txParams);
+              return _this.contract.setIssueLimit(_issueLimit, txParams);
 
             case 3:
               return _context49.abrupt("return", _context49.sent);
@@ -48939,27 +48925,27 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee49);
     }));
 
-    return function (_x56, _x57) {
+    return function (_x51, _x52) {
       return _ref49.apply(this, arguments);
     };
   }();
   /**
    * Transaction (consumes gas, requires signer)
-   * @param _loanLiquidationOpen {boolean}
+   * @param _liquidationRatio {BigNumber}
    * @param txParams {TxParams}
   
    **/
 
 
-  this.setLoanLiquidationOpen = /*#__PURE__*/function () {
-    var _ref50 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee50(_loanLiquidationOpen, txParams) {
+  this.setLiquidationRatio = /*#__PURE__*/function () {
+    var _ref50 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee50(_liquidationRatio, txParams) {
       return regenerator_default.a.wrap(function _callee50$(_context50) {
         while (1) {
           switch (_context50.prev = _context50.next) {
             case 0:
               txParams = txParams || {};
               _context50.next = 3;
-              return _this.contract.setLoanLiquidationOpen(_loanLiquidationOpen, txParams);
+              return _this.contract.setLiquidationRatio(_liquidationRatio, txParams);
 
             case 3:
               return _context50.abrupt("return", _context50.sent);
@@ -48972,27 +48958,27 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee50);
     }));
 
-    return function (_x58, _x59) {
+    return function (_x53, _x54) {
       return _ref50.apply(this, arguments);
     };
   }();
   /**
    * Transaction (consumes gas, requires signer)
-   * @param _minLoanCollateralSize {BigNumber}
+   * @param _loanLiquidationOpen {boolean}
    * @param txParams {TxParams}
   
    **/
 
 
-  this.setMinLoanCollateralSize = /*#__PURE__*/function () {
-    var _ref51 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee51(_minLoanCollateralSize, txParams) {
+  this.setLoanLiquidationOpen = /*#__PURE__*/function () {
+    var _ref51 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee51(_loanLiquidationOpen, txParams) {
       return regenerator_default.a.wrap(function _callee51$(_context51) {
         while (1) {
           switch (_context51.prev = _context51.next) {
             case 0:
               txParams = txParams || {};
               _context51.next = 3;
-              return _this.contract.setMinLoanCollateralSize(_minLoanCollateralSize, txParams);
+              return _this.contract.setLoanLiquidationOpen(_loanLiquidationOpen, txParams);
 
             case 3:
               return _context51.abrupt("return", _context51.sent);
@@ -49005,27 +48991,27 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee51);
     }));
 
-    return function (_x60, _x61) {
+    return function (_x55, _x56) {
       return _ref51.apply(this, arguments);
     };
   }();
   /**
    * Transaction (consumes gas, requires signer)
-   * @param _paused {boolean}
+   * @param _minLoanCollateralSize {BigNumber}
    * @param txParams {TxParams}
   
    **/
 
 
-  this.setPaused = /*#__PURE__*/function () {
-    var _ref52 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee52(_paused, txParams) {
+  this.setMinLoanCollateralSize = /*#__PURE__*/function () {
+    var _ref52 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee52(_minLoanCollateralSize, txParams) {
       return regenerator_default.a.wrap(function _callee52$(_context52) {
         while (1) {
           switch (_context52.prev = _context52.next) {
             case 0:
               txParams = txParams || {};
               _context52.next = 3;
-              return _this.contract.setPaused(_paused, txParams);
+              return _this.contract.setMinLoanCollateralSize(_minLoanCollateralSize, txParams);
 
             case 3:
               return _context52.abrupt("return", _context52.sent);
@@ -49038,27 +49024,27 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee52);
     }));
 
-    return function (_x62, _x63) {
+    return function (_x57, _x58) {
       return _ref52.apply(this, arguments);
     };
   }();
   /**
    * Transaction (consumes gas, requires signer)
-   * @param _resolver {String<EthAddress>}
+   * @param _paused {boolean}
    * @param txParams {TxParams}
   
    **/
 
 
-  this.setResolverAndSyncCache = /*#__PURE__*/function () {
-    var _ref53 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee53(_resolver, txParams) {
+  this.setPaused = /*#__PURE__*/function () {
+    var _ref53 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee53(_paused, txParams) {
       return regenerator_default.a.wrap(function _callee53$(_context53) {
         while (1) {
           switch (_context53.prev = _context53.next) {
             case 0:
               txParams = txParams || {};
               _context53.next = 3;
-              return _this.contract.setResolverAndSyncCache(_resolver, txParams);
+              return _this.contract.setPaused(_paused, txParams);
 
             case 3:
               return _context53.abrupt("return", _context53.sent);
@@ -49071,27 +49057,27 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee53);
     }));
 
-    return function (_x64, _x65) {
+    return function (_x59, _x60) {
       return _ref53.apply(this, arguments);
     };
   }();
   /**
    * Transaction (consumes gas, requires signer)
-   * @param _vToken {String<EthAddress>}
+   * @param _resolver {String<EthAddress>}
    * @param txParams {TxParams}
   
    **/
 
 
-  this.setVToken = /*#__PURE__*/function () {
-    var _ref54 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee54(_vToken, txParams) {
+  this.setResolverAndSyncCache = /*#__PURE__*/function () {
+    var _ref54 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee54(_resolver, txParams) {
       return regenerator_default.a.wrap(function _callee54$(_context54) {
         while (1) {
           switch (_context54.prev = _context54.next) {
             case 0:
               txParams = txParams || {};
               _context54.next = 3;
-              return _this.contract.setVToken(_vToken, txParams);
+              return _this.contract.setResolverAndSyncCache(_resolver, txParams);
 
             case 3:
               return _context54.abrupt("return", _context54.sent);
@@ -49104,8 +49090,41 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee54);
     }));
 
-    return function (_x66, _x67) {
+    return function (_x61, _x62) {
       return _ref54.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _vToken {String<EthAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.setVToken = /*#__PURE__*/function () {
+    var _ref55 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee55(_vToken, txParams) {
+      return regenerator_default.a.wrap(function _callee55$(_context55) {
+        while (1) {
+          switch (_context55.prev = _context55.next) {
+            case 0:
+              txParams = txParams || {};
+              _context55.next = 3;
+              return _this.contract.setVToken(_vToken, txParams);
+
+            case 3:
+              return _context55.abrupt("return", _context55.sent);
+
+            case 4:
+            case "end":
+              return _context55.stop();
+          }
+        }
+      }, _callee55);
+    }));
+
+    return function (_x63, _x64) {
+      return _ref55.apply(this, arguments);
     };
   }();
   /**
@@ -49117,45 +49136,13 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
 
 
   this.timeSinceInterestAccrualOnLoan = /*#__PURE__*/function () {
-    var _ref55 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee55(_account, _loanID) {
-      return regenerator_default.a.wrap(function _callee55$(_context55) {
-        while (1) {
-          switch (_context55.prev = _context55.next) {
-            case 0:
-              _context55.next = 2;
-              return _this.contract.timeSinceInterestAccrualOnLoan(_account, _loanID);
-
-            case 2:
-              return _context55.abrupt("return", _context55.sent);
-
-            case 3:
-            case "end":
-              return _context55.stop();
-          }
-        }
-      }, _callee55);
-    }));
-
-    return function (_x68, _x69) {
-      return _ref55.apply(this, arguments);
-    };
-  }();
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @param _account {String<EthAddress>}
-   * @param _loanID {BigNumber}
-   * @returns Object
-   **/
-
-
-  this.totalFeesOnLoan = /*#__PURE__*/function () {
     var _ref56 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee56(_account, _loanID) {
       return regenerator_default.a.wrap(function _callee56$(_context56) {
         while (1) {
           switch (_context56.prev = _context56.next) {
             case 0:
               _context56.next = 2;
-              return _this.contract.totalFeesOnLoan(_account, _loanID);
+              return _this.contract.timeSinceInterestAccrualOnLoan(_account, _loanID);
 
             case 2:
               return _context56.abrupt("return", _context56.sent);
@@ -49168,8 +49155,40 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
       }, _callee56);
     }));
 
-    return function (_x70, _x71) {
+    return function (_x65, _x66) {
       return _ref56.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param _account {String<EthAddress>}
+   * @param _loanID {BigNumber}
+   * @returns Object
+   **/
+
+
+  this.totalFeesOnLoan = /*#__PURE__*/function () {
+    var _ref57 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee57(_account, _loanID) {
+      return regenerator_default.a.wrap(function _callee57$(_context57) {
+        while (1) {
+          switch (_context57.prev = _context57.next) {
+            case 0:
+              _context57.next = 2;
+              return _this.contract.totalFeesOnLoan(_account, _loanID);
+
+            case 2:
+              return _context57.abrupt("return", _context57.sent);
+
+            case 3:
+            case "end":
+              return _context57.stop();
+          }
+        }
+      }, _callee57);
+    }));
+
+    return function (_x67, _x68) {
+      return _ref57.apply(this, arguments);
     };
   }();
   /**
@@ -49178,36 +49197,13 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
 
-  this.totalIssuedSynths = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee57() {
-    return regenerator_default.a.wrap(function _callee57$(_context57) {
-      while (1) {
-        switch (_context57.prev = _context57.next) {
-          case 0:
-            _context57.next = 2;
-            return _this.contract.totalIssuedSynths();
-
-          case 2:
-            return _context57.abrupt("return", _context57.sent);
-
-          case 3:
-          case "end":
-            return _context57.stop();
-        }
-      }
-    }, _callee57);
-  }));
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
-
-  this.totalLoansCreated = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee58() {
+  this.totalIssuedSynths = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee58() {
     return regenerator_default.a.wrap(function _callee58$(_context58) {
       while (1) {
         switch (_context58.prev = _context58.next) {
           case 0:
             _context58.next = 2;
-            return _this.contract.totalLoansCreated();
+            return _this.contract.totalIssuedSynths();
 
           case 2:
             return _context58.abrupt("return", _context58.sent);
@@ -49224,13 +49220,13 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    * @returns BigNumber
    **/
 
-  this.totalOpenLoanCount = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee59() {
+  this.totalLoansCreated = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee59() {
     return regenerator_default.a.wrap(function _callee59$(_context59) {
       while (1) {
         switch (_context59.prev = _context59.next) {
           case 0:
             _context59.next = 2;
-            return _this.contract.totalOpenLoanCount();
+            return _this.contract.totalLoansCreated();
 
           case 2:
             return _context59.abrupt("return", _context59.sent);
@@ -49244,16 +49240,16 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
   }));
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @returns String<EthAddress>
+   * @returns BigNumber
    **/
 
-  this.vToken = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee60() {
+  this.totalOpenLoanCount = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee60() {
     return regenerator_default.a.wrap(function _callee60$(_context60) {
       while (1) {
         switch (_context60.prev = _context60.next) {
           case 0:
             _context60.next = 2;
-            return _this.contract.vToken();
+            return _this.contract.totalOpenLoanCount();
 
           case 2:
             return _context60.abrupt("return", _context60.sent);
@@ -49266,6 +49262,29 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
     }, _callee60);
   }));
   /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<EthAddress>
+   **/
+
+  this.vToken = /*#__PURE__*/asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee61() {
+    return regenerator_default.a.wrap(function _callee61$(_context61) {
+      while (1) {
+        switch (_context61.prev = _context61.next) {
+          case 0:
+            _context61.next = 2;
+            return _this.contract.vToken();
+
+          case 2:
+            return _context61.abrupt("return", _context61.sent);
+
+          case 3:
+          case "end":
+            return _context61.stop();
+        }
+      }
+    }, _callee61);
+  }));
+  /**
    * Transaction (consumes gas, requires signer)
    * @param loanID {BigNumber}
    * @param withdrawAmount {BigNumber}
@@ -49274,28 +49293,28 @@ function EtherCollateraloUSD_EtherCollateraloUSD(contractSettings) {
    **/
 
   this.withdrawCollateral = /*#__PURE__*/function () {
-    var _ref61 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee61(loanID, withdrawAmount, txParams) {
-      return regenerator_default.a.wrap(function _callee61$(_context61) {
+    var _ref62 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee62(loanID, withdrawAmount, txParams) {
+      return regenerator_default.a.wrap(function _callee62$(_context62) {
         while (1) {
-          switch (_context61.prev = _context61.next) {
+          switch (_context62.prev = _context62.next) {
             case 0:
               txParams = txParams || {};
-              _context61.next = 3;
+              _context62.next = 3;
               return _this.contract.withdrawCollateral(loanID, withdrawAmount, txParams);
 
             case 3:
-              return _context61.abrupt("return", _context61.sent);
+              return _context62.abrupt("return", _context62.sent);
 
             case 4:
             case "end":
-              return _context61.stop();
+              return _context62.stop();
           }
         }
-      }, _callee61);
+      }, _callee62);
     }));
 
-    return function (_x72, _x73, _x74) {
-      return _ref61.apply(this, arguments);
+    return function (_x69, _x70, _x71) {
+      return _ref62.apply(this, arguments);
     };
   }();
 }
