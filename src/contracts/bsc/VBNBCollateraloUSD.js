@@ -352,13 +352,14 @@ function VBNBCollateraloUSD(contractSettings) {
 
   /**
    * Transaction (consumes gas, requires signer)
-   * @param _amount {BigNumber}
+   * @param _loanAmount {BigNumber}
+   * @param _collateral {BigNumber}
    * @param txParams {TxParams}
    * @returns BigNumber
    **/
-  this.openLoan = async (_amount, txParams) => {
+  this.openLoan = async (_loanAmount, _collateral, txParams) => {
     txParams = txParams || {};
-    return await this.contract.openLoan(_amount, txParams);
+    return await this.contract.openLoan(_loanAmount, _collateral, txParams);
   };
 
   /**

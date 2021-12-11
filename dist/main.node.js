@@ -24048,7 +24048,7 @@ var BSC_ADDRESSES = {
   SynthoDOT: '0xbEE3A7a91cc02ac3519C31a7348e1648E6192F38',
   SynthoICP: '0x93385170983bC4778eb9F8E24dF2423e467dBd41',
   EtherCollateraloUSD: '0xA90a21824e1848780dbeef70dF8Ddf9E8Ec5fDae',
-  VBNBCollateraloUSD: '0x4b5CB27ca5588Ff94d4241bB919E45Caf13108F4'
+  VBNBCollateraloUSD: '0xFcA47F59719e2Fb4d8870E76328eD35A67BC681e'
 };
 var TESTNET_ADDRESSES = {
   SafeDecimalMath: '0x674F2407cE710B93ADE35D7F0c9076d935a4aA5d',
@@ -32405,8 +32405,1373 @@ var TESTNET_ADDRESSES = {
   signature: '0x767a7b05'
 }]);
 // CONCATENATED MODULE: ./lib/abis/bsc/VBNBCollateraloUSD.js
-
-/* harmony default export */ var VBNBCollateraloUSD = (EtherCollateraloUSD);
+/* harmony default export */ var VBNBCollateraloUSD = ([{
+  inputs: [{
+    internalType: 'address',
+    name: '_owner',
+    type: 'address'
+  }, {
+    internalType: 'address',
+    name: '_resolver',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'constructor',
+  signature: 'constructor'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    internalType: 'uint256',
+    name: 'loanLimit',
+    type: 'uint256'
+  }],
+  name: 'AccountLoanLimitUpdated',
+  type: 'event',
+  signature: '0x59822dc2d999f6f0618e8b0db5cfc8496084574c769b09609d9b5f4394a310b6'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: true,
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'loanID',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'collateralAmount',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'collateralAfter',
+    type: 'uint256'
+  }],
+  name: 'CollateralDeposited',
+  type: 'event',
+  signature: '0x0b1992dffc262be88559dcaf96464e9d661d8bfca7e82f2bb73e31932a82187c'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: true,
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'loanID',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'amountWithdrawn',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'collateralAfter',
+    type: 'uint256'
+  }],
+  name: 'CollateralWithdrawn',
+  type: 'event',
+  signature: '0xfae26280bca25d80f1501a9e363c73d3845e651c9aaae54f1fc09a9dcd5f3303'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    internalType: 'uint256',
+    name: 'ratio',
+    type: 'uint256'
+  }],
+  name: 'CollateralizationRatioUpdated',
+  type: 'event',
+  signature: '0xfb0ebe8c7316e6a251494c38876d13d9a3a029273fce7964c12aa2ce07869530'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    internalType: 'uint256',
+    name: 'interestRate',
+    type: 'uint256'
+  }],
+  name: 'InterestRateUpdated',
+  type: 'event',
+  signature: '0xa90e14be5aa57b910aa6dc16c31ff1b5cda380ae25a793b0d3f74df6131a7d74'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    internalType: 'uint256',
+    name: 'issueFeeRate',
+    type: 'uint256'
+  }],
+  name: 'IssueFeeRateUpdated',
+  type: 'event',
+  signature: '0xe7bd72551c54d568cd97b00dc52d2787b5c5d4f0070d3582c1e8ba25141f799c'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    internalType: 'uint256',
+    name: 'issueLimit',
+    type: 'uint256'
+  }],
+  name: 'IssueLimitUpdated',
+  type: 'event',
+  signature: '0xbb72ce8874020b3b98429d653df927cac6618ac1932384b1446bf04bf9a1b7e5'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    internalType: 'uint256',
+    name: 'ratio',
+    type: 'uint256'
+  }],
+  name: 'LiquidationRatioUpdated',
+  type: 'event',
+  signature: '0x5568be83e5cf7405adf8fb39305e2cdf49c43336606d23c3e0d3fe54e205150a'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: true,
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'loanID',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'feesPaid',
+    type: 'uint256'
+  }],
+  name: 'LoanClosed',
+  type: 'event',
+  signature: '0x3cc9f5d298758bad94536f27fa6a3033c2793e0a387a2d78e72550a3b8dacf1e'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: true,
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'loanID',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'amount',
+    type: 'uint256'
+  }],
+  name: 'LoanCreated',
+  type: 'event',
+  signature: '0x58d170de3a12438e22d81380f353b2fcac86f0a708a1374deaa5c6322a95992f'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: true,
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'loanID',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'address',
+    name: 'liquidator',
+    type: 'address'
+  }],
+  name: 'LoanLiquidated',
+  type: 'event',
+  signature: '0xde21b2a43b0a2c2109c049fb1e4bb8653fd67d0ffd74fdcb662db381f1eeab38'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    internalType: 'bool',
+    name: 'loanLiquidationOpen',
+    type: 'bool'
+  }],
+  name: 'LoanLiquidationOpenUpdated',
+  type: 'event',
+  signature: '0xaa52cf15c1fbb778214c66f64726e141551158858d1c06ca0392c6c5869c8567'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: true,
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'loanID',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'address',
+    name: 'liquidator',
+    type: 'address'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'liquidatedAmount',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'liquidatedCollateral',
+    type: 'uint256'
+  }],
+  name: 'LoanPartiallyLiquidated',
+  type: 'event',
+  signature: '0xb6e43890aeea54fbe6c0ed628e78172a0ff30bbcb1d70d8b130b12c366bac4c5'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: true,
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'loanID',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'repaidAmount',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    internalType: 'uint256',
+    name: 'newLoanAmount',
+    type: 'uint256'
+  }],
+  name: 'LoanRepaid',
+  type: 'event',
+  signature: '0x2cebe3c4a7e8e81ca2035a6cb3ee450bb6401d9b6636652e183583f047049572'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    internalType: 'uint256',
+    name: 'minLoanCollateralSize',
+    type: 'uint256'
+  }],
+  name: 'MinLoanCollateralSizeUpdated',
+  type: 'event',
+  signature: '0x9f45df4d81199bea8f20e88707b6f7d36b8e8f20a7def01c113746f67557ffb6'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    internalType: 'address',
+    name: 'oldOwner',
+    type: 'address'
+  }, {
+    indexed: false,
+    internalType: 'address',
+    name: 'newOwner',
+    type: 'address'
+  }],
+  name: 'OwnerChanged',
+  type: 'event',
+  signature: '0xb532073b38c83145e3e5135377a08bf9aab55bc0fd7c1179cd4fb995d2a5159c'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    internalType: 'address',
+    name: 'newOwner',
+    type: 'address'
+  }],
+  name: 'OwnerNominated',
+  type: 'event',
+  signature: '0x906a1c6bd7e3091ea86693dd029a831c19049ce77f1dce2ce0bab1cacbabce22'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    internalType: 'bool',
+    name: 'isPaused',
+    type: 'bool'
+  }],
+  name: 'PauseChanged',
+  type: 'event',
+  signature: '0x8fb6c181ee25a520cf3dd6565006ef91229fcfe5a989566c2a3b8c115570cec5'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'COLLATERAL',
+  outputs: [{
+    internalType: 'bytes32',
+    name: '',
+    type: 'bytes32'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x24bbab8b'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'MAX_ADDRESSES_FROM_RESOLVER',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xe3235c91'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'OUSD_DECIMALS',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x6d9ca3e9'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'VBNB_DECIMALS',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x5b8e55a0'
+}, {
+  constant: false,
+  inputs: [],
+  name: 'acceptOwnership',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x79ba5097'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'accountLoanLimit',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x1474b279'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: '',
+    type: 'address'
+  }],
+  name: 'accountOpenLoanCounter',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x089f7fb4'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: '',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  name: 'accountsSynthLoans',
+  outputs: [{
+    internalType: 'address payable',
+    name: 'account',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
+    name: 'collateralAmount',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'loanAmount',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'mintingFee',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'timeCreated',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'loanID',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'timeClosed',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'loanInterestRate',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'accruedInterest',
+    type: 'uint256'
+  }, {
+    internalType: 'uint40',
+    name: 'lastInterestAccrued',
+    type: 'uint40'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xaa754a2a'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'uint256',
+    name: '_loanAmount',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_seconds',
+    type: 'uint256'
+  }],
+  name: 'accruedInterestOnLoan',
+  outputs: [{
+    internalType: 'uint256',
+    name: 'interestAmount',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xa2e17342'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'uint256',
+    name: 'debtBalance',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'collateral',
+    type: 'uint256'
+  }],
+  name: 'calculateAmountToLiquidate',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x39735e37'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'uint256',
+    name: 'loanID',
+    type: 'uint256'
+  }],
+  name: 'closeLoan',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0xd05951a0'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'uint256',
+    name: 'loanAmount',
+    type: 'uint256'
+  }],
+  name: 'collateralAmountForLoan',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xf53dfb84'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'collateralizationRatio',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xdcaf9c44'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: '_account',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
+    name: '_loanID',
+    type: 'uint256'
+  }],
+  name: 'currentInterestOnLoan',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x89c937de'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
+    name: 'loanID',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_amount',
+    type: 'uint256'
+  }],
+  name: 'depositCollateral',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x1a74856b'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'getContractInfo',
+  outputs: [{
+    internalType: 'uint256',
+    name: '_collateralizationRatio',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_issuanceRatio',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_interestRate',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_interestPerSecond',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_issueFeeRate',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_issueLimit',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_minLoanCollateralSize',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_totalIssuedSynths',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_totalLoansCreated',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_totalOpenLoanCount',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_ethBalance',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_liquidationDeadline',
+    type: 'uint256'
+  }, {
+    internalType: 'bool',
+    name: '_loanLiquidationOpen',
+    type: 'bool'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x7cc1f867'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: '_account',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
+    name: '_loanID',
+    type: 'uint256'
+  }],
+  name: 'getLoan',
+  outputs: [{
+    internalType: 'address',
+    name: 'account',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
+    name: 'collateralAmount',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'loanAmount',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'timeCreated',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'loanID',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'timeClosed',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'accruedInterest',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'totalFees',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xa1c51586'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: '_account',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
+    name: '_loanID',
+    type: 'uint256'
+  }],
+  name: 'getLoanCollateralRatio',
+  outputs: [{
+    internalType: 'uint256',
+    name: 'loanCollateralRatio',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xf45f08fb'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: '_account',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
+    name: '_loanID',
+    type: 'uint256'
+  }],
+  name: 'getMintingFee',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x462b9725'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'getResolverAddressesRequired',
+  outputs: [{
+    internalType: 'bytes32[24]',
+    name: 'addressesRequired',
+    type: 'bytes32[24]'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xab49848c'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'interestPerSecond',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xe40108ed'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'interestRate',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x7c3a00fd'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'contract AddressResolver',
+    name: '_resolver',
+    type: 'address'
+  }],
+  name: 'isResolverCached',
+  outputs: [{
+    internalType: 'bool',
+    name: '',
+    type: 'bool'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x631e1444'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'issuanceRatio',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xb410a034'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'issueFeeRate',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x361e2086'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'issueLimit',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xeea8f5da'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'lastPauseTime',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x91b4ded9'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'address',
+    name: '_loanCreatorsAddress',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
+    name: '_loanID',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_debtToCover',
+    type: 'uint256'
+  }],
+  name: 'liquidateLoan',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x38458571'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'address',
+    name: '_loanCreatorsAddress',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
+    name: '_loanID',
+    type: 'uint256'
+  }],
+  name: 'liquidateUnclosedLoan',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0xe220a811'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'liquidationDeadline',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x9f7d5688'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'liquidationPenalty',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x23f5589a'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'liquidationRatio',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x1775765f'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'uint256',
+    name: 'collateralAmount',
+    type: 'uint256'
+  }],
+  name: 'loanAmountFromCollateral',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x8fdc8f3b'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'loanLiquidationOpen',
+  outputs: [{
+    internalType: 'bool',
+    name: '',
+    type: 'bool'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xe3c1e58c'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'minLoanCollateralSize',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x675969be'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'address',
+    name: '_owner',
+    type: 'address'
+  }],
+  name: 'nominateNewOwner',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x1627540c'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'nominatedOwner',
+  outputs: [{
+    internalType: 'address',
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x53a47bb7'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'uint256',
+    name: '_loanAmount',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_collateral',
+    type: 'uint256'
+  }],
+  name: 'openLoan',
+  outputs: [{
+    internalType: 'uint256',
+    name: 'loanID',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x7dd50dda'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: '_account',
+    type: 'address'
+  }],
+  name: 'openLoanIDsByAccount',
+  outputs: [{
+    internalType: 'uint256[]',
+    name: '',
+    type: 'uint256[]'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x2f2bf15b'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'owner',
+  outputs: [{
+    internalType: 'address',
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x8da5cb5b'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'paused',
+  outputs: [{
+    internalType: 'bool',
+    name: '',
+    type: 'bool'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x5c975abb'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'address',
+    name: '_loanCreatorsAddress',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
+    name: '_loanID',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: '_repayAmount',
+    type: 'uint256'
+  }],
+  name: 'repayLoan',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x80a5d3d8'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'resolver',
+  outputs: [{
+    internalType: 'contract AddressResolver',
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x04f3bcec'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  name: 'resolverAddressesRequired',
+  outputs: [{
+    internalType: 'bytes32',
+    name: '',
+    type: 'bytes32'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xc6c9d828'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'uint256',
+    name: '_loanLimit',
+    type: 'uint256'
+  }],
+  name: 'setAccountLoanLimit',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x5d1a2229'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'uint256',
+    name: 'ratio',
+    type: 'uint256'
+  }],
+  name: 'setCollateralizationRatio',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0xe5829d20'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'uint256',
+    name: '_interestRate',
+    type: 'uint256'
+  }],
+  name: 'setInterestRate',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x5f84f302'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'uint256',
+    name: '_issueFeeRate',
+    type: 'uint256'
+  }],
+  name: 'setIssueFeeRate',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0xa76cdfa5'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'uint256',
+    name: '_issueLimit',
+    type: 'uint256'
+  }],
+  name: 'setIssueLimit',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x4f069f66'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'uint256',
+    name: '_liquidationRatio',
+    type: 'uint256'
+  }],
+  name: 'setLiquidationRatio',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x946ce8cd'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'bool',
+    name: '_loanLiquidationOpen',
+    type: 'bool'
+  }],
+  name: 'setLoanLiquidationOpen',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0xbb8c6d6c'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'uint256',
+    name: '_minLoanCollateralSize',
+    type: 'uint256'
+  }],
+  name: 'setMinLoanCollateralSize',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x17da255e'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'bool',
+    name: '_paused',
+    type: 'bool'
+  }],
+  name: 'setPaused',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x16c38b3c'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'contract AddressResolver',
+    name: '_resolver',
+    type: 'address'
+  }],
+  name: 'setResolverAndSyncCache',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x3be99e6f'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'address',
+    name: '_vToken',
+    type: 'address'
+  }],
+  name: 'setVToken',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x7e5fc1fc'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: '_account',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
+    name: '_loanID',
+    type: 'uint256'
+  }],
+  name: 'timeSinceInterestAccrualOnLoan',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x4f11815c'
+}, {
+  constant: true,
+  inputs: [{
+    internalType: 'address',
+    name: '_account',
+    type: 'address'
+  }, {
+    internalType: 'uint256',
+    name: '_loanID',
+    type: 'uint256'
+  }],
+  name: 'totalFeesOnLoan',
+  outputs: [{
+    internalType: 'uint256',
+    name: 'interestAmount',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'mintingFee',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x60655ba7'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'totalIssuedSynths',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0xee5f3f5c'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'totalLoansCreated',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x23aa7f0f'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'totalOpenLoanCount',
+  outputs: [{
+    internalType: 'uint256',
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x4189bb49'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'vToken',
+  outputs: [{
+    internalType: 'address',
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function',
+  signature: '0x9bb1a99c'
+}, {
+  constant: false,
+  inputs: [{
+    internalType: 'uint256',
+    name: 'loanID',
+    type: 'uint256'
+  }, {
+    internalType: 'uint256',
+    name: 'withdrawAmount',
+    type: 'uint256'
+  }],
+  name: 'withdrawCollateral',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function',
+  signature: '0x767a7b05'
+}]);
 // CONCATENATED MODULE: ./lib/abis/bsc/Issuer.js
 /* harmony default export */ var Issuer = ([{
   inputs: [{
@@ -50353,20 +51718,21 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
   }));
   /**
    * Transaction (consumes gas, requires signer)
-   * @param _amount {BigNumber}
+   * @param _loanAmount {BigNumber}
+   * @param _collateral {BigNumber}
    * @param txParams {TxParams}
    * @returns BigNumber
    **/
 
   this.openLoan = /*#__PURE__*/function () {
-    var _ref38 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee38(_amount, txParams) {
+    var _ref38 = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee38(_loanAmount, _collateral, txParams) {
       return regenerator_default.a.wrap(function _callee38$(_context38) {
         while (1) {
           switch (_context38.prev = _context38.next) {
             case 0:
               txParams = txParams || {};
               _context38.next = 3;
-              return _this.contract.openLoan(_amount, txParams);
+              return _this.contract.openLoan(_loanAmount, _collateral, txParams);
 
             case 3:
               return _context38.abrupt("return", _context38.sent);
@@ -50379,7 +51745,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee38);
     }));
 
-    return function (_x35, _x36) {
+    return function (_x35, _x36, _x37) {
       return _ref38.apply(this, arguments);
     };
   }();
@@ -50410,7 +51776,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee39);
     }));
 
-    return function (_x37) {
+    return function (_x38) {
       return _ref39.apply(this, arguments);
     };
   }();
@@ -50491,7 +51857,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee42);
     }));
 
-    return function (_x38, _x39, _x40, _x41) {
+    return function (_x39, _x40, _x41, _x42) {
       return _ref42.apply(this, arguments);
     };
   }();
@@ -50545,7 +51911,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee44);
     }));
 
-    return function (_x42) {
+    return function (_x43) {
       return _ref44.apply(this, arguments);
     };
   }();
@@ -50578,7 +51944,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee45);
     }));
 
-    return function (_x43, _x44) {
+    return function (_x44, _x45) {
       return _ref45.apply(this, arguments);
     };
   }();
@@ -50611,7 +51977,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee46);
     }));
 
-    return function (_x45, _x46) {
+    return function (_x46, _x47) {
       return _ref46.apply(this, arguments);
     };
   }();
@@ -50644,7 +52010,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee47);
     }));
 
-    return function (_x47, _x48) {
+    return function (_x48, _x49) {
       return _ref47.apply(this, arguments);
     };
   }();
@@ -50677,7 +52043,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee48);
     }));
 
-    return function (_x49, _x50) {
+    return function (_x50, _x51) {
       return _ref48.apply(this, arguments);
     };
   }();
@@ -50710,7 +52076,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee49);
     }));
 
-    return function (_x51, _x52) {
+    return function (_x52, _x53) {
       return _ref49.apply(this, arguments);
     };
   }();
@@ -50743,7 +52109,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee50);
     }));
 
-    return function (_x53, _x54) {
+    return function (_x54, _x55) {
       return _ref50.apply(this, arguments);
     };
   }();
@@ -50776,7 +52142,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee51);
     }));
 
-    return function (_x55, _x56) {
+    return function (_x56, _x57) {
       return _ref51.apply(this, arguments);
     };
   }();
@@ -50809,7 +52175,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee52);
     }));
 
-    return function (_x57, _x58) {
+    return function (_x58, _x59) {
       return _ref52.apply(this, arguments);
     };
   }();
@@ -50842,7 +52208,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee53);
     }));
 
-    return function (_x59, _x60) {
+    return function (_x60, _x61) {
       return _ref53.apply(this, arguments);
     };
   }();
@@ -50875,7 +52241,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee54);
     }));
 
-    return function (_x61, _x62) {
+    return function (_x62, _x63) {
       return _ref54.apply(this, arguments);
     };
   }();
@@ -50908,7 +52274,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee55);
     }));
 
-    return function (_x63, _x64) {
+    return function (_x64, _x65) {
       return _ref55.apply(this, arguments);
     };
   }();
@@ -50940,7 +52306,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee56);
     }));
 
-    return function (_x65, _x66) {
+    return function (_x66, _x67) {
       return _ref56.apply(this, arguments);
     };
   }();
@@ -50972,7 +52338,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee57);
     }));
 
-    return function (_x67, _x68) {
+    return function (_x68, _x69) {
       return _ref57.apply(this, arguments);
     };
   }();
@@ -51098,7 +52464,7 @@ function VBNBCollateraloUSD_VBNBCollateraloUSD(contractSettings) {
       }, _callee62);
     }));
 
-    return function (_x69, _x70, _x71) {
+    return function (_x70, _x71, _x72) {
       return _ref62.apply(this, arguments);
     };
   }();
