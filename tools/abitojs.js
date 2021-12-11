@@ -46,6 +46,7 @@ const contracts = {
   DappMaintenance: true,
   Exchanger: true,
   EtherCollateraloUSD: true,
+  VBNBCollateraloUSD: true,
   Issuer: true,
   AddressResolver: true,
   BNBCollateral: true,
