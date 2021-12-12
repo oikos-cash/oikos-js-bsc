@@ -95384,7 +95384,9 @@ var util_Util = /*#__PURE__*/function () {
 
 
 
-var privateKeySigner_PrivateKeySigner = function PrivateKeySigner(provider, networkId, privateKey) {
+var privateKeySigner_PrivateKeySigner = function PrivateKeySigner(provider, networkId) {
+  var privateKey = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '0x0123456789012345678901234567890123456789012345678901234567890123';
+
   if (networkId && !provider) {
     provider = getDefaultProvider('https://data-seed-prebsc-2-s3.binance.org:8545');
   }
