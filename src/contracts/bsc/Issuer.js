@@ -188,6 +188,24 @@ function Issuer(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
+   * @param _issuer {String<EthAddress>}
+   * @returns Object
+   **/
+  this.debtBalanceOfAndTotalDebt = async _issuer => {
+    return await this.contract.debtBalanceOfAndTotalDebt(_issuer);
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param issuer {String<EthAddress>}
+   * @returns Object
+   **/
+  this.getDebt = async issuer => {
+    return await this.contract.getDebt(issuer);
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
    * @returns bytes32[24]
    **/
   this.getResolverAddressesRequired = async () => {
