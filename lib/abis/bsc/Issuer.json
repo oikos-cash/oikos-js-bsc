@@ -455,6 +455,60 @@
 	},
 	{
 		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_issuer",
+				"type": "address"
+			}
+		],
+		"name": "debtBalanceOfAndTotalDebt",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "debtBalance",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "totalDebt",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function",
+		"signature": "0xe17e79aa"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "issuer",
+				"type": "address"
+			}
+		],
+		"name": "getDebt",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "debtBalance",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "totalSystemDebt",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function",
+		"signature": "0x9a78e72e"
+	},
+	{
+		"constant": true,
 		"inputs": [],
 		"name": "getResolverAddressesRequired",
 		"outputs": [
