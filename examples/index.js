@@ -1,22 +1,20 @@
 'use strict';
 import { getDefaultProvider } from 'ethers';
 
-const { OikosJs } = require('../dist/main.node.js');
+const { OikosJs } = require('../src/index.node');
 
 (async function() { 
-  const networkId = 97;
-  const provider = getDefaultProvider('https://data-seed-prebsc-2-s3.binance.org:8545');
-  const oksjs = new OikosJs({networkId, provider}); //uses default ContractSettings - ethers.js default provider, mainnet
+  const oksjs = new OikosJs(); //uses default ContractSettings - ethers.js default provider, mainnet
   const b32 = oksjs.ethers.utils.formatBytes32String;
-  //const p = await oksjs.ExchangeRates.rateForCurrency(b32('OKS')); 
-
-  const snxPrice = oksjs.utils.formatEther();
-  const totalSupply = await oksjs.Oikos.totalSupply();
+  let oksPrice = await oksjs.ExchangeRates.rateForCurrency(b32('OKS')); 
+  oksPrice = oksjs.utils.formatEther(oksPrice);
+  let totalSupply = await oksjs.Oikos.totalSupply();
+  totalSupply = oksjs.utils.formatEther(totalSupply);
 
   console.log('-------------------');
-  console.log(`SNX price: ${snxPrice}`);
+  console.log(`OKS price: ${oksPrice}`);
   console.log('-------------------');
-  console.log(`SNX SUPPLY: ${totalSupply}`);
+  console.log(`OKS SUPPLY: ${totalSupply}`);
   console.log('-------------------');
   console.log('SYNTH SUPPLY');
   console.log('-------------------');
@@ -26,7 +24,6 @@ const { OikosJs } = require('../dist/main.node.js');
   synths.forEach(async ({ name, sign, desc }) => {
     const totalAmount = await oksjs[name].totalSupply();
     const totalSupply = oksjs.utils.formatEther(totalAmount);
-    const OKS = await oksjs.Oikos.collateral('0xCD5b38549139E4cf0D9322c4f1C802f89901227b');
-    console.log(`${desc} (${name}) ${sign}${totalSupply} ${OKS}`);
+    console.log(`${desc} (${name}) ${sign} ${totalSupply}`);
   });
 })();
