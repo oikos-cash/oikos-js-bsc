@@ -1,4 +1,4 @@
-import * as snx from '@oikos/oikos-bsc';
+import * as oks from '@oikos/oikos-bsc';
 import { OikosJs } from '../../src/index.node.js';
 import ContractSettings from '../../src/contractSettings';
 import { contracts } from '../../tools/abitojs';
@@ -8,10 +8,10 @@ const { SUPPORTED_NETWORKS } = ContractSettings;
 describe('auto-generated contracts', () => {
   Object.entries(SUPPORTED_NETWORKS).forEach(([networkId, network]) => {
     describe(network, () => {
-      let snxjs;
+      let oksjs;
       beforeAll(() => {
         console.log({ networkId, network });
-        snxjs = new OikosJs({ networkId });
+        oksjs = new OikosJs({ networkId });
       });
 
       Object.entries(contracts).forEach(([contract, settings]) => {
@@ -21,8 +21,8 @@ describe('auto-generated contracts', () => {
               const targetContract =
                 typeof settings === 'object' ? settings.target || contract : contract;
 
-              expect(snxjs[contract].contract.address).toEqual(
-                snx.getTarget({ network, contract: targetContract }).address
+              expect(oksjs[contract].contract.address).toEqual(
+                oks.getTarget({ network, contract: targetContract }).address
               );
             };
           });
@@ -31,8 +31,8 @@ describe('auto-generated contracts', () => {
             () => {
               const source = typeof settings === 'object' ? settings.source || contract : contract;
 
-              expect(snxjs[contract].contract.interface.abi).toEqual(
-                snx.getSource({ network, contract: source }).abi
+              expect(oksjs[contract].contract.interface.abi).toEqual(
+                oks.getSource({ network, contract: source }).abi
               );
             };
           });
