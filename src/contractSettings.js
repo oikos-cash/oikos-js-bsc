@@ -1,4 +1,4 @@
-import { getDefaultProvider } from 'ethers';
+import { ethers, getDefaultProvider } from 'ethers';
 import addresses from '../lib/addresses';
 import ABIS from '../lib/abis';
 import synths from '../lib/synths';
@@ -18,16 +18,16 @@ class ContractSettings {
    * @constructor
    * @param provider {Object} - ethers.js provider object - default ethers.providers.getDefaultProvider()
    * @param signer {Object} - one of 4 provided signers or a custom ethers.js compatible signer. Use Metamask for Dapp browser support
-   * @param networkId {Number} - default 1 - mainnet, also supports 42 (Kovan)
+   * @param networkId {Number} - default 56 - mainnet, also supports 97 (Testnet)
    */
   constructor(contractSettings) {
     contractSettings = contractSettings || {};
     const { provider, signer, networkId } = contractSettings;
     this.networkId = networkId || 56;
     this.network = SUPPORTED_NETWORKS[Number(this.networkId)];
-    this.provider = provider || getDefaultProvider(network2providerUrl.bsc);
+    this.provider = ethers.getDefaultProvider(network2providerUrl[this.network]);
     if (!provider && networkId) {
-      this.provider = getDefaultProvider(network2providerUrl[this.network]);
+      this.provider = ethers.getDefaultProvider(network2providerUrl[this.network]);
     }
     this.signer = signer;
     this.addressList = addresses[this.networkId];
