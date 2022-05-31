@@ -8,10 +8,10 @@ const networkId = 97;
 const provider = getDefaultProvider('https://data-seed-prebsc-2-s3.binance.org:8545');
 const signer = new OikosJs.signers.PrivateKey(provider, network, process.env.PRIVATE_KEY);
 
-const snx = new OikosJs({ networkId, signer });
+const oks = new OikosJs({ networkId, signer });
 
 const run = async () => {
-  const res = await snx.FeePool.closeCurrentFeePeriod();
+  const res = await oks.FeePool.closeCurrentFeePeriod();
   console.log(res);
 };
 

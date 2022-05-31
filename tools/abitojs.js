@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
-const snx = require('@oikos/oikos-bsc');
+const oks = require('@oikos/oikos-bsc');
 const docsDescriptions = require('../lib/docSrc/descriptions');
 
 const SUPPORTED_NETWORKS = {
@@ -64,7 +64,7 @@ const typeMap = {
 const writeAddressFile = () => {
   const addressDefinitions = Object.values(SUPPORTED_NETWORKS)
     .map(network => {
-      const targets = snx.getTarget({ network });
+      const targets = oks.getTarget({ network });
 
       return `
         const ${network.toUpperCase()}_ADDRESSES = {
@@ -98,7 +98,7 @@ const writeAddressFile = () => {
 const writeSynthsFile = () => {
   const synthDefinitions = Object.values(SUPPORTED_NETWORKS)
     .map(network => {
-      const synths = snx.getSynths({ network });
+      const synths = oks.getSynths({ network });
 
       return `
         const ${network.toUpperCase()}_SYNTHS = ${util.inspect(synths, {
@@ -137,7 +137,7 @@ const generate = () => {
 
   Object.values(SUPPORTED_NETWORKS).map(network => {
     // add the synth contract as well (target addresses are their proxies, and source is the synth contract)
-    const synthContracts = snx.getSynths({ network }).reduce((memo, { name, subclass }) => {
+    const synthContracts = oks.getSynths({ network }).reduce((memo, { name, subclass }) => {
       memo[name] = { target: `Proxy${name}`, source: subclass || 'Synth' };
       return memo;
     }, {});
@@ -160,7 +160,7 @@ const generate = () => {
       }
 
       // get the abis from the network's deploy from oikos
-      const { abi } = snx.getSource({ network, contract: source }) || {};
+      const { abi } = oks.getSource({ network, contract: source }) || {};
       // some environments might not have an ABI for this contract yet
       if (abi) {
         // track which contracts exist in this netork
@@ -264,7 +264,7 @@ const writeAllABIFiles = network => {
   if (!fs.existsSync(folder)) {
     fs.mkdirSync(folder);
   }
-  const sources = snx.getSource({ network });
+  const sources = oks.getSource({ network });
 
   for (const [source, { abi }] of Object.entries(sources)) {
     const abiPath = path.join(folder, `${source}.json`);

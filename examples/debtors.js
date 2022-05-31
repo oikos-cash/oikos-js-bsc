@@ -18,10 +18,10 @@ const signer = new OikosJs.signers.PrivateKey(
   process.env.PRIVATE_KEY
 );
 
-const snx = new OikosJs({ networkId, signer });
+const oks = new OikosJs({ networkId, signer });
 
 const getDebtSnapshot = async () => {
-    return await snxData.snx.debtSnapshot({max:100000});
+    return await snxData.oks.debtSnapshot({max:100000});
 }
 
 (async function() {

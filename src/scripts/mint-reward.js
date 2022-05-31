@@ -10,7 +10,7 @@ const networkId = 97;
 const provider = getDefaultProvider('https://data-seed-prebsc-2-s3.binance.org:8545');
 const signer = new OikosJs.signers.PrivateKey(provider, network, process.env.PRIVATE_KEY);
 
-const snx = new OikosJs({ networkId, signer });
+const oks = new OikosJs({ networkId, signer });
 
 const run = async () => {
   const SupplySchedule = new ethers.Contract(
@@ -23,7 +23,7 @@ const run = async () => {
 
   console.log(`Last mint event ${BN(lastMintEvent._hex).toString()}`);
 
-  const res = await snx.Oikos.mint({
+  const res = await oks.Oikos.mint({
     gasLimit: 250000,
   });
   console.log(res);
