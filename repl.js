@@ -1,29 +1,13 @@
 require('@babel/register');
+
 const BigNumber = require('bignumber.js');
-//const { guessNetworkId } = require('./src/network2id');
-const { ethers, getDefaultProvider } = require("ethers");
 
 const repl = require('repl');
-
 const { OikosJs } = require('./src/index.node');
-const networkId = 56 //guessNetworkId();
-
-// const networkId = network2id(process.env.TRON_NETWORK || 'shasta');
-// oksjs.contractSettings.tronWeb.setPrivateKey(process.env.PRIVATE_KEY);
-
-const provider = getDefaultProvider("https://bsc-dataseed.binance.org")
-const signer = new OikosJs.signers.PrivateKey(
-  provider,
-  networkId,
-  process.env.PRIVATE_KEY
-);
-
-const oksjs = new OikosJs({ networkId, signer });
+const oksjs = new OikosJs();
 
 const bn = o => BigNumber(o._hex).toString();
-// module.exports = oksjs;
 
-console.log({ networkId });
 console.log('OikosJs is available from the oks variable. More utils: ctx');
 console.log('Use the PRIVATE_KEY environment variable to set the private key.');
 
@@ -33,8 +17,7 @@ const ctx = {
   BigNumber,
   b32: oksjs.ethers.utils.formatBytes32String,
   pb32: oksjs.ethers.utils.parseBytes32String,
-  bn,
-  //Tronweb: require('tronweb'),
-  //tronweb: oksjs.contractSettings.tronWeb,
+  bn
 };
+
 Object.assign(context, ctx);
