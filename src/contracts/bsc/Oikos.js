@@ -130,6 +130,14 @@ function Oikos(contractSettings) {
   };
 
   /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<EthAddress>
+   **/
+  this.blackListed = async () => {
+    return await this.contract.blackListed();
+  };
+
+  /**
    * Burn synths to clear issued synths/free SNX.<br>
    * Transaction (consumes gas, requires signer)
    * @param amount {BigNumber}
@@ -314,6 +322,45 @@ function Oikos(contractSettings) {
       destinationCurrencyKey,
       txParams
     );
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param exchangeForAddress {String<EthAddress>}
+   * @param sourceCurrencyKey {bytes32}
+   * @param sourceAmount {BigNumber}
+   * @param destinationCurrencyKey {bytes32}
+   * @param txParams {TxParams}
+   * @returns BigNumber
+   **/
+  this.exchangeOnBehalfOwner = async (
+    exchangeForAddress,
+    sourceCurrencyKey,
+    sourceAmount,
+    destinationCurrencyKey,
+    txParams
+  ) => {
+    txParams = txParams || {};
+    return await this.contract.exchangeOnBehalfOwner(
+      exchangeForAddress,
+      sourceCurrencyKey,
+      sourceAmount,
+      destinationCurrencyKey,
+      txParams
+    );
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param account {String<EthAddress>}
+   * @param balance {BigNumber}
+   * @param pit {String<EthAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+  this.fixBalance = async (account, balance, pit, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.fixBalance(account, balance, pit, txParams);
   };
 
   /**
@@ -503,6 +550,19 @@ function Oikos(contractSettings) {
    **/
   this.proxy = async () => {
     return await this.contract.proxy();
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param account {String<EthAddress>}
+   * @param oUSDamount {BigNumber}
+   * @param liquidator {String<EthAddress>}
+   * @param txParams {TxParams}
+   * @returns boolean
+   **/
+  this.purgeAccount = async (account, oUSDamount, liquidator, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.purgeAccount(account, oUSDamount, liquidator, txParams);
   };
 
   /**

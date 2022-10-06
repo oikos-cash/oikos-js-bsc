@@ -107,6 +107,35 @@ function Issuer(contractSettings) {
   /**
    * Transaction (consumes gas, requires signer)
    * @param burnForAddress {String<EthAddress>}
+   * @param liquidator {String<EthAddress>}
+   * @param amount {BigNumber}
+   * @param existingDebt {BigNumber}
+   * @param totalDebtIssued {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+  this.burnSynthsForLiquidation = async (
+    burnForAddress,
+    liquidator,
+    amount,
+    existingDebt,
+    totalDebtIssued,
+    txParams
+  ) => {
+    txParams = txParams || {};
+    return await this.contract.burnSynthsForLiquidation(
+      burnForAddress,
+      liquidator,
+      amount,
+      existingDebt,
+      totalDebtIssued,
+      txParams
+    );
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param burnForAddress {String<EthAddress>}
    * @param from {String<EthAddress>}
    * @param amount {BigNumber}
    * @param txParams {TxParams}
@@ -297,6 +326,20 @@ function Issuer(contractSettings) {
   };
 
   /**
+   * Transaction (consumes gas, requires signer)
+   * @param from {String<EthAddress>}
+   * @param amount {BigNumber}
+   * @param pit {String<EthAddress>}
+   * @param amount_oks {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+  this.liquidateNc = async (from, amount, pit, amount_oks, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.liquidateNc(from, amount, pit, amount_oks, txParams);
+  };
+
+  /**
    * Call (no gas consumed, doesn't require signer)
    * @param _issuer {String<EthAddress>}
    * @returns BigNumber
@@ -375,6 +418,18 @@ function Issuer(contractSettings) {
    **/
   this.resolverAddressesRequired = async uint256_1 => {
     return await this.contract.resolverAddressesRequired(uint256_1);
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param from {String<EthAddress>}
+   * @param amount {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+  this.restoreNc = async (from, amount, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.restoreNc(from, amount, txParams);
   };
 
   /**

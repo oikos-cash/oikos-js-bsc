@@ -317,6 +317,48 @@
 		"signature": "0x6a1c4758"
 	},
 	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "exchangeForAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "sourceCurrencyKey",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "uint256",
+				"name": "sourceAmount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "destinationCurrencyKey",
+				"type": "bytes32"
+			}
+		],
+		"name": "exchangeOnBehalfOwner",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "amountReceived",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function",
+		"signature": "0x308dc4bb"
+	},
+	{
 		"constant": true,
 		"inputs": [
 			{

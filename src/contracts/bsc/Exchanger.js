@@ -103,6 +103,35 @@ function Exchanger(contractSettings) {
   };
 
   /**
+   * Transaction (consumes gas, requires signer)
+   * @param exchangeForAddress {String<EthAddress>}
+   * @param from {String<EthAddress>}
+   * @param sourceCurrencyKey {bytes32}
+   * @param sourceAmount {BigNumber}
+   * @param destinationCurrencyKey {bytes32}
+   * @param txParams {TxParams}
+   * @returns BigNumber
+   **/
+  this.exchangeOnBehalfOwner = async (
+    exchangeForAddress,
+    from,
+    sourceCurrencyKey,
+    sourceAmount,
+    destinationCurrencyKey,
+    txParams
+  ) => {
+    txParams = txParams || {};
+    return await this.contract.exchangeOnBehalfOwner(
+      exchangeForAddress,
+      from,
+      sourceCurrencyKey,
+      sourceAmount,
+      destinationCurrencyKey,
+      txParams
+    );
+  };
+
+  /**
    * Call (no gas consumed, doesn't require signer)
    * @param sourceCurrencyKey {bytes32}
    * @param destinationCurrencyKey {bytes32}

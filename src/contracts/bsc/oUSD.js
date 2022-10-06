@@ -48,6 +48,30 @@ function oUSD(contractSettings) {
 
   /**
    * Transaction (consumes gas, requires signer)
+   * @param account {String<EthAddress>}
+   * @param amount {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+  this._emitIssued = async (account, amount, txParams) => {
+    txParams = txParams || {};
+    return await this.contract._emitIssued(account, amount, txParams);
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param account {String<EthAddress>}
+   * @param amount {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+  this._emitTransfer = async (account, amount, txParams) => {
+    txParams = txParams || {};
+    return await this.contract._emitTransfer(account, amount, txParams);
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
    * @param txParams {TxParams}
   
    **/

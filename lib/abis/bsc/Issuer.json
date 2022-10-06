@@ -280,6 +280,42 @@
 			},
 			{
 				"internalType": "address",
+				"name": "liquidator",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "existingDebt",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "totalDebtIssued",
+				"type": "uint256"
+			}
+		],
+		"name": "burnSynthsForLiquidation",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function",
+		"signature": "0xd3755e7d"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "burnForAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
 				"name": "from",
 				"type": "address"
 			},
@@ -471,8 +507,13 @@
 			},
 			{
 				"internalType": "uint256",
-				"name": "totalDebt",
+				"name": "totalSystemValue",
 				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "anyRateIsStale",
+				"type": "bool"
 			}
 		],
 		"payable": false,
@@ -689,6 +730,37 @@
 		"signature": "0xa63c4df4"
 	},
 	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "pit",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount_oks",
+				"type": "uint256"
+			}
+		],
+		"name": "liquidateNc",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function",
+		"signature": "0x7245768f"
+	},
+	{
 		"constant": true,
 		"inputs": [
 			{
@@ -859,6 +931,27 @@
 		"stateMutability": "view",
 		"type": "function",
 		"signature": "0xc6c9d828"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "restoreNc",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function",
+		"signature": "0x8af58625"
 	},
 	{
 		"constant": false,

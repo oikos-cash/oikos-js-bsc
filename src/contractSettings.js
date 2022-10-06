@@ -28,6 +28,9 @@ class ContractSettings {
     this.provider = ethers.getDefaultProvider(network2providerUrl[this.network]);
     if (!provider && networkId) {
       this.provider = ethers.getDefaultProvider(network2providerUrl[this.network]);
+      console.log(SUPPORTED_NETWORKS[Number(this.networkId)]);
+      console.log(network2providerUrl[this.network]);
+      console.log(provider);
     }
     this.signer = signer;
     this.addressList = addresses[this.networkId];
