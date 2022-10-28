@@ -263,6 +263,27 @@
 				"type": "uint256"
 			}
 		],
+		"name": "burnNc",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function",
+		"signature": "0xbdb93412"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
 		"name": "burnSynths",
 		"outputs": [],
 		"payable": false,
@@ -563,6 +584,28 @@
 		"stateMutability": "view",
 		"type": "function",
 		"signature": "0xab49848c"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "bytes32[]",
+				"name": "currencyKeys",
+				"type": "bytes32[]"
+			}
+		],
+		"name": "getSynths",
+		"outputs": [
+			{
+				"internalType": "contract ISynth[]",
+				"name": "",
+				"type": "address[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function",
+		"signature": "0x3b6afe40"
 	},
 	{
 		"constant": true,
@@ -931,27 +974,6 @@
 		"stateMutability": "view",
 		"type": "function",
 		"signature": "0xc6c9d828"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			}
-		],
-		"name": "restoreNc",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function",
-		"signature": "0x8af58625"
 	},
 	{
 		"constant": false,

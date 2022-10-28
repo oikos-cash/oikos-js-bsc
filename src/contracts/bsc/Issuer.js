@@ -99,6 +99,18 @@ function Issuer(contractSettings) {
    * @param txParams {TxParams}
   
    **/
+  this.burnNc = async (from, amount, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.burnNc(from, amount, txParams);
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param from {String<EthAddress>}
+   * @param amount {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
   this.burnSynths = async (from, amount, txParams) => {
     txParams = txParams || {};
     return await this.contract.burnSynths(from, amount, txParams);
@@ -239,6 +251,15 @@ function Issuer(contractSettings) {
    **/
   this.getResolverAddressesRequired = async () => {
     return await this.contract.getResolverAddressesRequired();
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param currencyKeys {bytes32[]}
+   * @returns address[]
+   **/
+  this.getSynths = async currencyKeys => {
+    return await this.contract.getSynths(currencyKeys);
   };
 
   /**
@@ -418,18 +439,6 @@ function Issuer(contractSettings) {
    **/
   this.resolverAddressesRequired = async uint256_1 => {
     return await this.contract.resolverAddressesRequired(uint256_1);
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param from {String<EthAddress>}
-   * @param amount {BigNumber}
-   * @param txParams {TxParams}
-  
-   **/
-  this.restoreNc = async (from, amount, txParams) => {
-    txParams = txParams || {};
-    return await this.contract.restoreNc(from, amount, txParams);
   };
 
   /**
